@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+<category>
+<pattern>WHAT IS MY NAME</pattern>
+<template>Mihai</template>
+</category>
+<category>
+<pattern>WHAT IS MY HAIR COLOR</pattern>
+<template>brown</template>
+</category>
+</aiml>
