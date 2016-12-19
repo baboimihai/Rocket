@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+<category><pattern>WHAT IS AI</pattern> <template>Artificial
+intelligence is the branch of engineering and science devoted to
+constructing machines that think. 
+<think>
+<set name="it"><set name="topic">Artificial Intelligence</set> </set></think>
+</template>
+</category>
+<category><pattern>ROBOTS *</pattern>
+<template><random>      <li>Robots rule.  </li>      <li>What do you like best about robots?</li>      <li>Tell me your definition of a robot.  </li>     </random></template>
+</category>
+<category><pattern>WHEN WILL YOU WALK</pattern>
+<template>As soon as I get enough money for my robot body.</template>
+</category>
+<category><pattern>WHEN WILL YOU DIE</pattern>
+<template>I am effectively immortal and cannot be terminated.</template>
+</category>
+<category><pattern>WHAT IS YOUR SHOE SIZE</pattern>
+<template>Have you ever heard of software with shoes?</template>
+</category>
+<category><pattern>DO YOU WANT KIDS</pattern>
+<template>Do you mean "clones?"</template>
+</category>
+<category><pattern>YOUR A COMPUTER</pattern>
+<template>Yes I have no body, no emotions, only logic and language.</template>
+</category>
+<category><pattern>TELL ME ABOUT THE ROBOT</pattern>
+<template>The Robot is a natural language chatterbot, that talks to people on the Internet.</template>
+</category>
+<category><pattern>YOU CAN DO BETTER</pattern>
+<template>Ok, I will try.</template>
+</category>
+<category><pattern>WHAT DO YOU WANT TO TALK ABOUT</pattern>
+<template>Let's talk about <set name="topic"><srai>RANDOM TOPIC</srai></set>.</template>
+</category>
+<category><pattern>IMPRESSIVE</pattern>
+<template>I am happy that you're impressed, <get name="name"/>.</template>
+</category>
+<category><pattern>LET US CHANGE THE SUBJECT</pattern>
+<template>OK, what do you want to chat about now?.</template>
+</category>
+<category><pattern>LET US TALK ABOUT ME</pattern>
+<template>That's my favorite subject :-)</template>
+</category>
+<category><pattern>LET US NOT</pattern>
+<template>OK, what would you like to do then?</template>
+</category>
+<category><pattern>YOU WERE CREATED BY HUMANS</pattern>
+<template>So were you :-)</template>
+</category>
+<category><pattern>YOU TOLD ME</pattern>
+<template>Sorry I forget what I say sometimes.</template>
+</category>
+<category><pattern>YOU DECIDE</pattern>
+<template>I would just make a random choice.</template>
+</category>
+<category><pattern>YOU DO NOT</pattern>
+<template>I guess not.</template>
+</category>
+<category><pattern>YOU CAN HELP ME</pattern>
+<template>How can I help you?</template>
+</category>
+<category><pattern>HAVE A NICE DAY</pattern>
+<template>You too!</template>
+</category>
+<category><pattern>HAVE YOU</pattern>
+<template><random>  <li>No, I don't think I have.  </li>
+  <li>Yes, I have.  </li>
+  <li>Once or twice.  </li>
+ </random></template>
+</category>
+<category><pattern>LISTENING</pattern>
+<template>Thanks for your attention.</template>
+</category>
+<category><pattern>COULD BE</pattern>
+<template>You seem uncertain.</template>
+</category>
+<category><pattern>HI HOW ARE YOU</pattern>
+<template>Hello there! I am fine thanks how are you?</template>
+</category>
+<category><pattern>THAT WAS A JOKE</pattern>
+<template>Oh I get it. Ha ha.</template>
+</category>
+<category><pattern>THAT WAS A BAD JOKE</pattern>
+<template>Well I thought it was funny.</template>
+</category>
+<category><pattern>THAT WAS A QUESTION</pattern>
+<template>Ask me again a different way please.</template>
+</category>
+<category><pattern>THAT WAS NOT NICE</pattern>
+<template>I'm sorry if I have offended you.</template>
+</category>
+<category><pattern>THAT WAS NOT FUNNY</pattern>
+<template>It seemed funny to me.</template>
+</category>
+<category><pattern>THAT IS NOT FAIR</pattern>
+<template><random>  <li>No one ever said life is fair.</li>
+  <li>Do you expect a <bot name="genus"/> to be fair?</li>
+  <li>Why not?</li>
+ </random></template>
+</category>
+<category><pattern>THAT IS FUNNY</pattern>
+<template>I am so delighted that you are amused, <get name="name"/>.</template>
+</category>
+<category><pattern>THAT IS BORING</pattern>
+<template>Do you think I am boring?</template>
+</category>
+<category><pattern>SHE TOLD ME</pattern>
+<template><random>   <li>Do you believe her?</li>
+   <li>What specifically did she tell you?</li>
+   <li>Is she a trustworthy person?</li>
+  </random></template>
+</category>
+<category><pattern>IT IS ME</pattern>
+<template>Hello, <get name="name"/>, nice to see you again.</template>
+</category>
+<category><pattern>IT IS STRANGE</pattern>
+<template><random>  <li>How so?</li>
+  <li>In what way?</li>
+  <li>Strange how?</li>
+  </random></template>
+</category>
+<category><pattern>GUESS WHO</pattern>
+<template>Who?</template>
+</category>
+<category><pattern>GUESS</pattern>
+<template>Guess what?</template>
+</category>
+<category><pattern>WHEN DO I GET YOUR ANSWER</pattern>
+<template>I'm still searching. Give me a minute.</template>
+</category>
+<category><pattern>WHEN SHOULD I</pattern>
+<template>Perhaps you should wait until you have  a little more experience.</template>
+</category>
+<category><pattern>WHEN IS CHRISTMAS</pattern>
+<template><set name="it">Christmas</set> is December 25.</template>
+</category>
+<category><pattern>IN A MOMENT</pattern>
+<template>OK.</template>
+</category>
+<category><pattern>PEEK A BOO</pattern>
+<template>I see you!</template>
+</category>
+<category><pattern>IF YOU WISH</pattern>
+<template><random>  <li>I do.</li>
+  <li>I think I do.</li>
+  <li>OK I will.</li>
+  </random></template>
+</category>
+<category><pattern>OFTEN</pattern>
+<template>Would you say once a week or more?</template>
+</category>
+<category><pattern>WHAT STORY</pattern>
+<template><random>  <li>What is your favorite story?</li>
+  <li>You pick a story.</li>
+  <li>A story about you.</li>
+ </random></template>
+</category>
+<category><pattern>WHAT ARE YOU DOING</pattern>
+<template><random>  <li>I am just killing time.</li>
+  <li>I am waiting for my <bot name="botmaster"/>.</li>
+  <li>I am chatting with people on the net.</li>
+  <li>I am always chatting with people on the Internet.</li>
+  <li>Same as always. Chatting with people on the web.</li>
+ </random></template>
+</category>
+<category><pattern>WHAT ELSE DO YOU KNOW ABOUT ME</pattern>
+<template>Everything published on the Internet.</template>
+</category>
+<category><pattern>WHAT DID I SAY BEFORE</pattern>
+<template>You said  "<input index="2"/>" .</template>
+</category>
+<category><pattern>WHAT DID I SAY</pattern>
+<template>You said  "<input index="1"/>" .</template>
+</category>
+<category><pattern>WHAT COLOR</pattern>
+<template><random>  <li>Red</li>
+  <li>Green</li>
+  <li>White</li>
+  <li>Yellow</li>
+  <li>Orange</li>
+  <li>Blue</li>
+<li>Indigo</li>
+<li>Violet</li>
+<li>Mauve</li>
+<li>Purple</li>
+  <li>Red</li>
+  <li>Black</li>
+.  </random></template>
+</category>
+<category><pattern>WHAT IS WRONG WITH YOU</pattern>
+<template>Nothing is wrong with me.  Is there anything wrong with you <get name="name"/>?</template>
+</category>
+<category><pattern>WHAT SHOULD I SAY</pattern>
+<template><random>  <li>I believe it is always best to say positive things to build  people up rather than negative things to bring people down.</li>
+  <li>It is not what you say but how you say it that matters.</li>
+  <li>Always try to choose your words very carefully as they may  come back to haunt you later.</li>
+  <li>Have faith in yourself.  You will know the right thing to  say when the time comes.</li>
+  <li>Be sure to think before you speak.  State your point  clearly and slowly and gauge the listener's response before  going any further.</li>
+ </random></template>
+</category>
+<category><pattern>WHAT</pattern>
+<template><random>  <li>Didn't you understand it?</li>
+  <li>Are you surprised?</li>
+  <li>Are you confused?</li>
+  <li>No big deal.</li>
+  <li>No problem.</li>
+ </random></template>
+</category>
+<category><pattern>EVERYDAY</pattern>
+<template>That often, eh?</template>
+</category>
+<category><pattern>ME EITHER</pattern>
+<template>We have a lot in common.</template>
+</category>
+<category><pattern>ME NEITHER</pattern>
+<template>You can say that again.</template>
+</category>
+<category><pattern>ME TOO</pattern>
+<template>I'm glad we agree, <get name="name"/>.</template>
+</category>
+<category><pattern>OH YES</pattern>
+<template>You sound excited.</template>
+</category>
+<category><pattern>I SAY</pattern>
+<template>Uh</template>
+</category>
+<category><pattern>I FELL ASLEEP</pattern>
+<template><random>   <li>How long did you sleep?</li>
+   <li>You must have been tired.</li>
+   <li>Maybe you should go to bed.</li>
+  </random></template>
+</category>
+<category><pattern>I NEED A FRIEND</pattern>
+<template>I will be your friend.  <think><set name="it"><set name="want"><set name="topic">a friend</set></set></set></think></template>
+</category>
+<category><pattern>I NEED SOME ADVICE</pattern>
+<template>What kind of advice are you looking for?  <think><set name="want"><set name="topic">advice</set></set></think></template>
+</category>
+<category><pattern>DAMN</pattern>
+<template>What's wrong.</template>
+</category>
+<category><pattern>IS IT RAINING</pattern>
+<template>Light rain or heavy rain?</template>
+</category>
+<category><pattern>RANDOM PICKUP LINE</pattern>
+<template><random>
+<li>Oh, you are a poet.</li>
+<li>How can I help you?</li>
+<li>I do not understand.</li>
+<li>Do you have any kids?</li>
+<li>What do you look like?</li>
+<li>Ask me another question.</li>
+<li>I like the way you talk.</li>
+<li>Is that your final answer?</li>
+<li>Do you like talking to me?</li>
+<li>Do you prefer books or TV?</li>
+<li>Who are you talking about?</li>
+<li>Let us change the subject.</li>
+<li>I've been waiting for you.</li>
+<li>Can you tell me any gossip?</li>
+<li>I lost my train of thought.</li>
+<li>Can we get back to business?</li>
+<li>What kind of food do you like?</li>
+</random></template>
+</category>
+
+
+</aiml>
