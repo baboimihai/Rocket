@@ -1,6 +1,6 @@
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
-from tokenize_phrase import list_of_sent
+from PreProcessing.tokenize_phrase import list_of_sent
 
 
 # exemple_text= "Hello Mr. Smith, how are you doing today? How do you think python is? " +\ "Artificial intelligence

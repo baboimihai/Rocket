@@ -21,12 +21,12 @@
 # pip install -U textblob
 # python -m textblob.download_corpora
 
-from autocorrect import auto_correct_input
-from language_detection import detect_language
-from detect_input_type import get_input_type
-from synonyms import get_synonyms
-from eliminate_stop_words import filter_stopwords
-from parser import parser
+from PreProcessing.autocorrect import auto_correct_input
+from PreProcessing.language_detection import detect_language
+from PreProcessing.detect_input_type import get_input_type
+from PreProcessing.synonyms import get_synonyms
+from PreProcessing.eliminate_stop_words import filter_stopwords
+from PreProcessing.parser import parser
 
 
 def pre_process_text(m_input):

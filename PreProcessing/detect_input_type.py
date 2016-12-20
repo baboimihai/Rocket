@@ -2,7 +2,7 @@ import pickle
 
 
 def get_classifier():
-    with open("serialized_classifier.txt", "rb") as f:
+    with open("C:\\Users\\Baboias\\PycharmProjects\\AI_Rocket\\PreProcessing\\serialized_classifier.txt", "rb") as f:
         classifier = pickle.load(f)
 
     return classifier
