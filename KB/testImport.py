@@ -1,7 +1,5 @@
 from KnowledgeBase import AimlCommunication
 
-# TODO: inca mai trebuie sa fac salvarea unor date in fisiere
-
 def talkWithTheChatbot():
     print("Rocket> Who are you?")
     username = input("Me> ")
