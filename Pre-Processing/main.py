@@ -33,7 +33,7 @@ def pre_process_text(m_input):
     if len(m_input) is 0:
         return None
 
-    m_map = {}
+    m_map = {} 
     m_input = auto_correct_input(m_input)
     language = detect_language(m_input)
     m_map["language"] = language
