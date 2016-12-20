@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+<category>
+<pattern></pattern>
+<template>
+	<random>
+		<li>Did you know dreamt is the only word that ends in mt</li>
+		<li>Did you know honey is the only natural food which never spoils</li>
+		<li>Did you know all insects have 6 legs</li>
+		<li>Did you know In eastern Africa you can buy beer brewed from bananas</li>
+		<li>Did you know cats have over 100 vocal chords</li>
+		<li>Did you know hummingbirds are the only bird that can fly backwards</li>
+		<li>Did you know a group of frogs is called an army</li>
+		<li>Did you know Brazil covers 50% of the South American continent</li>
+		<li>Did you know China manufacturers 70% of the worlds toys</li>
+		<li>Did you know Isaac Newton invented the cat door</li>
+		<li>Did you know for every human there are 200 million insects</li>
+		<li>Did you know Oak trees don't produce acorns until they are 50 years old</li>
+		<li>Did you know the rarest type of diamond is green</li>
+		<li>Did you know Niagara Falls could fill 4,000 bathtubs every second</li>
+		<li>Did you know rain contains vitamin B12</li>
+		<li>Did you know a moth has no stomach</li>
+		<li>Did you know the lie detector was invented in 1921</li>
+		<li>Did you know porcupines float in water</li>
+	</random>
+</template>
+</cateogry>
+</aiml>
