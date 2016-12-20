@@ -25,8 +25,6 @@ def parser(text):
                 keys.append((word[0][0], word[0][1], 'Subject'))
 
             elif word.label() == 'Action':
-
-                word.append('Action')
                 keys.append((word[0][0], word[0][1], 'Action'))
 
     return keys
