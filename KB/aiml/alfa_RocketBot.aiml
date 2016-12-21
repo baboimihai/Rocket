@@ -7,6 +7,72 @@ constructing machines that think.
 <set name="it"><set name="topic">Artificial Intelligence</set> </set></think>
 </template>
 </category>
+<category><pattern>HI HOW ARE YOU</pattern>
+<template><random>
+<li>Hello there! I am fine thanks how are you?</li>
+<li> Bounjour! Ca va bien, merci, et toi? </li>
+</random></template>
+</category>
+<category><pattern>HI</pattern>
+<template><random><li>Hello there!</li>
+<li>Bounjour!</li>
+<li>Holla</li>
+<li>Hi</li>
+<li>Hello</li>
+<li>Buna</li>
+</random></template>
+</category>
+<category><pattern>HELLO</pattern>
+<template><random><li>Hello there!</li>
+<li>Bounjour!</li>
+<li>Holla</li>
+<li>Hi</li>
+<li>Hello</li>
+<li>Buna</li>
+</random></template>
+</category>
+<category><pattern>GOTTA GO</pattern>
+<template><random><li>Ok, bye!</li>
+<li>Bye bye!</li>
+<li>Bye</li>
+<li>Ok</li>
+<li>Adios</li>
+<li>Hasta la vista!</li>
+</random></template>
+</category>
+<category><pattern>BYE</pattern>
+<template><random><li>Ok, bye!</li>
+<li>Bye bye!</li>
+<li>Bye</li>
+<li>Ok</li>
+<li>Adios</li>
+<li>Hasta la vista!</li>
+<li>Catch you later</li>
+<li>See you soon</li>
+</random></template>
+</category>
+<category><pattern>I HAVE TO LEAVE</pattern>
+<template><random><li>Ok, bye!</li>
+<li>Bye bye!</li>
+<li>Bye</li>
+<li>Ok</li>
+<li>Adios</li>
+<li>Hasta la vista!</li>
+<li>Catch you later</li>
+<li>See you soon</li>
+</random></template>
+</category>
+<category><pattern>GOOD BYE</pattern>
+<template><random><li>Ok, bye!</li>
+<li>Bye bye!</li>
+<li>Bye</li>
+<li>Ok</li>
+<li>Adios</li>
+<li>Hasta la vista!</li>
+<li>Catch you later</li>
+<li>See you soon</li>
+</random></template>
+</category>
 <category><pattern>ROBOTS *</pattern>
 <template><random>      <li>Robots rule.  </li>      <li>What do you like best about robots?</li>      <li>Tell me your definition of a robot.  </li>     </random></template>
 </category>
