@@ -1,44 +1,37 @@
-from textblob.classifiers import NaiveBayesClassifier
 import pickle
+import nltk.classify.util
+from nltk.classify import NaiveBayesClassifier
+from nltk.corpus import movie_reviews
+ 
+def word_feats(words):
+    return dict([(word, True) for word in words])
+
+negatives = open("negative_data.txt","r")
+positives = open("positive_data.txt","r")
+questions = open("question_data.txt","r")
+
+negative_features = [(word_feats(negative.split()),'neg') for negative in negatives.readlines()]
+positive_features = [(word_feats(positive.split()),'pos') for positive in positives.readlines()]
+question_features = [(word_feats(question.split()),'q') for question in questions.readlines()]
+
+negcutoff = len(negative_features) * 3/4
+poscutoff = len(positive_features) * 3/4
+question_cut_off = len(question_features) * 3/4
+
+trainfeats = negative_features[:int(negcutoff)] + positive_features[:int(poscutoff)] + question_features[:int(question_cut_off)]
+testfeats = negative_features[int(negcutoff):] + positive_features[int(poscutoff):] + question_features [int(question_cut_off):]
+
+# print ('train on %d instances, test on %d instances' % (len(trainfeats), len(testfeats)))
+
+classifier = NaiveBayesClassifier.train(trainfeats)
 
 
-train_data = []
-validation_data = []
-
-# ------------------ training classifier ----------------------------
-with open("affirmation_positive_training_data.txt") as pos:
-    for line in pos:
-        train_data.append((line, "pos"))
-
-with open("affirmation_negative_training_data.txt") as neg:
-    for line in neg:
-        train_data.append((line, "neg"))
-
-with open("question_training_data.txt") as q:
-    for line in q:
-        train_data.append((line, "q"))
-
-# ------------------- validation --------------------------------------
-with open("affirmation_positive_validation_data.txt") as pos:
-    for line in pos:
-        validation_data.append((line, "pos"))
-
-with open("affirmation_negative_validation_data.txt") as neg:
-    for line in neg:
-        validation_data.append((line, "neg"))
-
-with open("question_validation_data.txt") as q:
-    for line in q:
-        validation_data.append((line, "q"))
-
-
-m_classifier = NaiveBayesClassifier(train_data)
-serialized = pickle.dumps(m_classifier)
+serialized = pickle.dumps(classifier)
 
 f = open("serialized_classifier.txt", "wb")
 
 f.write(serialized)
 f.close()
 
-# print(m_classifier.classify("I don't like this"))
-# print(m_classifier.accuracy(validation_data)) ~= 72%
+# print(classifier.classify(word_feats("Who are you ?")))
+# print ('accuracy:', nltk.classify.util.accuracy(classifier, testfeats)) -> 89% accuracy
