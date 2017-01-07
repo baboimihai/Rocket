@@ -2,13 +2,14 @@ import pickle
 import nltk.classify.util
 from nltk.classify import NaiveBayesClassifier
 from nltk.corpus import movie_reviews
- 
+
 def word_feats(words):
     return dict([(word, True) for word in words])
-
-negatives = open("negative_data.txt","r")
-positives = open("positive_data.txt","r")
-questions = open("question_data.txt","r")
+import os
+dir = os.path.dirname(__file__)
+negatives = open(os.path.join(dir,"negative_data.txt"),"r")
+positives = open(os.path.join(dir,"positive_data.txt"),"r")
+questions = open(os.path.join(dir,"question_data.txt"),"r")
 
 negative_features = [(word_feats(negative.split()),'neg') for negative in negatives.readlines()]
 positive_features = [(word_feats(positive.split()),'pos') for positive in positives.readlines()]
