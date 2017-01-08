@@ -1,25 +1,29 @@
 import xml.etree.ElementTree as ET
 import random
 import glob
+import os
 
 context = dict()
 
 class Parser:
-    filesList = ["alfa_RocketBot", "std-brain", "std-dictionary", "std-geography", "std-inventions",
-                 "std-knowledge", "std-personality", "std-pickup", "std-sextalk", "std-sports"]
+    filesList = ["alfa_RocketBot.aiml", "std-brain.aiml", "std-dictionary.aiml", "std-geography.aiml", "std-inventions.aiml",
+                 "std-knowledge.aiml", "std-personality.aiml", "std-pickup.aiml", "std-sextalk.aiml", "std-sports.aiml"]
     rootList = []
     currentUser = ""
     userRoot = ""
     yesNoRoot = ""
+
     def __init__(self, username):
         self.processAimlFiles()
-        self.currentUser = username
+        self.currentUser = username.lower()
 
-        tree = ET.parse("aiml/yes-no.aiml")
+        file_path = os.path.join(os.path.dirname(__file__), 'aiml\\' + "yes-no.aiml")
+        tree = ET.parse(file_path)
         self.yesNoRoot = tree.getroot()
 
-        if self.searchForFile(username) is True:
-            userTree = ET.parse("aiml/user_definitions/" + username.lower() + '.aiml')
+        if self.searchForFile(username.lower()) is True:
+            file_path = os.path.join(os.path.dirname(__file__), 'aiml\\user_definitions\\' + username.lower() + '.aiml')
+            userTree = ET.parse(file_path)
             self.userRoot = userTree.getroot()
         else:
             self.createAimlFileForUser(username.lower())
@@ -27,10 +31,12 @@ class Parser:
         context["it"] = ""
         context["topic"] = ""
 
+
     def processAimlFiles(self):
         # IMPORTANT!! folositi "r" inaintea stringului, poate provoca erori altfel ?
         for file in self.filesList:
-            tree = ET.parse("aiml/" + file + ".aiml")
+            file_path = os.path.join(os.path.dirname(__file__), 'aiml\\' + file)
+            tree = ET.parse(file_path)
             self.rootList.append(tree.getroot())
 
     def selectRandomAnswer(self, rand):
@@ -80,21 +86,26 @@ class Parser:
 
     # cauta arhiva pentru un user
     def searchForFile(self, username):
-        filename = username.lower() + ".aiml"
-        for file in glob.glob("aiml/user_definitions/*"):
-            file = file[22:]
+        filename = username + ".aiml"
+        file_path = os.path.join(os.path.dirname(__file__), 'aiml\\user_definitions\\*')
+        for file in glob.glob(file_path):
+            file = file[56:]
             if filename == file.lower():
                 print("found")
                 return True
 
     def createAimlFileForUser(self, username):
-        fo = open("aiml/user_definitions/"+username+".aiml", "w")
+        filename = username + ".aiml"
+        file_path = os.path.join(os.path.dirname(__file__), 'aiml\\user_definitions\\' + filename)
+        fo = open(file_path, "w")
         fo.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<aiml version=\"1.0\">\n")
         fo.write("</aiml>")
         fo.close()
 
     def saveAnswerInUserFile(self, answer, question):
-        fo = open("aiml/user_definitions/" + self.currentUser + ".aiml", "r+")
+        filename = self.currentUser + ".aiml"
+        file_path = os.path.join(os.path.dirname(__file__), 'aiml\\user_definitions\\' + filename)
+        fo = open(file_path, "r+")
         fo.seek(0, 2)
         size = fo.tell()
         fo.truncate(size - 7)  # truncate </aiml>
@@ -103,7 +114,7 @@ class Parser:
         fo.write("</aiml>")
         fo.close()
 
-        self.userRoot = ET.parse("aiml/user_definitions/" + self.currentUser.lower() + '.aiml').getroot()
+        self.userRoot = ET.parse(file_path).getroot()
 
 
 #exista in ductionar "context" care contiune cateva date cateva date despre discutia curenta. Irelevant momentan
