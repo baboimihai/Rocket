@@ -7,9 +7,9 @@ def word_feats(words):
     return dict([(word, True) for word in words])
 import os
 dir = os.path.dirname(__file__)
-negatives = open(os.path.join(dir,"negative_data.txt"),"r")
-positives = open(os.path.join(dir,"positive_data.txt"),"r")
-questions = open(os.path.join(dir,"question_data.txt"),"r")
+negatives = open(os.path.join(dir,"negative_data.txt"),"r",encoding="utf8")
+positives = open(os.path.join(dir,"positive_data.txt"),"r",encoding="utf8")
+questions = open(os.path.join(dir,"question_data.txt"),"r",encoding="utf8")
 
 negative_features = [(word_feats(negative.split()),'neg') for negative in negatives.readlines()]
 positive_features = [(word_feats(positive.split()),'pos') for positive in positives.readlines()]
@@ -29,7 +29,7 @@ classifier = NaiveBayesClassifier.train(trainfeats)
 
 serialized = pickle.dumps(classifier)
 
-f = open("serialized_classifier.txt", "wb")
+f = open(os.path.join(dir,"serialized_classifier.txt"), "wb")
 
 f.write(serialized)
 f.close()

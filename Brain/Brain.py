@@ -3,9 +3,15 @@ import PreProcessing.main
 
 
 def MainBrain(input):
-    return input
-   # parser = AimlCommunication.Parser(input)
-    #return PreProcessing.main.pre_process_text("How old is George?")
+    try:
+        return PreProcessing.main.pre_process_text("George?")
+        #return AimlCommunication.Parser(input)
+    except Exception as e:
+        return str(e)
+
+
+
+    #return
 
     # while True:
     #     pattern = input("Me> ")

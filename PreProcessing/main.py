@@ -50,7 +50,7 @@ def pre_process_text(m_input):
 
         list_of_synonyms = []
         for key in m_keys:
-            list_of_synonyms.append((key[0], get_synonyms(key[0])))
+           list_of_synonyms.append((key[0], get_synonyms(key[0])))
 
         current_dict["synonyms"] = list_of_synonyms
 
