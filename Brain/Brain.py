@@ -1,14 +1,15 @@
 from KB.KnowledgeBase.AimlCommunication import Parser
-#import PreProcessing.main
+import PreProcessing.main
 
 parser = Parser("nume")
 def MainBrain(input):
     try:
-        result=parser.findPattern(input);
+        result=parser.findPattern(input)
+        vParsed=PreProcessing.main.parser(input)
         if result is None:
-            return "Nu stiu"
+            return "Nu stiu"+str(vParsed)
         else:
-            return result
+            return result+str(vParsed)
     except Exception as e:
         return str(e)
 

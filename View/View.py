@@ -4,7 +4,27 @@ from PyQt5.QtWidgets import QMainWindow, QGridLayout, QLabel, QApplication, QWid
     QPushButton, QAction, QLineEdit, QMessageBox
 from PyQt5.QtGui import QPalette, QIcon, QColor, QFont
 from PyQt5.QtCore import pyqtSlot, Qt
+
+import threading
+import time
 from Brain.Brain import MainBrain
+textboxValue = ""
+FinalAnsw = ""
+
+class myThread (threading.Thread):
+    print ("Start")
+    def __init__(self):
+        threading.Thread.__init__(self)
+
+
+    def run(self):
+        def getAnswer(unString):
+            result = MainBrain(textboxValue)
+            return result
+
+        global textboxValue
+        global FinalAnsw
+        FinalAnsw = getAnswer(textboxValue)
 
 class App(QWidget):
     def __init__(self):
@@ -61,10 +81,14 @@ class App(QWidget):
         self.show()
 
     def on_click(self):
+        global textboxValue
         textboxValue = self.textbox.toPlainText()
         self.conversationBox.append("You: " + textboxValue)
-        result = MainBrain(textboxValue)
-        self.conversationBox.append("Rocket: " + result)
+        th = myThread()
+        th.start()
+        th.join()
+        global FinalAnsw
+        self.conversationBox.append("Rocket: " + FinalAnsw)
         self.textbox.setText("")
 
 
@@ -72,4 +96,4 @@ class App(QWidget):
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     ex = App()
-    sys.exit(app.exec_())
+    app.exec_()
