@@ -63,10 +63,7 @@ class App(QWidget):
     def on_click(self):
         textboxValue = self.textbox.toPlainText()
         self.conversationBox.append("You: " + textboxValue)
-        #result = MainBrain(textboxValue)
-        result="Hi"
-        from time import sleep
-        sleep(20)
+        result = MainBrain(textboxValue)
         self.conversationBox.append("Rocket: " + result)
         self.textbox.setText("")
 
@@ -80,4 +77,4 @@ class App(QWidget):
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     ex = App()
-    app.exec_()
+    sys.exit(app.exec_())

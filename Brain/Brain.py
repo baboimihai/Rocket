@@ -1,11 +1,14 @@
-from KB.KnowledgeBase import AimlCommunication
-import PreProcessing.main
+from KB.KnowledgeBase.AimlCommunication import Parser
+#import PreProcessing.main
 
-
+parser = Parser("nume")
 def MainBrain(input):
     try:
-        return PreProcessing.main.pre_process_text("George?")
-        #return AimlCommunication.Parser(input)
+        result=parser.findPattern(input);
+        if result is None:
+            return "Nu stiu"
+        else:
+            return result
     except Exception as e:
         return str(e)
 
