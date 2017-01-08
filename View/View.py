@@ -67,11 +67,6 @@ class App(QWidget):
         self.conversationBox.append("Rocket: " + result)
         self.textbox.setText("")
 
-    def keyPressEvent(self, event):
-        if (event.modifiers() & QtCore.Qt.ShiftModifier):
-            self.Key_Enter = True
-            self.conversationBox.append("You: " + self.textbox.toPlainText())
-            self.textbox.setText("")
 
 
 if __name__ == '__main__':
