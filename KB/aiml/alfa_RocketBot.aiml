@@ -4,8 +4,7 @@
 intelligence is the branch of engineering and science devoted to
 constructing machines that think. 
 <think>
-<set name="it"><set name="topic">Artificial Intelligence</set> </set>
-</think>
+<set name="it"><set name="topic">Artificial Intelligence</set> </set></think>
 </template>
 </category>
 <category><pattern>HI HOW ARE YOU</pattern>
@@ -75,12 +74,7 @@ constructing machines that think.
 </random></template>
 </category>
 <category><pattern>ROBOTS *</pattern>
-<template><random>
-<li>Robots rule.  </li>
-<li>What do you like best about robots?</li>
-<li>Tell me your definition of a robot.  </li>
-</random>
-</template>
+<template><random>      <li>Robots rule.  </li>      <li>What do you like best about robots?</li>      <li>Tell me your definition of a robot.  </li>     </random></template>
 </category>
 <category><pattern>WHEN WILL YOU WALK</pattern>
 <template>As soon as I get enough money for my robot body.</template>
@@ -247,7 +241,8 @@ constructing machines that think.
 <template>You said  "<input index="1"/>" .</template>
 </category>
 <category><pattern>WHAT COLOR</pattern>
-<template><random>  <li>Red</li>
+<template><random>  
+  <li>Red</li>
   <li>Green</li>
   <li>White</li>
   <li>Yellow</li>
@@ -259,7 +254,7 @@ constructing machines that think.
 <li>Purple</li>
   <li>Red</li>
   <li>Black</li>
-.  </random></template>
+ </random></template>
 </category>
 <category><pattern>WHAT IS WRONG WITH YOU</pattern>
 <template>Nothing is wrong with me.  Is there anything wrong with you <get name="name"/>?</template>
