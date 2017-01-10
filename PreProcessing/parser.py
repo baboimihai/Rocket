@@ -10,9 +10,9 @@ def parser(text):
     sentence = pos_tag(words)
 
     grammar = '''
-    Action: {<NN.*>?<VB.*><RB.*>?}
+    Action: {<VB|VBD|VBG|VBN|VBP|VBZ>|<VB|VBD|VBG|VBN|VBP|VBZ><VB|VBD|VBG|VBN|VBP|VBZ>|<VB|VBD|VBG|VBN|VBP|VBZ>.+<VB|VBD|VBG|VBN|VBP|VBZ>+}
     Location: {<IN><NN.*>+}
-    Subject: {<DT>?<JJ>*<NN.*>}
+    Subject: {<JJ>*<NN|NNS|NNP|NNPS|PRP>|<PRP$><JJ*><NN|NNS|NNP|NNPS|PRP>}
     '''
     cp = nltk.RegexpParser(grammar, "Input")
     result = cp.parse(sentence)
