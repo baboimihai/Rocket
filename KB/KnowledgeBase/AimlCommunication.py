@@ -4,7 +4,7 @@ import glob
 import os
 
 class Parser:
-    filesList = ["alfa_RocketBot", "std-brain", "std-dictionary", "std-geography", "std-inventions",
+    filesList = ["did-you-know","alfa_RocketBot", "std-brain", "std-dictionary", "std-geography", "std-inventions",
                  "std-knowledge", "std-personality", "std-pickup", "std-sextalk", "std-sports"]
     rootList = []
     currentUser = ""
@@ -52,7 +52,7 @@ class Parser:
 
     def processTemplate(self, template):
         answer = ""
-        if template.text is None or template.text == "\n" or template.text == "\t" or template.text == " ":
+        if template.text is None or template.text == "\n" or template.text == "\t" or template.text == " " or template.text.isspace():
             answer = self.selectRandomAnswer(template.find("random"))
         else:
             answer = template.text

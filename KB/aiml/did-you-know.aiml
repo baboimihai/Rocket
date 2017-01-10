@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="1.0">
 <category>
-<pattern></pattern>
+<pattern>did you know</pattern>
 <template>
-	<random>
+    <random>
 		<li>Did you know dreamt is the only word that ends in mt</li>
 		<li>Did you know honey is the only natural food which never spoils</li>
 		<li>Did you know all insects have 6 legs</li>
