@@ -116,6 +116,74 @@ class Parser:
 
         self.userRoot = ET.parse(file_path).getroot()
 
+    def setUserProfile(self):
+        print("Rocket> " + "How old are you?")
+        pattern = "How old am I?"
+        answer = input("Me> ")
+        self.saveAnswerInUserFile(answer, pattern)
+        if int(answer) >= 12 and int(answer) <= 30:
+            print("Rocket> " + "Wow! You are young!")
+        print("Rocket> " + "In which city do you live?")
+        city = input("Me> ")
+        print("Rocket> " + "In which country is that?")
+        country = input("Me> ")
+        answer = city + ", " + country
+        pattern = "Where am I from?"
+        self.saveAnswerInUserFile(answer,pattern)
+        print("Rocket> "+ "What's your hair color?")
+        answer = input("Me> ")
+        pattern = "What's my hair color?"
+        self.saveAnswerInUserFile(answer, pattern)
+        print("Rocket> What's your eyes' color?")
+        answer = input("Me> ")
+        pattern = "What's my eye color?"
+        self.saveAnswerInUserFile(answer,pattern)
+        print("Rocket> What's your hobby?")
+        pattern = "What's my hobby?"
+        pattern = "What do I like to do?"
+        answer = input("Me> ")
+        self.saveAnswerInUserFile(answer, pattern)
+        print("Rocket> Are you a student?")
+        answer = input("Me> ")
+        if answer.lower() == "yes":
+            self.saveAnswerInUserFile(answer, "Am I a student?")
+            print("Rocket> What do you study?")
+            answer = input("Me> ")
+            self.saveAnswerInUserFile(answer, "What do I study?")
+            print("Really? I find that very difficult!")
+        else:
+            print("Rocket> Oh..")
+            self.saveAnswerInUserFile("No.", "Am I a student?")
+        print("Rocket> When is your birthday?")
+        answer = input("Me> ")
+        self.saveAnswerInUserFile(answer, "When is my birthday?")
+        print("Rocket> Awesome!")
+        print("Rocket> " + "Do you have kids?")
+        answer = input("Me> ")
+        if answer.lower() == "yes":
+            pattern = "Do I have kids?"
+            answer = "Yes."
+            self.saveAnswerInUserFile(answer, pattern)
+            print("Rocket> " + "How many kids do you have?")
+            pattern = "How many kids do I have?"
+            answer = input("Me> ")
+            self.saveAnswerInUserFile(answer, pattern)
+        if answer.lower() == "no":
+            pattern = "Do I have kids?"
+            answer = "No."
+            self.saveAnswerInUserFile(answer, pattern)
+            print("Rocket> " + "That's a pity...")
+            pattern = "How many kids do I have?"
+            answer = "None."
+            self.saveAnswerInUserFile(answer, pattern)
+        print("Rocket> " + "How tall are you?")
+        pattern = "How tall am I?"
+        answer = input("Me> ")
+        self.saveAnswerInUserFile(answer,pattern)
+        self.saveAnswerInUserFile(answer,"What's my height?")
+
+        
+
 
 #exista in ductionar "context" care contiune cateva date cateva date despre discutia curenta. Irelevant momentan
 #print ("Topic: "+AimlCommunication.context["topic"]+"\n")
