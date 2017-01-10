@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+<category><pattern>What's my name?</pattern>
+<template>anda</template>
+</category>
+<category><pattern>How do I feel today?</pattern>
+<template>fine</template>
+</category>
+<category><pattern>How old am I?</pattern>
+<template>21</template>
+</category>
+<category><pattern>Where am I from?</pattern>
+<template>Iasi, Romania</template>
+</category>
+<category><pattern>What's my hair color?</pattern>
+<template>black</template>
+</category>
+<category><pattern>What's my eye color?</pattern>
+<template>brown</template>
+</category>
+<category><pattern>What do I like to do?</pattern>
+<template>reading</template>
+</category>
+<category><pattern>Am I a student?</pattern>
+<template>yes</template>
+</category>
+<category><pattern>What do I study?</pattern>
+<template>computer science</template>
+</category>
+<category><pattern>When is my birthday?</pattern>
+<template>november 14th</template>
+</category>
+<category><pattern>Do I have kids?</pattern>
+<template>No.</template>
+</category>
+<category><pattern>How many kids do I have?</pattern>
+<template>None.</template>
+</category>
+<category><pattern>How tall am I?</pattern>
+<template>1.70</template>
+</category>
+<category><pattern>What's my height?</pattern>
+<template>1.70</template>
+</category>
+<category><pattern>are you a boy or a girl?</pattern>
+<template>computer program</template>
+</category>
+</aiml>

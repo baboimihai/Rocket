@@ -1,5 +1,6 @@
 from KnowledgeBase import AimlCommunication
 
+
 def talkWithTheChatbot():
     print("Rocket> Who are you?")
     username = input("Me> ")
