@@ -1,23 +1,12 @@
 from KnowledgeBase import AimlCommunication
 
+
 def talkWithTheChatbot():
-    print("Hello!")
     print("Rocket> Who are you?")
     username = input("Me> ")
     parser = AimlCommunication.Parser(username)
-    parser.saveAnswerInUserFile(username, "What's my name?")
-    print("Rocket> How do you feel today?")
-    answer = input("Me> ")
-    parser.saveAnswerInUserFile(answer, "How do I feel today?")
-    print("Rocket> Do you want to make acquaintance?")
-    answer = input("Me> ")
-    if answer.lower() == "yes":
-        parser.setUserProfile()
-    else:
-        print("Rocket> Ok then. How can I help you?")
 
     while True:
-        print("Rocket> How can I help you?")
         pattern = input("Me> ")
         #TODO: goodbye synonims
         result = parser.findPattern(pattern)
