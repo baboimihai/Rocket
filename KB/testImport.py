@@ -1,6 +1,7 @@
 from KnowledgeBase import AimlCommunication
 
 def talkWithTheChatbot():
+    print("Hello!")
     print("Rocket> Who are you?")
     username = input("Me> ")
     parser = AimlCommunication.Parser(username)
