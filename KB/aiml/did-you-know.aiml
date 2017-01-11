@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="1.0">
 <category>
-<pattern>did you know</pattern>
+<pattern>Did you know?</pattern>
 <template>
 	<random>
 		<li>Did you know dreamt is the only word that ends in mt</li>
@@ -283,5 +283,5 @@
 		<li>Did you know 13 people die every year from vending machines</li>
 	</random>
 </template>
-</cateogry>
+</category>
 </aiml>

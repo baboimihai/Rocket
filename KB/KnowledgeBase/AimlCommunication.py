@@ -4,14 +4,14 @@ import glob
 import os
 
 class Parser:
-    filesList = ["did-you-know","alfa_RocketBot", "std-brain", "std-dictionary", "std-geography", "std-inventions",
+    filesList = ["alfa_RocketBot", "std-brain", "std-dictionary", "std-geography", "std-inventions",
                  "std-knowledge", "std-personality", "std-pickup", "std-sextalk", "std-sports"]
     rootList = []
     currentUser = ""
     userRoot = ""
     yesNoRoot = ""
     context = dict()
-    directory = os.path.dirname(os.path.dirname(__file__))
+    directory = ""
     def __init__(self, username):
         self.processAimlFiles()
         self.currentUser = username
@@ -29,6 +29,7 @@ class Parser:
         self.context["topic"] = ""
 
     def  getPath(self,*paths):
+        self.directory = os.path.dirname(os.path.dirname(__file__))
         selfDirectoryCopy = self.directory
         for path in paths:
             selfDirectoryCopy = os.path.join(selfDirectoryCopy,path)
@@ -37,7 +38,8 @@ class Parser:
     #preia toate radacinile si le adauga in rootList
     def processAimlFiles(self):
         for file in self.filesList:
-            tree = ET.parse(self.getPath("aiml", file+".aiml"))
+            path = self.getPath("aiml", file+".aiml")
+            tree = ET.parse(path)
             self.rootList.append(tree.getroot())
 
     def selectRandomAnswer(self, rand):
@@ -90,13 +92,27 @@ class Parser:
 
     def findPatternInCurrentRoot(self, pattern, currentRoot):
         #TODO: process <srai>, <think>, <that>, <get name>, <condition>
+        resultTemplate = ""
         for categ in currentRoot.findall("category"):
             pat = categ.find("pattern")
             # TODO: improve search by using reg expressions
-            if (pat.text is not None and (pat.text.lower() == pattern.lower() or self.matchPattern(pat,pattern.upper()))):
+            if (pat.text is not None and (pat.text.lower() == pattern.lower())):
                 tem = categ.find("template")
-                return self.processTemplate(tem)
+                resultTemplate = self.processTemplate(tem)
+                break
 
+        if (resultTemplate == ""):
+            for categ in currentRoot.findall("category"):
+                pat = categ.find("pattern")
+                # TODO: improve search by using reg expressions
+                if (pat.text is not None and (pat.text.lower() == pattern.lower() or self.matchPattern(pat, pattern.upper()))):
+                    tem = categ.find("template")
+                    resultTemplate = self.processTemplate(tem)
+                    break  # trebuie sa verifice ce inlociuesti * in pattern
+
+        if (resultTemplate == ""):
+            return None
+        return resultTemplate
 
 
     def findPattern(self, pattern):
