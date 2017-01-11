@@ -11,7 +11,7 @@ class Parser:
     userRoot = ""
     yesNoRoot = ""
     context = dict()
-    directory = os.path.dirname(os.path.dirname(__file__))
+    directory = ""
     def __init__(self, username):
         self.processAimlFiles()
         self.currentUser = username
@@ -29,6 +29,7 @@ class Parser:
         self.context["topic"] = ""
 
     def  getPath(self,*paths):
+        self.directory = os.path.dirname(os.path.dirname(__file__))
         selfDirectoryCopy = self.directory
         for path in paths:
             selfDirectoryCopy = os.path.join(selfDirectoryCopy,path)
@@ -37,7 +38,8 @@ class Parser:
     #preia toate radacinile si le adauga in rootList
     def processAimlFiles(self):
         for file in self.filesList:
-            tree = ET.parse(self.getPath("aiml", file+".aiml"))
+            path = self.getPath("aiml", file+".aiml")
+            tree = ET.parse(path)
             self.rootList.append(tree.getroot())
 
     def selectRandomAnswer(self, rand):
@@ -49,10 +51,17 @@ class Parser:
     def processThink(self, thinkTag):
         self.context["it"]=thinkTag.find("set").find("set").text
         self.context["topic"] = self.context["it"]
+    def processSrai(self,sraiTag):
+        pass
+    def processCondition(self,conditionTag):
+        pass
+    def processThat(self,thatTag):
+        pass
 
     def processTemplate(self, template):
         answer = ""
-        if template.text is None or template.text == "\n" or template.text == "\t" or template.text == " ":
+        #TODO sa se verifica urmatorul tag
+        if(template.find("random")):
             answer = self.selectRandomAnswer(template.find("random"))
         else:
             answer = template.text
@@ -61,16 +70,50 @@ class Parser:
             self.processThink(template.find("think"))
         return answer
 
+    def matchPattern(self,patternTag,pattern): #face match si pe pattern care contine un singur * ex: <pattern>A BOOK *</pattern>
+        star = ""
+        if(patternTag is None):
+            return False
+        if("*" not in patternTag.text):
+            return False
+        poz = patternTag.text.find("*")
+        first = patternTag.text[0:poz-1]
+        if(first != pattern[0:poz-1]):
+            return False
+        second = patternTag.text[poz+1:]
+        if(len(second)==0):
+            return True
+        reverseSecond = second[::-1]
+        reversePattern = pattern[::-1]
+        match = reversePattern[0:len(second)]
+        if(match == reverseSecond):
+            return True
+        return False
+
     def findPatternInCurrentRoot(self, pattern, currentRoot):
         #TODO: process <srai>, <think>, <that>, <get name>, <condition>
-        for categ in currentRoot:
-            if (categ.tag == "category"):
-                for pat in categ:
-                    #TODO: improve search by using reg expressions
-                    if pat.tag == "pattern" and (pat.text is not None and pat.text.lower() == pattern.lower()):
-                        for tem in categ:
-                            if (tem.tag == "template"):
-                                return self.processTemplate(tem)
+        resultTemplate = ""
+        for categ in currentRoot.findall("category"):
+            pat = categ.find("pattern")
+            # TODO: improve search by using reg expressions
+            if (pat.text is not None and (pat.text.lower() == pattern.lower())):
+                tem = categ.find("template")
+                resultTemplate = self.processTemplate(tem)
+                break
+
+        if (resultTemplate == ""):
+            for categ in currentRoot.findall("category"):
+                pat = categ.find("pattern")
+                # TODO: improve search by using reg expressions
+                if (pat.text is not None and (pat.text.lower() == pattern.lower() or self.matchPattern(pat, pattern.upper()))):
+                    tem = categ.find("template")
+                    resultTemplate = self.processTemplate(tem)
+                    break  # trebuie sa verifice ce inlociuesti * in pattern
+
+        if (resultTemplate == ""):
+            return None
+        return resultTemplate
+
 
     def findPattern(self, pattern):
         result = self.findPatternInCurrentRoot(pattern, self.userRoot)

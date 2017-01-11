@@ -1,4 +1,4 @@
-from KnowledgeBase import AimlCommunication
+from KB.KnowledgeBase import AimlCommunication
 
 
 def talkWithTheChatbot():
