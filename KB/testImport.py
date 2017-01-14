@@ -1,4 +1,4 @@
-from KB.KnowledgeBase import AimlCommunication
+from KnowledgeBase import AimlCommunication
 
 
 def talkWithTheChatbot():
@@ -22,4 +22,6 @@ def talkWithTheChatbot():
             else:
                 print("Rocket> Ok")
 
-talkWithTheChatbot()
+#talkWithTheChatbot()
+parser = AimlCommunication.Parser("mihai")
+parser.test("WHEN WAS THE FIRST TELEVISION BUILT")

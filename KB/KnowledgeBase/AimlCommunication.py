@@ -12,6 +12,8 @@ class Parser:
     yesNoRoot = ""
     context = dict()
     directory = ""
+    previousRezLen = 0
+    starText = ""
     def __init__(self, username):
         self.processAimlFiles()
         self.currentUser = username
@@ -51,18 +53,30 @@ class Parser:
     def processThink(self, thinkTag):
         self.context["it"]=thinkTag.find("set").find("set").text
         self.context["topic"] = self.context["it"]
+
     def processSrai(self,sraiTag):
         pass
+
     def processCondition(self,conditionTag):
         pass
+
     def processThat(self,thatTag):
         pass
 
     def processTemplate(self, template):
         answer = ""
-        #TODO sa se verifica urmatorul tag
+        #cautarile astea pot fi imbunatatite
         if(template.find("random")):
             answer = self.selectRandomAnswer(template.find("random"))
+        elif (template.find("srai") is not None):
+            srai = template.find("srai")
+            # star ar tb verificat si in alte elemente ?
+            if (srai.find("star") is not None):
+                #print("srai", srai.text, srai.find("star").tail)
+                text = srai.text + self.starText + srai.find("star").tail
+                answer = self.findPattern(text)
+            else:
+                answer = self.findPattern(srai.text)
         else:
             answer = template.text
 
@@ -82,51 +96,65 @@ class Parser:
             return False
         second = patternTag.text[poz+1:]
         if(len(second)==0):
+            print(pattern, patternTag.text)
             return True
         reverseSecond = second[::-1]
         reversePattern = pattern[::-1]
         match = reversePattern[0:len(second)]
         if(match == reverseSecond):
+            self.starText = pattern[len(first)+1:-len(second)]
+            # print(len(pattern[len(first)+1:-len(second)]), pattern[len(first)+1:-len(second)])
             return True
         return False
 
-    def findPatternInCurrentRoot(self, pattern, currentRoot):
-        #TODO: process <srai>, <think>, <that>, <get name>, <condition>
+    def findPatternSimpleSearch(self, pattern, currentRoot):
+        #TODO: process <star>, <think>, <that>, <get name>, <condition>
         resultTemplate = ""
         for categ in currentRoot.findall("category"):
             pat = categ.find("pattern")
-            # TODO: improve search by using reg expressions
-            if (pat.text is not None and (pat.text.lower() == pattern.lower())):
+            if (pat.text is not None and (pat.text == pattern.upper())):
                 tem = categ.find("template")
                 resultTemplate = self.processTemplate(tem)
                 break
 
         if (resultTemplate == ""):
-            for categ in currentRoot.findall("category"):
-                pat = categ.find("pattern")
-                # TODO: improve search by using reg expressions
-                if (pat.text is not None and (pat.text.lower() == pattern.lower() or self.matchPattern(pat, pattern.upper()))):
+            return None
+        return resultTemplate
+
+    def findPatternComplexSearch(self, pattern, currentRoot):
+        #TODO: process <star>, <think>, <that>, <get name>, <condition>
+        resultTemplate = ""
+        for categ in currentRoot.findall("category"):
+            pat = categ.find("pattern")
+            if (pat.text is not None and self.matchPattern(pat, pattern.upper())):
+                # aici e posibil sa gasim mai multe rezultate
+                if (self.previousRezLen < len(pat.text)):
+                    self.previousRezLen = len(pat.text)
                     tem = categ.find("template")
+                    print(tem.text)
                     resultTemplate = self.processTemplate(tem)
-                    break  # trebuie sa verifice ce inlociuesti * in pattern
 
         if (resultTemplate == ""):
             return None
         return resultTemplate
 
-
     def findPattern(self, pattern):
-        result = self.findPatternInCurrentRoot(pattern, self.userRoot)
+        self.previousRezLen = 0
+        result = self.findPatternSimpleSearch(pattern, self.userRoot)
         if result is None:
             for currentRoot in self.rootList:
-                result = self.findPatternInCurrentRoot(pattern, currentRoot)
+                result = self.findPatternSimpleSearch(pattern, currentRoot)
                 if result is not None:
                     return result
-        else:
-            return result
+            for currentRoot in self.rootList:
+                auxLen = self.previousRezLen
+                auxResult = self.findPatternComplexSearch(pattern, currentRoot)
+                if auxLen != self.previousRezLen:
+                    result = auxResult
+        return result
 
     def processAnswer(self, text):
-        return self.findPatternInCurrentRoot(text, self.yesNoRoot)
+        return self.findPatternSimpleSearch(text, self.yesNoRoot)
 
     # cauta arhiva pentru un user
     def searchForFile(self, username):
@@ -135,7 +163,6 @@ class Parser:
         for file in files:
             f = os.path.basename(file)
             if filename == f.lower():
-                print("found")
                 return True
 
     def createAimlFileForUser(self, username):
@@ -156,6 +183,8 @@ class Parser:
 
         self.userRoot = ET.parse(self.getPath("aiml","user_definitions" , self.currentUser.lower() + '.aiml')).getroot()
 
+    def test(self, pattern):
+        print(self.findPattern(pattern))
 
 #exista in ductionar "context" care contiune cateva date cateva date despre discutia curenta. Irelevant momentan
 #print ("Topic: "+AimlCommunication.context["topic"]+"\n")
