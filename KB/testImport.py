@@ -1,4 +1,4 @@
-from KnowledgeBase import AimlCommunication
+from KB.KnowledgeBase import AimlCommunication
 
 
 def talkWithTheChatbot():
@@ -24,4 +24,9 @@ def talkWithTheChatbot():
 
 #talkWithTheChatbot()
 parser = AimlCommunication.Parser("mihai")
-parser.test("WHEN WAS THE FIRST TELEVISION BUILT")
+#teste din aiml vechi
+#parser.testSrai("WHEN WAS THE FIRST TELEVISION BUILT")
+#parser.testSet("WHAT DO YOU WANT TO TALK ABOUT"); # eroare
+#parser.testSet("WHEN IS CHRISTMAS")
+#parser.testGet("WHAT IS WRONG WITH YOU")
+parser.testSet("MALAYSIA")

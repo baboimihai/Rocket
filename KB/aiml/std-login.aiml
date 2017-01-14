@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<aiml version="1.0">
+
+<category>
+<pattern>LOGIN</pattern>
+<template>
+What is your user name?
+</template>
+</category>
+
+<category>
+<pattern>*</pattern>
+<that>WHAT IS YOUR USER NAME</that>
+<template>
+<think><set name="username"><star /></set></think>
+     What is your password?
+</template>
+</category>
+
+<category>
+<pattern>*</pattern>
+<that>WHAT IS YOUR PASSWORD</that>
+<template>
+Thank you.
+</template>
+</category>
+</aiml>

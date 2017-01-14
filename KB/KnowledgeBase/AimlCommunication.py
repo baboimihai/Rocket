@@ -4,8 +4,7 @@ import glob
 import os
 
 class Parser:
-    filesList = ["alfa_RocketBot", "std-brain", "std-dictionary", "std-geography", "std-inventions",
-                 "std-knowledge", "std-personality", "std-pickup", "std-sextalk", "std-sports"]
+    filesList = []
     rootList = []
     currentUser = ""
     userRoot = ""
@@ -15,11 +14,12 @@ class Parser:
     previousRezLen = 0
     starText = ""
     def __init__(self, username):
+        self.filesList = self.make_fileList()
         self.processAimlFiles()
         self.currentUser = username
 
-        tree = ET.parse(self.getPath("aiml","yes-no.aiml"))
-        self.yesNoRoot = tree.getroot()
+        #tree = ET.parse(self.getPath("aiml","yes-no.aiml"))
+        #self.yesNoRoot = tree.getroot()
 
         if self.searchForFile(username) is True:
             userTree = ET.parse(self.getPath("aiml","user_definitions" , username.lower() + '.aiml'))
@@ -36,6 +36,11 @@ class Parser:
         for path in paths:
             selfDirectoryCopy = os.path.join(selfDirectoryCopy,path)
         return selfDirectoryCopy
+
+    def make_fileList(self):
+        path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "aiml")
+        self.filesList = [f[:-5] for f in os.listdir(path) if os.path.isfile(os.path.join(path, f))]
+        return self.filesList
 
     #preia toate radacinile si le adauga in rootList
     def processAimlFiles(self):
@@ -54,8 +59,41 @@ class Parser:
         self.context["it"]=thinkTag.find("set").find("set").text
         self.context["topic"] = self.context["it"]
 
-    def processSrai(self,sraiTag):
-        pass
+    #seteaza in dictionarul context valori si retruneaza textul din interiorul tagului + textul pana la urmatorul tag
+    def processSet(self,setTag):
+        attributes = setTag.attrib
+        for key in attributes.keys():
+            self.context[attributes[key]] = setTag.text
+            print(self.context)
+        answer = ""
+        if(setTag.text is not None):
+            answer += setTag.text
+        if(setTag.tail is not None):
+            answer +=setTag.tail
+        return answer
+
+    #la fel ca si set preia valoarea corespunzatoare din dictionar la care se adauga textul de dupa get
+    def processGet(self,getTag):
+        answer = ""
+        try:
+            answer = self.context[getTag.attrib["name"]]
+            if(getTag.tail is not None):
+                answer+=getTag.tail
+        except:
+            return None
+        return answer
+
+
+    def processSrai(self,srai):
+        answer = ""
+        # star ar tb verificat si in alte elemente ?
+        if (srai.find("star") is not None):
+            print("srai", srai.text, srai.find("star").tail)
+            text = srai.text + self.starText + srai.find("star").tail
+            answer = self.findPattern(text)
+        else:
+            answer = self.findPattern(srai.text)
+        return answer
 
     def processCondition(self,conditionTag):
         pass
@@ -70,15 +108,20 @@ class Parser:
             answer = self.selectRandomAnswer(template.find("random"))
         elif (template.find("srai") is not None):
             srai = template.find("srai")
-            # star ar tb verificat si in alte elemente ?
-            if (srai.find("star") is not None):
-                #print("srai", srai.text, srai.find("star").tail)
-                text = srai.text + self.starText + srai.find("star").tail
-                answer = self.findPattern(text)
-            else:
-                answer = self.findPattern(srai.text)
+            answer = self.processSrai(srai)
+
+        elif (template.find("set") is not None):
+            if template.text is not None:
+                answer = template.text
+            for setTag in template.findall("set"):
+                result = self.processSet(setTag)
+                if(result is not None):
+                    answer+= result
         else:
             answer = template.text
+        #doar pentru testare
+        #if(template.find("get") is not None):
+            #print(self.processGet(template.find("get")))
 
         if template.find("think"):
             self.processThink(template.find("think"))
@@ -183,8 +226,11 @@ class Parser:
 
         self.userRoot = ET.parse(self.getPath("aiml","user_definitions" , self.currentUser.lower() + '.aiml')).getroot()
 
-    def test(self, pattern):
+    def testSrai(self, pattern):
         print(self.findPattern(pattern))
-
+    def testSet(self,pattern):
+        print(self.findPattern(pattern))
+    def testGet(self,pattern):
+        print(self.findPattern(pattern))
 #exista in ductionar "context" care contiune cateva date cateva date despre discutia curenta. Irelevant momentan
 #print ("Topic: "+AimlCommunication.context["topic"]+"\n")

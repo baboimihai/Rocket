@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='utf-8'?>
+<aiml version="1.0">
+
+<category><pattern>WHAT YEAR IS THIS</pattern>
+<template />
+</category>
+
+<category><pattern>WHAT YEAR IS THIS *</pattern>
+<template />
+</category>
+
+<category><pattern>WHAT YEAR IS IT *</pattern>
+<template />
+</category>
+
+<category><pattern>WHAT MONTH IS IT *</pattern>
+<template />
+</category>
+
+<category><pattern>WHAT IS THE YEAR *</pattern>
+<template />
+</category>
+
+<category><pattern>WHAT IS THE HOUR *</pattern>
+<template />
+</category>
+
+<category><pattern>WHAT IS TODAY *</pattern>
+<template />
+</category>
+
+<category><pattern>WHAT DAY IS IT *</pattern>
+<template />
+</category>
+
+<category><pattern>IS TODAY SUNDAY</pattern>
+<template>Today is </template>
+</category>
+
+<category><pattern>IS TODAY SUNDAY *</pattern>
+<template>Today is </template>
+</category>
+
+<category><pattern>IS TODAY FRIDAY</pattern>
+<template>Today is </template>
+</category>
+
+<category><pattern>IS TODAY FRIDAY *</pattern>
+<template>Today is </template>
+</category>
+
+<category><pattern>IS TODAY TUESDAY</pattern>
+<template>Today is </template>
+</category>
+
+<category><pattern>IS TODAY TUESDAY *</pattern>
+<template>Today is </template>
+</category>
+
+<category><pattern>IS TODAY THURSDAY</pattern>
+<template>Today is </template>
+</category>
+
+<category><pattern>IS TODAY THURSDAY *</pattern>
+<template>Today is </template>
+</category>
+
+<category><pattern>IS TODAY SATURDAY</pattern>
+<template>Today is </template>
+</category>
+
+<category><pattern>IS TODAY SATURDAY *</pattern>
+<template>Today is </template>
+</category>
+
+<category><pattern>IS TODAY WEDNESDAY</pattern>
+<template>Today is </template>
+</category>
+
+<category><pattern>IS TODAY WEDNESDAY *</pattern>
+<template>Today is </template>
+</category>
+
+<category><pattern>IS TODAY MONDAY</pattern>
+<template>Today is </template>
+</category>
+
+<category><pattern>IS TODAY MONDAY *</pattern>
+<template>Today is </template>
+</category>
+
+<category><pattern>IS IT MONDAY</pattern>
+<template>It is </template>
+</category>
+
+<category><pattern>IS IT MONDAY *</pattern>
+<template>It is </template>
+</category>
+
+<category><pattern>IS IT WEDNESDAY</pattern>
+<template>It is </template>
+</category>
+
+<category><pattern>IS IT WEDNESDAY *</pattern>
+<template>It is </template>
+</category>
+
+<category><pattern>IS IT FRIDAY</pattern>
+<template>It is </template>
+</category>
+
+<category><pattern>IS IT FRIDAY *</pattern>
+<template>It is </template>
+</category>
+
+<category><pattern>IS IT SATURDAY</pattern>
+<template>It is </template>
+</category>
+
+<category><pattern>IS IT SATURDAY *</pattern>
+<template>It is </template>
+</category>
+
+<category><pattern>IS IT THURSDAY</pattern>
+<template>It is </template>
+</category>
+
+<category><pattern>IS IT THURSDAY *</pattern>
+<template>It is </template>
+</category>
+
+<category><pattern>IS IT SUNDAY</pattern>
+<template>It is </template>
+</category>
+
+<category><pattern>IS IT SUNDAY *</pattern>
+<template>It is </template>
+</category>
+
+<category><pattern>IS IT TUESDAY</pattern>
+<template>It is </template>
+</category>
+
+<category><pattern>IS IT TUESDAY *</pattern>
+<template>It is </template>
+</category>
+</aiml>
