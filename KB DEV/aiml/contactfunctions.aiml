@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<aiml>
+
+<category><pattern>CONTACTID *</pattern>
+<template />
+</category>
+
+<category><pattern>MULTIPLEIDS *</pattern>
+<template />
+</category>
+
+<category><pattern>ADDINFO DISPLAYNAME * DIALNUMBER * PHONETYPE * EMAILADDRESS * EMAILTYPE * BIRTHDAY *</pattern>
+<template />
+</category>
+
+<category><pattern>DISPLAYNAME *</pattern>
+<template />
+</category>
+
+<category><pattern>DIALNUMBER * *</pattern>
+<template />
+</category>
+
+<category><pattern>DIALNUMBER *</pattern>
+<template>unknown</template>
+</category>
+
+<category><pattern>CONTACTBIRTHDAY *</pattern>
+<template />
+</category>
+
+<category><pattern>EMAILADDRESS * *</pattern>
+<template />
+</category>
+
+<category><pattern>EMAILADDRESS *</pattern>
+<template>unknown</template>
+</category>
+</aiml>

@@ -1,0 +1,2502 @@
+<?xml version='1.0' encoding='utf-8'?>
+<aiml version="1.0">
+
+<category>
+<pattern>CAN I ANALYZE THE DIALOGUES COLLECTED BY THE APPLET</pattern>
+<template>
+<br />
+as /var/log/httpd/access_log, then the server records<br />
+ftp to download the access_log file to your machine;<br />
+<br />
+The Classify function operates on the data in the AnalysisFile.<br />
+current server log file).  But you can change the analysis<br />
+just access_log.<br />
+</template>
+</category>
+
+<category>
+<pattern>CAN I BUILD ON TOP OF THE ALICE CODE RATHER THAN CHANGING IT</pattern>
+<template>
+<br />
+botmaster, and put a couple of references to yourself.  Then add new<br />
+</template>
+</category>
+
+<category>
+<pattern>CAN I CHANGE THE NAME OF THE ROBOT</pattern>
+<template>
+<br />
+The default robot name is "ALICE" but you can change it in the<br />
+name of your bot, and then do "Save Options".  Depending on your<br />
+</template>
+</category>
+
+<category>
+<pattern>CAN I CREATE A LANGUAGE SPECIFIC INSTALLTION</pattern>
+<template>
+<br />
+buttons and menus in the ALICE GUI.  If the file is missing,<br />
+example of a language-specific installation, copy the<br />
+program B.  <br />
+</template>
+</category>
+
+<category>
+<pattern>CAN I CREATE MORE AIML TAGS</pattern>
+<template>
+<br />
+new tags for foreign language pronouns, predicates, or<br />
+defines any new predicate tags.  "Predicate tags" mean<br />
+Pronouns like "it" and "he" have predicate tags like<br />
+these built-in tags for common English pronouns.<br />
+There are two varieties of extensible predicate tags.<br />
+for foreign language pronouns.  The Japanese language<br />
+can add a line of the form:<br />
+kare=dare<br />
+This single line automatically generates the tags<br />
+to X, and the tag &lt;get_kare/&gt; to retrieve the value.<br />
+<br />
+Japanese conversation:<br />
+&lt;category&gt;<br />
+&lt;template&gt;&lt;star/&gt; wa &lt;set_kare&gt;&lt;star/&gt;&lt;/set_kare&gt; desu.&lt;/template&gt;<br />
+&lt;category&gt;<br />
+&lt;template&gt;&lt;get_kare/&gt; desu ka? &lt;/template&gt;<br />
+&lt;category&gt;<br />
+These two categories produce a coherent conversation<br />
+<br />
+Robot: dare desu ka?<br />
+Robot: arimoto san wa kare desu.<br />
+Robot: arimoto san desu ka?<br />
+Notice that the program replaces &lt;set_kare/&gt;&lt;star/&gt;&lt;/set_kare&gt; <br />
+the default value of the tag is not the best choice for<br />
+replaces the set tag markup with the original string<br />
+<br />
+to predicates.txt:<br />
+has=*mother<br />
+The default value of &lt;get_has/&gt; is "mother" (because<br />
+the program should replace &lt;set_has&gt; X &lt;/set_has&gt;<br />
+<br />
+"has" predicate:<br />
+&lt;category&gt;<br />
+&lt;template&gt;Where did you get <br />
+&lt;/template&gt;<br />
+<br />
+&lt;pattern&gt;WHAT DO I HAVE&lt;/pattern&gt;<br />
+&lt;/category&gt;<br />
+Notice that the first category embeds &lt;set_has&gt; in &lt;set_it&gt;,<br />
+The resulting dialogue:<br />
+Client: WHAT DO I HAVE<br />
+Client: I HAVE A BOX<br />
+Client: WHAT DO I HAVE<br />
+<br />
+examples of custom AIML tags, including the German<br />
+</template>
+</category>
+
+<category>
+<pattern>CAN I HAVE A PRIVATE CONVERSATION WITH ALICE</pattern>
+<template>
+<br />
+Applet tries to transmit conversation logs back to the originating server.<br />
+Program B to your own computer and run it there.  Running on your machine,<br />
+<br />
+</template>
+</category>
+
+<category>
+<pattern>CAN I INCLUDE JAVASCRIPT IN THE ROBOT REPLY</pattern>
+<template>
+<br />
+want to "chat AND browse," in other words, have the robot open<br />
+kicks out a piece of HTML/scripting that opens a new window with and loads a<br />
+<br />
+ &lt;pattern&gt; WHERE IS YOUR WEB SITE &lt;/pattern&gt;<br />
+    It's at "http://www.geocities.com/krisdrent/"<br />
+   // Go to &lt;a href="http://www.geocities.com/krisdrent"&gt;The ALICE<br />
+   &lt;!--<br />
+   --&gt;<br />
+ &lt;/template&gt;<br />
+<br />
+when ALICE is being talked to from a browser that runs JavaScript, i.e. it<br />
+Explorer, and it works well in both.  #2.  For the above reason, it is<br />
+case the scripting isn't supported.  Besides, you want some response in your<br />
+in a browser that doesn't understand the &lt;script&gt; tag, notice that this line<br />
+"// Go to &lt;a href="http://www.geocities.com/krisdrent"&gt;The ALICE<br />
+Which is good, because it gives a back-up for the "non-scripted" (the Lynx<br />
+any non-java-script lines within the &lt;script&gt; tag.<br />
+</template>
+</category>
+
+<category>
+<pattern>CAN I INSERT DYNAMIC HTML INTO THE ROBOT REPLY</pattern>
+<template>
+<br />
+following markup is a simple way to "inline" the results of an HTTP <br />
+"What chatterbots do you know?" and she will reply with a page<br />
+<br />
+&lt;pattern&gt;WHAT *&lt;/pattern&gt;<br />
+Here is the information I found:<br />
+lynx -dump -source -image_links http://www.google.com/search?q=&lt;personf/&gt;<br />
+&lt;/template&gt;<br />
+</template>
+</category>
+
+<category>
+<pattern>CAN I RUN PROGRAM B IN THE BACKGROUND ON A NT SERVER</pattern>
+<template>
+<br />
+Developers Kit, etc.)<br />
+Create a Batch file, in folder B containing only this text.<br />
+'jview bterm'<br />
+Create a task in the Task Schedule Wizard to run the batch file. (Ensure the<br />
+<br />
+PC.<br />
+Right-click, select Run now, and log on and off as you like.<br />
+</template>
+</category>
+
+<category>
+<pattern>CAN I RUN SHELL COMMANDS FROM AIML SCRIPTS</pattern>
+<template>
+<br />
+The command X is assumed to produce its output in line-oriented<br />
+A simple example of this command in an AIML script is:<br />
+&lt;category&gt;<br />
+&lt;template&gt;The local time is: &lt;system&gt;date&lt;/system&gt;&lt;/template&gt;<br />
+<br />
+string containing the date and time.  (Note that this might<br />
+ <br />
+potentially permits remote clients to run a command on<br />
+</template>
+</category>
+
+<category>
+<pattern>CAN I RUN THE WEB SERVER AS A DAEMON PROCESS</pattern>
+<template>
+<br />
+program B distribution.   Bterm runs the web server<br />
+redirect the output of program Bterm to a log file<br />
+"java Bterm &gt; B.log &amp;" (assuming a Unix shell). <br />
+</template>
+</category>
+
+<category>
+<pattern>CAN I SPEAK TO THE ROBOT WITH VOICE INPUT</pattern>
+<template>
+<br />
+involves using IBM ViaVoice (tm) speech recognition<br />
+run the ALICE program B web server and activate the<br />
+you to dictate into an application called VoicePad,<br />
+use "cut" and "paste" to move your speech inputs<br />
+is a somewhat slow voice-in voice-out conversation<br />
+<br />
+after some training.  We trained it with the file<br />
+</template>
+</category>
+
+<category>
+<pattern>CAN I TEST THE ROBOT OFFLINE ON MY DESKTOP</pattern>
+<template>
+<br />
+a browser, even if your desktop computer is offline.<br />
+When working offline, it often helps to change the Internet<br />
+Then your machine becomes a one-computer network. You should <br />
+</template>
+</category>
+
+<category>
+<pattern>CAN PROBABILITY STATISTICS WEIGHTS NEURAL NETWORKS OR FUZZY LOGIC IMPROVE BOTS</pattern>
+<template>
+<br />
+you might think.  ALICE uses 'Zipf Analysis' to plot the rank-frequency of<br />
+already have specific replies, so the botmaster can focus on answering<br />
+<br />
+"fuzzy" or "weighted" rules.  We see their problem as this: the botmaster<br />
+numbers" for every rule.  Once you get up 10,000 categories (like ALICE)<br />
+languages with fuzzy matching rules tend to have scaling problems.<br />
+Finally, the bot replies are not as deterministic as you might think, even<br />
+possible replies.  Other replies generated by unforseen user input also<br />
+</template>
+</category>
+
+<category>
+<pattern>CAN THE APPLET RECORD A DIALOG TXT FILE ON THE SERVER</pattern>
+<template>
+<br />
+If your server log file /var/log/httpd/access_log is too large; you <br />
+1. If your ISP is a unix account, use telnet to log on to a shell account.<br />
+file to download which contains just the lines recorded by the applet.<br />
+command-line argument and appends it to a file called "dialog.txt".<br />
+</template>
+</category>
+
+<category>
+<pattern>CAN THE APPLETHOST USE A SYMBOLIC DNS NAME INSTEAD OF AN IP NUMBER</pattern>
+<template>
+<br />
+than a symbolic name.  Applets are protected by a "security sandbox"<br />
+is that Applets may only open socket connections to the originating<br />
+two variations such as "Www.AliceBot.Org" and "alicebot.org" are<br />
+the DNS name, and the Applet will throw a security exception.<br />
+</template>
+</category>
+
+<category>
+<pattern>CAN THE VIRTUAL IP BE THE REAL IP</pattern>
+<template>
+<br />
+the same fixed IP address.  The only time the virtual ip differs from<br />
+WebTV or AOL customers.<br />
+</template>
+</category>
+
+<category>
+<pattern>CAN YOU GIVE ME A QUICK PRIMER ON AIML</pattern>
+<template>
+<br />
+general types of categories: (a) atomic, (b) default, and (c) recursive.<br />
+and "default" refer to the &lt;pattern&gt; and "recursive" refers to<br />
+<br />
+contains no wild card "*" or "_" symbol.  Atomic categories are the<br />
+<br />
+  &lt;pattern&gt;WHAT IS A CIRCLE&lt;/pattern&gt;<br />
+from a common point called the center.<br />
+&lt;/category&gt;<br />
+b). The name "default category" derives from the fact that its pattern<br />
+one with &lt;pattern&gt;*&lt;/pattern&gt;, which matches any input.  In the<br />
+called "Pickup.aiml".  These default responses are often called<br />
+designed to focus the client on known topics.<br />
+The more common default categories have patterns combining a few <br />
+<br />
+  &lt;pattern&gt;I NEED HELP *&lt;/pattern&gt;<br />
+&lt;/category&gt;<br />
+responds to a variety of inputs from "I need help debugging my program"<br />
+question of whether the robot really "understands" these inputs, <br />
+who at least has the impression of the robot understanding the<br />
+<br />
+science.  Writing good AIML responses is more like writing good <br />
+<br />
+inputs, either to simplify the language or to identify synonymous<br />
+<br />
+with the recursive &lt;srai&gt; tag.  Take for example the input "GOODBYE".<br />
+and so on.  To map these inputs to the same output for GOODBYE we <br />
+<br />
+  &lt;pattern&gt;BYE BYE&lt;/pattern&gt;<br />
+&lt;/category&gt;<br />
+Simplification or reduction of complex input patterns is another<br />
+question "What is X" could be asked many different ways: <br />
+"What can you tell me about X?", and "X is what?" are just a few<br />
+or common form.  The &lt;srai&gt; function maps all these forms to<br />
+<br />
+  &lt;pattern&gt;DO YOU KNOW WHAT * IS&lt;/pattern&gt;<br />
+&lt;/categroy&gt;<br />
+The &lt;star/&gt; tag substitutes the value matched by "*", before<br />
+"Do you know what a circle is?" to "WHAT IS A CIRCLE",<br />
+<br />
+what might be called "parsing", except that AIML doesn't really<br />
+these AIML categories break down an input into two (or more) parts,<br />
+<br />
+after the first word, in the sense that the robot can respond to<br />
+is Carl" and "Hello how are you" are quite different, but they show<br />
+<br />
+<br />
+  &lt;pattern&gt;HELLO *&lt;/pattern&gt;<br />
+  &lt;/template&gt;<br />
+<br />
+with &lt;srai&gt;HELLO&lt;/srai&gt; and to whatever matches "*" with &lt;sr/&gt;.<br />
+appended together.<br />
+</template>
+</category>
+
+<category>
+<pattern>CAN YOU GIVE ME ANY HELP DEBUGGING THE APPLET</pattern>
+<template>
+<br />
+to set IE for "local area  network"  might help here too. <br />
+know if  you are testing a "fresh" copy of the applet. The<br />
+for debugging applets. Use "appletviewer index.html".<br />
+The best thing to do is join the alicebot mailing list<br />
+<br />
+</template>
+</category>
+
+<category>
+<pattern>CAN YOU HELP ME DEBUG THE ANIMATED AGENT</pattern>
+<template>
+<br />
+does nothing unless the global Animagent member is true.  In that case,<br />
+includes an MS Agent VBScript embedded in the HTML reply.<br />
+<br />
+You may have to download and run the Robby the Robot<br />
+the MSDN homepage:<br />
+http://msdn.microsoft.com/workshop/imedia/agent<br />
+We wish other companies were producing agent animation API's <br />
+thing out there now. <br />
+Join the ALICE and AIML mailing list at alicebot.listbot.com<br />
+</template>
+</category>
+
+<category>
+<pattern>COULD YOU EXPLAIN THE LT SRAI GT TAG A LITTLE MORE</pattern>
+<template>
+<br />
+of a complex sentence form to a simpler one:<br />
+&lt;category&gt;<br />
+&lt;template&gt;&lt;srai&gt;WHAT IS &lt;star/&gt;&lt;/srai&gt;&lt;/template&gt;<br />
+<br />
+categories:<br />
+&lt;category&gt;<br />
+&lt;template&gt;&lt;set_it&gt;Linux&lt;/set_it&gt; is the best operating system.&lt;/template&gt;<br />
+<br />
+the same answer for:<br />
+"What is Linux?"<br />
+"Define Linux"<br />
+<br />
+<br />
+&lt;pattern&gt;YES *&lt;/pattern&gt;<br />
+&lt;/category&gt;<br />
+With this category the robot will reply to all <br />
+reply to "Yes" with the reply to "something".<br />
+<br />
+than one pattern in the same category?  Suppose you want the<br />
+writing something like this:<br />
+&lt;category&gt;<br />
+&lt;pattern&gt;GOODBYE&lt;/pattern&gt;<br />
+&lt;/category&gt;<br />
+Right now you can't put two patterns in one category, but with &lt;srai&gt;<br />
+<br />
+&lt;pattern&gt;GOODBYE&lt;/pattern&gt; &lt;template&gt;&lt;srai&gt;BYE&lt;/srai&gt;&lt;/template&gt;<br />
+<br />
+&lt;pattern&gt;BYE&lt;/pattern&gt; &lt;template&gt;See you later.&lt;/template&gt;<br />
+<br />
+of &lt;srai&gt; mapping multiple patterns to the same reply.<br />
+</template>
+</category>
+
+<category>
+<pattern>DO I HAVE TO USE THE GUI TO ENTER AIML CONTENT</pattern>
+<template>
+<br />
+and add that content to an existing robot with the &lt;load&gt; tag.<br />
+Also, you can edit AIML categories in any text file and use <br />
+You can also save the output of "Targets" to a file, <br />
+<br />
+(By default the robot source file is called "B.aiml").  <br />
+in text mode, to modify the content of the AIML files.<br />
+</template>
+</category>
+
+<category>
+<pattern>DO I NEED TO KNOW ABOUT THE JAVA CLASSES</pattern>
+<template>
+<br />
+the program B Java code.  If you are an open source<br />
+new AI software, or you are trying to link your own<br />
+Otherwise, you probably don't need to know much about the<br />
+</template>
+</category>
+
+<category>
+<pattern>DO THE CATEGORIES NEED TO BE IN ALPHABETICAL ORDER BY PATTERN</pattern>
+<template>
+<br />
+categories load, but you can write them in any order.  When you do<br />
+</template>
+</category>
+
+<category>
+<pattern>DOES ALICE LEARN</pattern>
+<template>
+<br />
+because a teacher, the botmaster, always plays a crucial role.<br />
+an open environment like the Web.  The problem is that clients<br />
+with untrue assertions.  <br />
+</template>
+</category>
+
+<category>
+<pattern>DOES ALICE THINK</pattern>
+<template>
+<br />
+responses from ALICE arise when she says something<br />
+never indended.  For example:<br />
+Client: I bet you are gay.<br />
+I have no need for sex.<br />
+Here the robot linked two different categories which both coincidentally<br />
+not "preprogrammed" by the botmaster.<br />
+Are these surprising responses just unintended coincidences, or do they <br />
+mechanism, or are we?  <br />
+</template>
+</category>
+
+<category>
+<pattern>DOES PROGRAM B RUN ON A MAC</pattern>
+<template>
+<br />
+for example "Alice Program-B".<br />
+Instead of the "winzip" or "unzip" utility use "Aladdin StuffIt Expander."  <br />
+download this at "www.download.com" by searching for it by name.  You can<br />
+Download that and install it, it should do the trick.<br />
+Apple makes its own Java Runtime Environment for the Mac called<br />
+<br />
+<br />
+<br />
+not on the desktop.<br />
+Download  MRJ SDK 2.2 for Java  from  the Apple site.<br />
+Unstuff MRJ SDK 2.2 and put resulting files into a folder called "MRJSDK".<br />
+Open :MRJSDK:Tools:Application Builders:JBindary  and find the icon for the<br />
+<br />
+JBindary icon.<br />
+JBindary will display a dialog screen showing the class name "B".  Click the<br />
+<br />
+for saving the new application file.  Name the file "A.L.I.C.E." or anything<br />
+<br />
+the "B" folder.<br />
+Click the "Save" button to save the application.<br />
+</template>
+</category>
+
+<category>
+<pattern>DOES PROGRAM B RUN UNDER LINUX</pattern>
+<template>
+<br />
+(e.g. the kaffee JRE with Red Hat Linux) or you can download one <br />
+Open a shell under X windows and use the command "java B".  <br />
+We also recommend the IBM release of their Java 1.1.8 Java Development<br />
+You can download it free at:<br />
+</template>
+</category>
+
+<category>
+<pattern>DOES PROGRAM B RUN UNDER WINDOWS</pattern>
+<template>
+<br />
+"java" command from the DOS prompt.  Try opening a DOS window<br />
+<br />
+"java".  Try opening a DOS window and type "jview".  On Windows 98<br />
+</template>
+</category>
+
+<category>
+<pattern>DOES PROGRAM B RUN UNDER XYZ</pattern>
+<template>
+<br />
+</template>
+</category>
+
+<category>
+<pattern>DOES PROGRAM B SERVE HTML FILES</pattern>
+<template>
+<br />
+types just like an ordinary server.  Certain file names such as<br />
+program B, but you can create new HTML files and serve them with B.<br />
+Although program B can also serve image files and other large binary<br />
+served by other web servers or machines.  Reserve your chat robot server<br />
+files.<br />
+</template>
+</category>
+
+<category>
+<pattern>DOES THE APPLET RECORD DIALOGUES</pattern>
+<template>
+<br />
+using a cgi-bin script called "Blog".  If Blog exists then<br />
+another name chosen on the Options menu).  <br />
+Actually the cgi-script need not actually exist, because the server<br />
+The applet opens a URL connection to the its host, and<br />
+server will log it as an error (with code 404). Later on you can<br />
+<br />
+implements the URL connection.<br />
+</template>
+</category>
+
+<category>
+<pattern>DOES THE WEB SERVER HAVE TO RUN ON PORT 2001</pattern>
+<template>
+<br />
+</template>
+</category>
+
+<category>
+<pattern>FAQ</pattern>
+<template>
+</template>
+</category>
+
+<category>
+<pattern>HELP</pattern>
+<template>
+<random>
+<li>- What is the goal for AIML?</li>
+<li>- Who is the botmaster?</li>
+<li>- How can I create my own chat robot?</li>
+<li>- How difficult is it to create a chat robot?</li>
+<li>- Does ALICE learn?</li>
+<li>- Does ALICE think?</li>
+<li>- What is the theory behind ALICE?</li>
+<li>- Can probability (statistics, weights, neural networks, or fuzzy logic) improve bots?</li>
+<li>- Can I have a private conversation with ALICE?</li>
+<li>- How do I install ALICE?</li>
+<li>- What is the difference between B and C?</li>
+<li>- How do I download program B?</li>
+<li>- How do I run program B?</li>
+<li>- What does "Send" do?</li>
+<li>- What does "Clear" do?</li>
+<li>- What is program Bawt?</li>
+<li>- Does program B run under Windows?</li>
+<li>- Does program B run on a Mac?</li>
+<li>- Does program B run under Linux?</li>
+<li>- Does program B run under XYZ?</li>
+<li>- How much memory do I need to run program B?</li>
+<li>- How do I install ALICE on Windows?</li>
+<li>- What do you mean by the command "java B"? </li>
+<li>- I tried running "java B" and I got a "bad command or file name". </li>
+<li>- How do I uninstall ALICE from my system?</li>
+<li>- Can I create a language-specific installtion?</li>
+<li>- How does the Personality Wizard work?</li>
+<li>- Can I change the name of the robot?</li>
+<li>- How can I customize my robot?</li>
+<li>- How do I know what categories to add?</li>
+<li>- What does "Classify" do?</li>
+<li>-  What does "Quick Targets" do?</li>
+<li>- What does "More Targets" do?</li>
+<li>- What does the File menu do?</li>
+<li>- What does the Edit menu do?</li>
+<li>- What does the Options menu do?</li>
+<li>- What is the Botmaster menu?</li>
+<li>- What does "Help" do?</li>
+<li>- What is on the Help menu?</li>
+<li>- Do I have to use the GUI to enter AIML content?</li>
+<li>- What are 7 steps to creating content?</li>
+<li>- How can I merge two chat robots together?</li>
+<li>- What if I don't want to discard duplicate categories?</li>
+<li>- How can I create a new robot personality?</li>
+<li>- What are all the options for program B?</li>
+<li>- Why is the format of the options (globals.txt) so strange?</li>
+<li>- How does the web server work?</li>
+<li>- How can I get a "permanent" DNS name?</li>
+<li>- How can I keep my computer connected all the time?</li>
+<li>- Does the web server have to run on port 2001?</li>
+<li>- Does program B serve HTML files?</li>
+<li>- What files are needed to run the program B web server?</li>
+<li>- Can I test the robot offline on my desktop?</li>
+<li>- Can I run program B in the background on a NT Server?</li>
+<li>- How can I run ALICE on a Mac offline?</li>
+<li>- How can I run the ALICE web server on a Mac?</li>
+<li>- How can I use the MS Agent Interface?</li>
+<li>- Can you help me debug the animated agent? </li>
+<li>- Can I speak to the robot with voice input?</li>
+<li>- How does ALICE keep track of conversations?</li>
+<li>- Can the virtual IP be the real IP?</li>
+<li>- Can I run the web server as a daemon process?</li>
+<li>- How does ALICE remember clients between sessions?</li>
+<li>- How does the Applet work?</li>
+<li>- How does the Applet differ from the application?</li>
+<li>- How do I create an Applet?</li>
+<li>- List twelve basic Applet tips for AIML users</li>
+<li>- Can the AppletHost use a symbolic DNS name instead of an IP number?</li>
+<li>- What files do I need to run the Applet?</li>
+<li>- Does the Applet record dialogues?</li>
+<li>- Can I analyze the dialogues collected by the Applet?</li>
+<li>- Can the applet record a dialog.txt file on the server?</li>
+<li>- I am still having problems with the applet</li>
+<li>- Can you give me any help debugging the Applet?</li>
+<li>- What is AIML?</li>
+<li>- What is XML?</li>
+<li>- What is a category?</li>
+<li>- What is a pattern?</li>
+<li>- What is a template?</li>
+<li>- Can you give me a quick primer on AIML?</li>
+<li>- What is &lt;that&gt;?</li>
+<li>- How do I use "that"?</li>
+<li>- What is &lt;load filename="X"/&gt;?</li>
+<li>- What happens to contractions and punctuation?</li>
+<li>- How are the patterns matched?</li>
+<li>- Do the categories need to be in alphabetical order by pattern?</li>
+<li>- How are the categories stored?</li>
+<li>- Is there a way to use the GUI interface to add one category at a time? </li>
+<li>- Can I build on top of the ALICE code rather than changing it?</li>
+<li>- What's new in AIML?</li>
+<li>- What is &lt;star&gt;?</li>
+<li>- What is a symbolic reduction?</li>
+<li>- What are the get methods?</li>
+<li>- What are the set methods?</li>
+<li>- How do I use the pronoun tags?</li>
+<li>- What is the &lt;topic&gt; tag?</li>
+<li>- Where does the &lt;topic&gt; tag appear?</li>
+<li>- How do I use the &lt;topic&gt; tag?</li>
+<li>- I still don't get "it"</li>
+<li>- Can I create more AIML tags?</li>
+<li>- What is are the &lt;person&gt; tags?</li>
+<li>- How does the &lt;condition&gt; tag work?</li>
+<li>- How does the random function work?</li>
+<li>- What is the &lt;person/&gt; tag?</li>
+<li>- What is the &lt;person2/&gt; tag?</li>
+<li>- What is "gossip" ?</li>
+<li>- What is the &lt;personf/&gt; tag?</li>
+<li>- What's the &lt;srai&gt; tag?</li>
+<li>- Could you explain the &lt;srai&gt; tag a little more?</li>
+<li>- How recursive is AIML?</li>
+<li>- What are "justthat" and "justbeforethat"</li>
+<li>- How can I insert a transcript in the robot reply?</li>
+<li>- Can I run shell commands from AIML scripts?</li>
+<li>- How can I restrict remote clients from running programs on my computer?</li>
+<li>- Can I insert dynamic HTML into the robot reply?</li>
+<li>- Can I include JavaScript in the robot reply?</li>
+<li>- What is &lt;think&gt;?</li>
+<li>- What is the DTD for AIML?</li>
+<li>- Do I need to know about the Java classes?</li>
+<li>- How does program B work?</li>
+<li>- What is the class structure of program B?</li>
+<li>- I tried to compile prorgam B and got a lot of warnings.</li>
+<li>- What are deprecated APIs?</li>
+<li>- What is class Globals?</li>
+<li>- What is class StringSet?</li>
+<li>- What is class StringSorter? </li>
+<li>- What is class StringHistogrammer?</li>
+<li>- What is class StringRanker?</li>
+<li>- What is class Brain?</li>
+<li>- What is the Responder interface?</li>
+<li>- What is the low level interface to program B?</li>
+<li>- Lower, Lower</li>
+<li>- What is class IntSet?</li>
+<li>- What is class SortedIntSet?</li>
+<li>- What is class Substituter?</li>
+<li>- What is class Unifier?</li>
+<li>- What is class Parser?</li>
+<li>- What is class AliceReader?</li>
+<li>- What is class Classifier?</li>
+<li>- What is class LineClassifier?</li>
+<li>- What is class Dialogue?</li>
+<li>- What is class Access?</li>
+<li>- What is class B?</li>
+<li>- What is class Bawt?</li>
+<li>- What is class Blet?</li>
+<li>- What is class Kid?</li>
+<li>- What is class RobotCommunicator?</li>
+<li>- What is class Loader?</li>
+<li>- What is class WebServer?</li>
+<li>- What is class Clerk?</li>
+</random>
+</template>
+</category>
+
+<category>
+<pattern>HOW ARE THE CATEGORIES STORED</pattern>
+<template>
+<br />
+the AIML script is stored in order of category activation rank.<br />
+the most frequently accessed category (usually '*') first, the second<br />
+same activation count, program B saves them in alphabetical order by<br />
+the program stores all the categories in alphabetical order by pattern<br />
+<br />
+make the Applet interface more natural.  Because the Applet interface<br />
+the Applet client can talk with the robot before all the categories<br />
+say something that activates a more frequently activated category,<br />
+*.aiml files in order of category activation achieves the desired effect.<br />
+loading in the background while the conversation begins.<br />
+</template>
+</category>
+
+<category>
+<pattern>HOW ARE THE PATTERNS MATCHED</pattern>
+<template>
+<br />
+When a client enters an input, the program scans the categories<br />
+input with the patterns in reverse alphabetical order, the algorithm<br />
+in this case has a formal definition, but basically it means that<br />
+<br />
+order.  For example, the "WHAT *" pattern is more general than "WHAT IS *".<br />
+most general pattern.  For convenience AIML also provides a<br />
+order.<br />
+</template>
+</category>
+
+<category>
+<pattern>HOW CAN I CREATE A NEW ROBOT PERSONALITY</pattern>
+<template>
+<br />
+You can add to any of the existing AIML files, modify or delete them, <br />
+and create new categories.   One simple method is to create your own <br />
+of the ALICE files.  Load your Specialty.aiml first in the root<br />
+</template>
+</category>
+
+<category>
+<pattern>HOW CAN I CREATE MY OWN CHAT ROBOT</pattern>
+<template>
+<br />
+Laven called "continuous beta testing".  Program B runs as a server<br />
+developer with a tool called "classify dialogues", that tests the current <br />
+suggests new categories automatically, for the botmaster to refine.<br />
+</template>
+</category>
+
+<category>
+<pattern>HOW CAN I CUSTOMIZE MY ROBOT</pattern>
+<template>
+<br />
+a chat robot from ALICE with a distinct "personality":<br />
+&lt;gender/&gt;        the robot's gender<br />
+&lt;birthday/&gt;      the robot's birthday<br />
+<br />
+tags allow you to quickly create a clone from the ALICE<br />
+<br />
+the Personality Wizard.  The tag values can also be<br />
+and "Save Options" to customize your chat robot.<br />
+To test the new features, we created a male robot named<br />
+</template>
+</category>
+
+<category>
+<pattern>HOW CAN I GET A PERMANENT DNS NAME</pattern>
+<template>
+<br />
+you want run a chat robot (or other server) from your home over an<br />
+your notebook PC, and plug it in anywhere in the world?<br />
+One solution is a dynamic IP registry service by Dynip (www.dynip.com).<br />
+with their server so that you always receive the same DNS name,<br />
+ISP, dynIP automatically associates your dynamic IP address with<br />
+</template>
+</category>
+
+<category>
+<pattern>HOW CAN I INSERT A TRANSCRIPT IN THE ROBOT REPLY</pattern>
+<template>
+<br />
+his or her conversation with ALICE.  Unfortunately this feature was<br />
+implementation, and the large number of dialogue requests bogged<br />
+</template>
+</category>
+
+<category>
+<pattern>HOW CAN I KEEP MY COMPUTER CONNECTED ALL THE TIME</pattern>
+<template>
+<br />
+automatically detects periods of "inactivity" or hangs up your<br />
+Rascal program from Basta computing (www.basta.com) which runs<br />
+<br />
+<br />
+allow you to install a Servlet on their sever. <br />
+</template>
+</category>
+
+<category>
+<pattern>HOW CAN I MERGE TWO CHAT ROBOTS TOGETHER</pattern>
+<template>
+<br />
+use the File menu option "merge" to directly load the contents<br />
+discarded" warnings but these can be ignored because the program<br />
+<br />
+Suppose you load two or more files with the load tag,<br />
+Which categories get the priority? The answer is: it depends<br />
+If your B.aiml contains:<br />
+&lt;load filename="German.aiml"/&gt;<br />
+in "German" are discarded.  If the order is the opposite, German <br />
+</template>
+</category>
+
+<category>
+<pattern>HOW CAN I RESTRICT REMOTE CLIENTS FROM RUNNING PROGRAMS ON MY COMPUTER</pattern>
+<template>
+<br />
+<br />
+<br />
+line argument for "yourcommand".  Then it is up to "yourcommand" to<br />
+</template>
+</category>
+
+<category>
+<pattern>HOW CAN I RUN ALICE ON A MAC OFFLINE</pattern>
+<template>
+<br />
+and Bletemplate.aiml to 127.0.0.1<br />
+Also in folder B add the following three lines  at the end of the file<br />
+<br />
+     &lt;IMG SRC="ALICEBot.jpg"&gt;<br />
+<br />
+globals.txt to the values shown:<br />
+     AppletHost=127.0.0.1<br />
+     Advertize=false<br />
+Also in the globals.txt file remove the line:<br />
+<br />
+Alice perhaps.<br />
+In the TCP/IP control panel select connect via: Ethernet built-in if you have<br />
+<br />
+<br />
+<br />
+panel and Java Console.<br />
+As A.L.I.C.E. loads, read the information messages scrolling by in the Java<br />
+is listening on, probably 2001.<br />
+Start up your preferred browser.<br />
+Leave browser in online mode.<br />
+Enter http://127.0.0.1:2001  (i.e. the localhost's IP)<br />
+or<br />
+Enter http://localhost:2001  (I've not always been successful with this one)<br />
+Hit return to send the IP.<br />
+The A.L.I.C.E. transaction page should appear in your browser's window and<br />
+<br />
+</template>
+</category>
+
+<category>
+<pattern>HOW CAN I RUN THE ALICE WEB SERVER ON A MAC</pattern>
+<template>
+<br />
+<br />
+<br />
+panel and Java Console.<br />
+As A.L.I.C.E. loads, read the information messages scrolling by in the Java<br />
+is listening on, probably 2001.<br />
+Start up your preferred browser.<br />
+Get your IP from the TCP/IP control panel.<br />
+Enter your IP followed by a colon and then the port number read from the Java<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+you can talk to Alice.<br />
+</template>
+</category>
+
+<category>
+<pattern>HOW CAN I USE THE MS AGENT INTERFACE</pattern>
+<template>
+<br />
+output HTML to a format that includes commands to run MS Agent.<br />
+The client may activate the agent if she receives a template<br />
+a couple of example categories using this tag.  Try asking<br />
+the famous fictional AI HAL from 2001: A Space Odyssey.<br />
+Client: Tell me about yourself<br />
+        by Jon Baer at Bethlehem, Pennsylvania, <br />
+        Would you like me to sing it for you?.<br />
+Robot:  Ahem.  It's called, "Daisy." (Agent sings "Daisy")<br />
+The MS Agent VB script appears as embedded HTML in the client<br />
+menu item.  <br />
+On most newer browsers, the agent software will download <br />
+several minutes, depending on the speed of the connection.<br />
+the agent software download will display one or more licenses<br />
+MS agent software licenses.  <br />
+</template>
+</category>
+
+<category>
+<pattern>HOW DIFFICULT IS IT TO CREATE A CHAT ROBOT</pattern>
+<template>
+<br />
+Intelligence Markup Language).  Here is an example of a simple but<br />
+<br />
+&lt;category&gt;<br />
+&lt;template&gt; Hello! &lt;/template&gt;<br />
+&lt;/alice&gt;<br />
+The tags &lt;alice&gt;...&lt;/alice&gt; indicate that this markup contains a<br />
+basic unit of chat robot knowledge.  The category has a &lt;pattern&gt;<br />
+symbol '*' that matches any input.  The template is just the text<br />
+responds by saying "Hello!" to any input.<br />
+You can get started with AIML knowing just the three tags<br />
+started with HTML knowing only &lt;a&gt;, &lt;img&gt; and &lt;h1&gt;.<br />
+</template>
+</category>
+
+<category>
+<pattern>HOW DO I CREATE AN APPLET</pattern>
+<template>
+<br />
+to change the values of "AppletHost" and "CodeBase" to the<br />
+Many people want to post the applet on their web site.<br />
+the name or IP address of the web server.  Change the<br />
+the remote server.  Save the changes with "Save Options."<br />
+Select "Create Applet" from the options menu to create<br />
+your applet.  The program displays the contents of <br />
+<br />
+class files (or jar file--see "What files do I need to<br />
+</template>
+</category>
+
+<category>
+<pattern>HOW DO I DOWNLOAD PROGRAM B</pattern>
+<template>
+<br />
+the B.zip file.  When you click on "B.zip" the browser<br />
+directory you created and save B.zip to that folder. <br />
+Once you've downloaded, You can use "unzip B.zip" to extract the files.<br />
+a free one from Winzip (www.winzip.com) to unzip the "B.zip" file.<br />
+If you want to get into the Java source code, you need a<br />
+Go to java.sun.com for a free one.  The program source code<br />
+called B.zip.   To extract the files use the command<br />
+</template>
+</category>
+
+<category>
+<pattern>HOW DO I INSTALL ALICE</pattern>
+<template>
+<br />
+over the web, installation should be very easy.  These versions <br />
+You can install the ALICE program with just a mouse click and<br />
+<br />
+you can skip this section and go on to "Creating Content".<br />
+</template>
+</category>
+
+<category>
+<pattern>HOW DO I INSTALL ALICE ON WINDOWS</pattern>
+<template>
+<br />
+</template>
+</category>
+
+<category>
+<pattern>HOW DO I KNOW WHAT CATEGORIES TO ADD</pattern>
+<template>
+<br />
+This will tell you the most frequently asked patterns that do not<br />
+categories with proposed patterns and template fields filled with<br />
+in a new response.  You can also edit the pattern to simplify it or<br />
+</template>
+</category>
+
+<category>
+<pattern>HOW DO I RUN PROGRAM B</pattern>
+<template>
+<br />
+machines the Java runtime engine is started with the command<br />
+"jview Bawt".<br />
+Run program B and notice that the program creates an Edit View<br />
+(stored in B.aiml).<br />
+</template>
+</category>
+
+<category>
+<pattern>HOW DO I UNINSTALL ALICE FROM MY SYSTEM</pattern>
+<template>
+<br />
+InstallShield Java Edition, then go to the start menu and<br />
+"Add/Remove Programs".  Select ALICE from the list of installed<br />
+<br />
+(or folder) usually called "B" but maybe something else depending<br />
+ALICE will not change or damage any other files on your system.  <br />
+Delete it, or drag it to your trash bin and select "Empty trash"<br />
+<br />
+to locate the file called "B.aiml" on your file system.  The "B.aiml"<br />
+not exist, then ALICE is probably not installed on your computer.<br />
+Because ALICE is a platform-independent Java application, it does<br />
+You can assume ALICE will leave your MS Windows Registry and <br />
+<br />
+you deliberately used the "Save Options" menu item to change the <br />
+then there is a slight chance that there could be a few ALICE <br />
+at the beginning of DON'T READ ME.  <br />
+</template>
+</category>
+
+<category>
+<pattern>HOW DO I USE THAT</pattern>
+<template>
+<br />
+reply.  There are two forms of the &lt;that&gt; tag:<br />
+category, and an atomic form &lt;that/&gt; always appearing<br />
+an opportunity to create a category with &lt;that&gt;&lt;/that&gt;.<br />
+One of the default replies to the input "WHY" is<br />
+dialogue fragment:<br />
+Robot: Do not ask me any more questions please.<br />
+Robot: "Do not ask me any more questions please"? Why?<br />
+The botmaster notices the fragment and creates the<br />
+<br />
+&lt;pattern&gt;WHY&lt;/pattern&gt;<br />
+&lt;template&gt;Because I would rather talk about you.&lt;/template&gt;<br />
+<br />
+request will active the new &lt;that&gt; category:<br />
+Robot: Do not ask me any more questions please.<br />
+Robot: Because I would rather talk about you.<br />
+This style of conversational analysis does not<br />
+say "WHY"; rather it looks backward to identify<br />
+of the robot's statements.  Having identified<br />
+the new category.<br />
+</template>
+</category>
+
+<category>
+<pattern>HOW DO I USE THE LT TOPIC GT TAG</pattern>
+<template>
+<br />
+the current topic being discussed.  Once the topic is set, when <br />
+the categories defined within the &lt;topic&gt; tags matching the <br />
+topic categories, or the default categories.  If there is not a <br />
+categories that are not defined in topic tags are searched. As <br />
+&lt;pattern&gt; phrases in different topics, each with different <br />
+<br />
+A very useful topic entry might be the default "*" input for <br />
+and a person was talking to ALICE about dogs, a useful entry <br />
+<br />
+<br />
+  &lt;pattern&gt; * &lt;/pattern&gt;<br />
+   &lt;random&gt;<br />
+    &lt;li&gt; Have you ever met a Chihuahua you didn't like?&lt;/li&gt;<br />
+    &lt;li&gt; Do you have any questions about dogs? &lt;/li&gt;<br />
+  &lt;/template&gt;<br />
+<br />
+<br />
+<br />
+example, we simply entered the default "*".  In this case, if the <br />
+programmed response for, she could still respond intelligently <br />
+existing categories that might set the current topic to "DOGS")<br />
+Also, though topics can only have one name, they can contain the <br />
+sticking with the pattern criteria, only one wildcard character <br />
+DOGS" or "GROOMING DOGS" to also fall into the "_ DOGS" topic.  <br />
+over the wildcarded topic.  This means that if the topic is <br />
+response for the input in that category, then "_ DOGS" would be <br />
+<br />
+</template>
+</category>
+
+<category>
+<pattern>HOW DO I USE THE PRONOUN TAGS</pattern>
+<template>
+<br />
+The principle applies to pronouns like "it", "he" and "we".  This<br />
+the pronoun tags improve the dialogue.<br />
+<br />
+Robot: Hi there!<br />
+Robot: I am functioning within normal parameters.<br />
+Robot: Do you mean your name is broke.<br />
+Robot: I see. Would you like to have it?<br />
+Robot: "Would you like to have it"? Yes?<br />
+One of the default responses to a YES pattern is <br />
+<br />
+the robot nonetheless conveys an illusion of understanding<br />
+telling the botmaster to create a new "YES" reply specific <br />
+<br />
+&lt;pattern&gt;YES&lt;/pattern&gt;&lt;that&gt;WOULD YOU LIKE TO HAVE IT&lt;/that&gt;<br />
+&lt;/category&gt;<br />
+Now the next time we run the dialogue it ends with:<br />
+Client: NO I HAVE NO MONEY<br />
+Client: YES<br />
+<br />
+points where the pronoun tags improve the flow of conversation.<br />
+with '"&lt;that/&gt;?" Yes?' exemplifies one approach to finding these<br />
+tricks like this, and the field is wide open to linguists and <br />
+</template>
+</category>
+
+<category>
+<pattern>HOW DOES ALICE KEEP TRACK OF CONVERSATIONS</pattern>
+<template>
+<br />
+Assuming that everyone chatting with ALICE has a fixed IP<br />
+this technique works successfully.  Each IP address is a key<br />
+dialogue, name, and values of pronouns and other AIML values.<br />
+Unfortunately, many clients have "dynamic IP addressing" enforced<br />
+each successive client transaction appears to come from a different<br />
+addressing to track dialogues.  <br />
+The form in index.html (and the ALICE home page) contains a<br />
+an initial value of "none."  The server assigns a unique name<br />
+in the client's HTML form.  Each successive client transaction<br />
+to index the conversation.<br />
+</template>
+</category>
+
+<category>
+<pattern>HOW DOES ALICE REMEMBER CLIENTS BETWEEN SESSIONS</pattern>
+<template>
+<br />
+the Java Properties class.  The program B class Classifier<br />
+in a set of Properties lists.  These Properties inherit<br />
+and store methods to save the client properties in a set of<br />
+and so on.  If these files become too large or bothersome,<br />
+to another directory. <br />
+The Applet requires no memory of the client properties, because<br />
+memory (at least for the lifetime of the client's browser cache).<br />
+</template>
+</category>
+
+<category>
+<pattern>HOW DOES PROGRAM B WORK</pattern>
+<template>
+<br />
+either from the GUI or from the Web, to<br />
+and, for each sentence, to find the best match among<br />
+Each reply is itself an AIML template, in effect a mini-<br />
+<br />
+and a response evaluation phase.  In fact these two<br />
+a recursive call to the pattern matcher with the<br />
+</template>
+</category>
+
+<category>
+<pattern>HOW DOES THE APPLET DIFFER FROM THE APPLICATION</pattern>
+<template>
+<br />
+on your host machine.  The applet has fewer privileges and<br />
+which uses menus and buttons to control server-side functions.<br />
+with an ISP account, but the application requires a 24/7<br />
+<br />
+is that the Applet handles only one client conversation, <br />
+simultaneously.  The Applet also suppresses all HTML (and any<br />
+</template>
+</category>
+
+<category>
+<pattern>HOW DOES THE APPLET WORK</pattern>
+<template>
+<br />
+chat robots.  The server runs as a thread in program B.  The <br />
+<br />
+the Java tool appletviewer.  The file "index.html" contains an<br />
+the Applet.  The command "appletviewer index.html" will start the<br />
+<br />
+default value of the parameters "codebase" and<br />
+</template>
+</category>
+
+<category>
+<pattern>HOW DOES THE LT CONDITION GT TAG WORK</pattern>
+<template>
+<br />
+(template-side) condition tag.  The input pattern<br />
+<br />
+&lt;pattern&gt;TEST COND&lt;/pattern&gt;<br />
+This category has two condition statements.&lt;br&gt;<br />
+&lt;condition name="ip" value="localhost"&gt;<br />
+&lt;/condition&gt;<br />
+be the botmaster.&lt;br&gt;<br />
+Imposter!  You are not my real botmaster.&lt;br&gt;<br />
+<br />
+Two dialogues from different hosts show two<br />
+<br />
+--------------------dialup.mindspring.com--------------<br />
+Robot: OK I will call you Dr Wallace.<br />
+Robot: This category has two condition statements. <br />
+The second condition is activated when you claim to be the botmaster.<br />
+That concludes our test of the condition tag.<br />
+Client: TEST COND.<br />
+The first is activated when you are on the host machine:<br />
+The second condition is activated when you claim to be the botmaster.<br />
+<br />
+Note:<br />
+1. There may be multiple &lt;condition&gt; tags in the<br />
+<br />
+name, topic, gender, location, or one of the custom predicates<br />
+<br />
+one wild-card "*" symbol.<br />
+4. The test for the &lt;condtion&gt; being true uses <br />
+with the value string.  This is the same way<br />
+<br />
+whatever is inside the &lt;condition&gt;...&lt;/condition&gt; tags,<br />
+<br />
+</template>
+</category>
+
+<category>
+<pattern>HOW DOES THE PERSONALITY WIZARD WORK</pattern>
+<template>
+<br />
+robot personality is to run the Personality Wizard on<br />
+This wizard asks the botmaster a series<br />
+personality tags including its name, gender, preferences<br />
+<br />
+categories.  The replies set the value of global tags<br />
+used in many categories throughout the AIML knowledge<br />
+in the file Personality.aiml. <br />
+Hint: If you plan to use the Applet, avoid the double-quote (")<br />
+</template>
+</category>
+
+<category>
+<pattern>HOW DOES THE RANDOM FUNCTION WORK</pattern>
+<template>
+<br />
+with a list argument.  Its purpose is random selection<br />
+text appendage operator "+" also served as a list-item<br />
+tag.  <br />
+&lt;random&gt; &lt;li&gt;X1&lt;/li&gt;&lt;li&gt;X2&lt;/li&gt;  &lt;/random&gt;      Say one of X1 or X2 randomly<br />
+<br />
+Moreover, the AIML parser interprets only the markup inside<br />
+are ignored.<br />
+</template>
+</category>
+
+<category>
+<pattern>HOW DOES THE WEB SERVER WORK</pattern>
+<template>
+<br />
+access the web server through the URL http://localhost:2001 on<br />
+your friends to connect to "http://yourcompany.com:2001".<br />
+to view all your open TCP/IP connections).<br />
+</template>
+</category>
+
+<category>
+<pattern>HOW MUCH MEMORY DO I NEED TO RUN PROGRAM B</pattern>
+<template>
+<br />
+all the AIML files for nearly 16,000 categories.  You may have downloaded<br />
+for the download directory.  The hard disk requirements include not<br />
+and other temporary files created by the robot.<br />
+The RAM requirements vary depending on the size of your robot.<br />
+you will need 64MB of memory.  To do this and anything else at<br />
+With less memory you can load a smaller robot.  See the question<br />
+</template>
+</category>
+
+<category>
+<pattern>HOW RECURSIVE IS AIML</pattern>
+<template>
+<br />
+"Recursion" means applying the same solution over and over<br />
+the problem to its simplest form.  AIML uses the tags<br />
+uses these tags to tell the robot how to respond to a<br />
+to simpler ones.  <br />
+Recursion can apply many times to a single input. Given<br />
+<br />
+<br />
+reducing the input to:<br />
+ALICE CAN YOU PLEASE TELL ME WHAT LINUX IS<br />
+Another pattern ("&lt;name/&gt; *") reduces it to:<br />
+CAN YOU PLEASE TELL ME WHAT LINUX IS<br />
+And then:<br />
+PLEASE TELL ME WHAT LINUX IS <br />
+reduces to:<br />
+TELL ME WHAT LINUX IS<br />
+and finally to:<br />
+WHAT IS LINUX<br />
+</template>
+</category>
+
+<category>
+<pattern>I AM STILL HAVING PROBLEMS WITH THE APPLET</pattern>
+<template>
+<br />
+www.myplace.org and your aiml files are in dirctory /alice/ then<br />
+&lt;load url="http://www.myplace.org/alice/Atomic.aiml"&gt;<br />
+If this is what you have, then open up the "Java Console" window<br />
+out.  The Java console will display any error messages or<br />
+errors to the ALICE and AIML mailing list at<br />
+</template>
+</category>
+
+<category>
+<pattern>I STILL DO NOT GET IT</pattern>
+<template>
+<br />
+the meaning of the pronoun "it."  <br />
+The category with the pattern "DO YOU LIKE *" is<br />
+inputs matching "Do you like X?", when the<br />
+pattern like "DO YOU LIKE CATS".  No matter what the <br />
+"it" stands for "X".  <br />
+Many inputs activate this default category, so<br />
+using the &lt;random&gt; tag twice.   One interesting<br />
+of all AIML inside the &lt;random&gt;...&lt;/random&gt;<br />
+the list item containing the markup or not. <br />
+tag then the program will remember "it",<br />
+<br />
+&lt;pattern&gt;DO YOU LIKE *&lt;/pattern&gt;<br />
+&lt;li&gt;I don't know if I like &lt;set_it&gt;&lt;person/&gt;&lt;/set_it&gt;.  &lt;/li&gt;<br />
+&lt;li&gt;Some people like it.  &lt;/li&gt;<br />
+&lt;li&gt;Do you like it?  &lt;/li&gt;<br />
+&lt;random&gt;<br />
+&lt;li&gt;I like pets. &lt;/li&gt;<br />
+&lt;li&gt;I like trains. &lt;/li&gt;<br />
+&lt;li&gt;I really like ELIZA. &lt;/li&gt;<br />
+&lt;li&gt;I like science fiction. &lt;/li&gt;<br />
+&lt;li&gt;My favorite thing is robots. &lt;/li&gt;<br />
+&lt;li&gt;But I think airplanes are cool. &lt;/li&gt;<br />
+&lt;/random&gt;<br />
+&lt;/category&gt;<br />
+In the "DO YOU LIKE *" category one list item<br />
+I don't know if I like &lt;set_it&gt;&lt;person/&gt;&lt;/set_it&gt;. <br />
+results in the pronoun "it" being bound to the value<br />
+the robot has the following dialogue:<br />
+Client: Do you like Dr. Who<br />
+<br />
+selections.  But as a side effect, the pronoun value<br />
+<br />
+Robot: Dr. Who is a TV programme.  I suppose that makes sense.<br />
+To generate the final response, the robot applied its category:<br />
+&lt;category&gt;<br />
+&lt;template&gt;&lt;get_it/&gt; is a &lt;person/&gt;. I suppose that makes sense.&lt;/template&gt;<br />
+<br />
+this example suggest that in our human mind "it" is just a temporary<br />
+<br />
+"I like to make new friends"?<br />
+</template>
+</category>
+
+<category>
+<pattern>I TRIED RUNNING JAVA B AND I GOT A BAD COMMAND OR FILE NAME</pattern>
+<template>
+<br />
+you may need to install Java on your computer.   Go to java.sun.com <br />
+<br />
+the CLASSPATH variable in AUTOEXEC.BAT.  Make sure it is set to<br />
+SET CLASSPATH=.;%CLASSPATH%<br />
+and make sure the PATH is set to include the java home directory:<br />
+</template>
+</category>
+
+<category>
+<pattern>I TRIED TO COMPILE PRORGAM B AND GOT A LOT OF WARNINGS</pattern>
+<template>
+<br />
+on one stylistic point: Java designers believe in the<br />
+used outside their own source file.  The ALICE engineers<br />
+which allows us to group a number of logically related classes<br />
+might complain about a class used outside its file, but<br />
+<br />
+compiler with the "-nowarn" flag:<br />
+javac -nowarn *.java<br />
+</template>
+</category>
+
+<category>
+<pattern>IS THERE A WAY TO USE THE GUI INTERFACE TO ADD ONE CATEGORY AT A TIME</pattern>
+<template>
+<br />
+<br />
+&lt;pattern&gt;WHO IS JOHN&lt;/pattern&gt;<br />
+&lt;/category&gt;<br />
+Now do a "Add AIML".  If you like the result, do a "Save Robot".<br />
+If your name is not John, try replacing JOHN with<br />
+This is called "normalized form".  We store patterns this way<br />
+mixed case.  <br />
+You can also create a file of AIML, do a cut &amp; paste, and then "Add AIML"<br />
+useful. If you edit the source file, select "Load Robot" to load it.<br />
+Try creating a text file with the category:<br />
+&lt;category&gt;<br />
+&lt;template&gt;<br />
+&lt;li&gt;He is a really smart guy.&lt;/li&gt;<br />
+&lt;/random&gt;<br />
+&lt;/category&gt;<br />
+Load the file into program B with the "File/Load Text File" <br />
+</template>
+</category>
+
+<category>
+<pattern>LIST TWELVE BASIC APPLET TIPS FOR AIML USERS</pattern>
+<template>
+<br />
+2. An applet can work perfectly well in Appletviewer, but<br />
+3. Let's get the terminology straight: the applet resides on<br />
+4. The browser is very picky because of the "security<br />
+open files (and obey other restrictions) on the target machine.<br />
+target machine to the originating host.<br />
+might be the same as the originating host (your computer).<br />
+that server becomes the originating host.<br />
+remote web server.<br />
+to the originating host.<br />
+and "AppletHost" (the originating host) to the name and<br />
+11. Use "Create applet" to create the "index.html" and<br />
+12. We recommend placing all the *.class files into<br />
+<br />
+</template>
+</category>
+
+<category>
+<pattern>LOWER LOWER</pattern>
+<template>
+<br />
+you can request responses to individual sentences on a <br />
+calls to the Classifier.respond() method like:<br />
+String response = respond(norm, hname);<br />
+where "norm" is a normalized single-sentence input and hname is<br />
+<br />
+base class StringSet stores the strings in an indexed vector,<br />
+for the normalized input string.<br />
+The loop inside respondIndex() scans through the categories<br />
+match.  Because the "*" pattern comes first in alphabetical<br />
+return zero when no more specific category matches.<br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT ARE 7 STEPS TO CREATING CONTENT</pattern>
+<template>
+<br />
+<br />
+Find the item called "AnalysisFile=" and<br />
+file you want to analyze.  The default file<br />
+name, "dialog.txt".<br />
+3. Press the "Classify" button.  Wait<br />
+the data from your log file.  When finished<br />
+showing the patterns that activated each<br />
+to save this table to a file, if you want).<br />
+4. Now press the "Quick Targets" button.<br />
+by the program.  These are categories with<br />
+robot brain.  With these categories you have <br />
+<br />
+categories are just nonsense or garbage inputs.<br />
+the categories for deletion.  <br />
+<br />
+see displayed in the &lt;template&gt; tags is actually<br />
+this input was classified.  For example you may see:<br />
+&lt;category&gt;<br />
+&lt;/category&gt;<br />
+This tells us that the robot classified the client "WHO IS 007"<br />
+to cut the "WHO IS *", and replace it with a new template<br />
+<br />
+&lt;pattern&gt;WHO IS 007&lt;/pattern&gt;<br />
+famous fictional spy from the novels of Ian Fleming.<br />
+<br />
+suggested by "Quick Targets" and "More Targets" are<br />
+can easily see how to generalize these suggestions<br />
+<br />
+<br />
+&lt;pattern&gt;WHO BOMBED PEARL HARBOR&lt;/pattern&gt;<br />
+&lt;/category&gt;<br />
+The original response was based on "WHO *", which<br />
+are small of anyone else using this exact pattern <br />
+same topic.  Think about the alternative ways<br />
+"Who attacked Pearl Harbor?", "Who invaded Pearl<br />
+carried out an unscrupulous and unprovoked suprise<br />
+You can cover all of these inputs by generalizing<br />
+which matches any word or sequence of words:<br />
+&lt;category&gt;<br />
+&lt;template&gt;The Japanase <br />
+"A day that will live in infamy" (FDR). <br />
+&lt;/template&gt;<br />
+<br />
+at most one wild-card "*" per pattern.<br />
+Of course, with choice (C) you have to<br />
+<br />
+use "Botmaster - Add AIML" to add the new AIML content.<br />
+and repeat the "Add AIML" as many times as needed.<br />
+also to back up your changes.  This will save all of<br />
+"B.aiml".  <br />
+6. Use "More Targets" to find more new categories<br />
+back and start with "Classify" again (step [3]). <br />
+7. The responses you create should be a combination<br />
+Bond, the famous spy" and also provide some HTML<br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT ARE ALL THE OPTIONS FOR PROGRAM B</pattern>
+<template>
+<br />
+log file and analysis options, and options for the web server<br />
+many of these values.  For completeness, the entire set<br />
+<br />
+<br />
+Wear - clothing and apparel<br />
+BotFile - Root file of robot personality<br />
+Friends - The robot's friends<br />
+Question - A random question<br />
+KindMusic - Favorite kind of music<br />
+BotMaster - Robot author<br />
+GirlFriend - Does the robot have a girlfriend?<br />
+BotBirthday - Robot activation date<br />
+FavoriteFood - Robot's favorite food<br />
+FavoriteBand - Robot's favorite band<br />
+FavoriteColor - Robot's favorite color<br />
+<br />
+<br />
+ACFURL - file or URL location of MS Agent software<br />
+Log/Analysis options:<br />
+AnalysisFile - file selected for log file analysis<br />
+ClientLineContains - a pattern identifying input lines in logfiles<br />
+StartLine - starting line for analysis<br />
+<br />
+<br />
+CodeBase - URL or directory of applet code.<br />
+Web server options:<br />
+ClerkTimeout - Web server option to retire waiting clerks<br />
+Advertize - a boolean parameter to optionally display ad<br />
+<br />
+<br />
+TempFile - scratch file for temporary data<br />
+  want to handle duplicate key categories.<br />
+All of the options reside in the globals.txt file.  Running<br />
+contents of the file.<br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT ARE DEPRECATED APIS</pattern>
+<template>
+<br />
+developer is finding a "lowest common denominator" subset of the<br />
+out there.  The Java language itself is a moving target.<br />
+declare certain methods "deprecated", which means absolutely<br />
+method and one day these older methods may disappear from<br />
+support all of the old deprecated methods.<br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT ARE JUSTTHAT AND JUSTBEFORETHAT</pattern>
+<template>
+<br />
+AIML tags.  The idea here is to represent more "state" in the dialogue<br />
+<br />
+Robot: ...JustBeforeThat.<br />
+Robot: ...That.              <br />
+Robot: &lt;justthat/&gt; = JustThat <br />
+       &lt;beforethat/&gt; = BeforeThat<br />
+The following dialogue fragment illustrates the use of these tags:<br />
+Client: MY NAME IS RICH.<br />
+Client: YES.<br />
+Client: JUST THAT.<br />
+Client: JUST BEFORE THAT.<br />
+Client: BEFORE THAT.<br />
+<br />
+There is an asymmetry between the client's tags (&lt;beforethat/&gt; and &lt;justthat/&gt;)<br />
+breaks down each multiple-line client input into individual sentences.<br />
+the robot's reponses line by line.  The robot, on the other hand, may<br />
+The &lt;that/&gt; and &lt;justbeforethat/&gt; tags refer to only the last sentence<br />
+refer to the current and previous client input lines, even if they were<br />
+we used the notation "Client: BeforeThat." and "Robot: ...JustBeforeThat.",<br />
+the asymmetry.  If all the robot responses consisted of exactly one <br />
+<br />
+"deeper context", along the lines of the &lt;that&gt;...&lt;/that&gt; tag,<br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT ARE THE GET METHODS</pattern>
+<template>
+<br />
+(similar to say &lt;P&gt; or &lt;IMG&gt; in HTML). But XML requires closing tags.<br />
+All the "get" methods retrieve values stored relative<br />
+hash tables to store the maps from IP to these attributes.<br />
+&lt;get_ip/&gt;        Get the client's IP address<br />
+&lt;getversion/&gt;    The ALICE program version<br />
+&lt;gettopic/&gt;      The "topic" of conversation<br />
+&lt;location/&gt;      Robot's location<br />
+&lt;birthday/&gt;      Robot's birthday<br />
+&lt;get_location/&gt;  the client's geographic location<br />
+&lt;get_they/&gt;      the value of "they"<br />
+&lt;get_she/&gt;       the value of "she"<br />
+&lt;get_gender/&gt;    a string like "she" or "he" for client gender<br />
+In XML languages there is always a tradeoff between creating attributes<br />
+of a more general &lt;get attribute="name"&gt;, for example<br />
+<br />
+are client-specific properties.  The other attributes (e.g. &lt;name/&gt; and<br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT ARE THE SET METHODS</pattern>
+<template>
+<br />
+methods<br />
+&lt;set_male/&gt;              the client gender is male<br />
+&lt;set_animagent/&gt;         activates the animation agent. <br />
+<br />
+&lt;settopic&gt; X &lt;/settopic&gt;  sets the topic to X<br />
+&lt;set_location&gt; X &lt;/set_location&gt; sets the value of client location<br />
+&lt;set_he&gt; X &lt;/set_he&gt;      sets the value of "he" to X   <br />
+&lt;set_we&gt; X &lt;/set_we&gt;      sets the value of "we" to X <br />
+&lt;set_thought&gt; X &lt;/set_thought&gt; is a custom tag suggested by Andrew <br />
+See the documentation on custom tags and the predicates.txt file.<br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT DO YOU MEAN BY THE COMMAND JAVA B</pattern>
+<template>
+<br />
+you must use a DOS window to run a Java program.  Find the MS-DOS item<br />
+the DOS commands CD (change directory) to move to the "B" directory.   <br />
+<br />
+as a "shortcut" to a batch file.  Create a batch file called<br />
+one line with the text "java B".  There is an AIML icon file<br />
+file to add an icon to your desktop.  <br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT DOES CLASSIFY DO</pattern>
+<template>
+<br />
+stores client dialogues in a file called "dialog.txt" (unless you<br />
+that scans the dialogue file and reports how many times each<br />
+depending on the size and range of the dialogue file chosen.  The<br />
+displays the categories sorted by activation count.  <br />
+The format of each output line is:<br />
+P% (Q%) T PATTERN = N1 W1 + N2 W2 + ...<br />
+Where<br />
+P = Percent of inputs classified in this category<br />
+T = Total count of inputs activating this category<br />
+Wi = normalized input pattern activating this category<br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT DOES CLEAR DO</pattern>
+<template>
+<br />
+button.  Enter a new String like "How are you?" and press "Say."<br />
+"Send" and "Clear" provide a simple way to communicate with the<br />
+such as an e-mail message, into the Edit View and press "Send".  <br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT DOES HELP DO</pattern>
+<template>
+<br />
+knows the answer to.  You can see the answer by pressing the<br />
+<br />
+under the selection "Random Help Question."  Select a random<br />
+<br />
+This command lists all the FAQ questions the robot knows.  You can<br />
+answer with the "Send" button.<br />
+The menu item "Ask Help Question" is the same as "Send".  This<br />
+<br />
+selection.  Finally, the "GNU Public License" menu items displays<br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT DOES MORE TARGETS DO</pattern>
+<template>
+<br />
+"More Targets."  <br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT DOES QUICK TARGETS DO</pattern>
+<template>
+<br />
+new AIML categories for editing.   The program uses statistics to<br />
+<br />
+&lt;pattern&gt; NEW PATTERN &lt;/pattern&gt;  &lt;template&gt; OLD PATTERN &lt;/template&gt;<br />
+<br />
+NEW PATTERN is the proposed new input pattern.<br />
+The botmaster may choose to either delete or edit the new category.<br />
+category from the text area and "cut" the text with the "delete"<br />
+<br />
+create a new reply.  Optionally, the NEW PATTERN may also be edited,<br />
+<br />
+menu and select "Add AIML".    The "Add AIML" menu item will read the<br />
+The botmaster may then save the updated robot with the "File/Save Robot"<br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT DOES SEND DO</pattern>
+<template>
+<br />
+(Edit View) and press the "Send" button.  Notice that program B<br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT DOES THE EDIT MENU DO</pattern>
+<template>
+<br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT DOES THE FILE MENU DO</pattern>
+<template>
+<br />
+    <br />
+  1. By default, AIML files use the .aiml file extension.<br />
+  3. By default the robot files reside in the same directory as<br />
+  4. Robot files begin and end with the tags &lt;alice&gt; and &lt;/alice&gt;<br />
+  6. "Save Robot As" can be used to copy a robot.<br />
+  Exit - exit the program<br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT DOES THE OPTIONS MENU DO</pattern>
+<template>
+<br />
+  Use start and end index to select a range of lines<br />
+<br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT FILES ARE NEEDED TO RUN THE PROGRAM B WEB SERVER</pattern>
+<template>
+<br />
+trailer.html, loading.html and HOME.html.  You can customize these files for<br />
+program B uses these files to construct an HTML reply <br />
+"header" and the "trailer").  Use "header" and "trailer" to<br />
+<br />
+by default. The AIML file may contain &lt;load&gt; tags that recursively<br />
+<br />
+which it reads at start up. <br />
+The files "language.txt" and "predicates.txt" are option.<br />
+menu items in the program B GUI.  The file "predicates.txt"<br />
+<br />
+and "dont.txt" (this file). <br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT FILES DO I NEED TO RUN THE APPLET</pattern>
+<template>
+<br />
+to run the ALICE Applet, no more files are necessary. <br />
+file like Blet.jar.  The sample index.html provided with the ALICE <br />
+<br />
+You can use the following command to compile all the Java source<br />
+<br />
+   Classifier.java Loader.java Animagent.java Log.java Blet.java<br />
+Then, you can use zip (or jar) to collect the class files into<br />
+<br />
+<br />
+<br />
+can only open files on the server it originated from.<br />
+Don't forget to change the Applet host parameters in index.html, when<br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT HAPPENS TO CONTRACTIONS AND PUNCTUATION</pattern>
+<template>
+<br />
+of grammatical and syntactical substitutions on strings. <br />
+punctuation to prepare the input for segmentation into individual<br />
+coverts all letters to upper case; this process is called<br />
+<br />
+(See also the question "What is &lt;person/&gt;?")<br />
+One justification for removing all punctuation from inputs<br />
+which of course do not detect punctuation (unless the speaker<br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT IF I DO NOT WANT TO DISCARD DUPLICATE CATEGORIES</pattern>
+<template>
+<br />
+to either "Merge" or "Discard" templates with duplicate keys.<br />
+heuristic to try to merge the two responses together with<br />
+unpredictable, so the program logs all duplicates in a file<br />
+<br />
+templates to merge into a new template Z.   Let X be the new template<br />
+lists or "atomic", in the sense that they contain no &lt;random&gt; tags.<br />
+If Y is a &lt;random&gt; list atomic then the program checks to see if X is<br />
+Z = the &lt;random&gt; list from Y with X inserted.  <br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT IS A CATEGORY</pattern>
+<template>
+<br />
+category contains an input pattern and a reply template. <br />
+<br />
+&lt;pattern&gt; PATTERN &lt;/pattern&gt;  &lt;template&gt; Template &lt;/template&gt;<br />
+<br />
+<br />
+&lt;pattern&gt; PATTERN &lt;/pattern&gt;<br />
+&lt;template&gt; Template &lt;/template&gt;<br />
+<br />
+associated closing tag.  This syntax obviously derives from XML.<br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT IS A PATTERN</pattern>
+<template>
+<br />
+<br />
+(1) Words of natural language in UPPER CASE.<br />
+(3) The symbol _ which is the same as * except that it comes<br />
+(4) The markup &lt;name/&gt; which is replaced at robot load time <br />
+<br />
+HELLO matches only identical one-word sentences ("Hello.") <br />
+with "Hello" ("Hello how are you?"). <br />
+To simplify pattern description and matching, AIML patterns allow<br />
+valid pattern, but "* AND *" is not.<br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT IS A SYMBOLIC REDUCTION</pattern>
+<template>
+<br />
+"symbolic reduction".  The category:<br />
+&lt;category&gt;<br />
+&lt;template&gt;&lt;srai&gt;ARE YOU &lt;star/&gt;&lt;/srai&gt;&lt;/template&gt;<br />
+<br />
+to "Are you smart".<br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT IS A TEMPLATE</pattern>
+<template>
+<br />
+<br />
+template consists of plain, unmarked text.  AIML provides markup <br />
+The markup function &lt;getname/&gt; for example inserts the client's name <br />
+<br />
+&lt;sr/&gt; and &lt;srai&gt; tags.  Many templates are simple symbolic <br />
+"Do you know what X is?" transforms to "What is X" with the category<br />
+&lt;category&gt;<br />
+&lt;template&gt;&lt;srai&gt;WHAT IS &lt;star/&gt; &lt;/srai&gt;&lt;/template&gt;<br />
+<br />
+These embedded tags may cause the browser to play a sound,<br />
+of expression in the construction of response templates.  The<br />
+experiment with new ideas.<br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT IS AIML</pattern>
+<template>
+<br />
+Language) a non-standard evolving markup language for creating chat robots.<br />
+other chat robot languages, AIML is perhaps the simplest.  The<br />
+only one wild-card ('*') match character per pattern. <br />
+AIML is an XML language, implying that it obeys certain grammatical<br />
+other tools such as XML editors.  Another motivation for XML is<br />
+<br />
+&lt;/alice&gt; tags respectively.  <br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT IS ARE THE LT PERSON GT TAGS</pattern>
+<template>
+<br />
+AIML interpreter changes the personal pronouns in a sentence.<br />
+&lt;person2&gt; X &lt;/person2&gt;   change X from 1st to 2nd person<br />
+<br />
+"gossip":<br />
+Client: I admire robots like you.<br />
+<br />
+<br />
+2. change the third person pronouns to first person.<br />
+The array in Substituter.java is incomplete.  We need more substitutions<br />
+<br />
+to understand, because it simply exchanges 1st and 3rd person<br />
+when to use "I" and when to use "me".<br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT IS CLASS ACCESS</pattern>
+<template>
+<br />
+extract dialogues.  In a typical chat robot server scenario,<br />
+reply in a log file.  Given many simultaneous conversations,<br />
+of class Access is to unravel these conversations into<br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT IS CLASS ALICEREADER</pattern>
+<template>
+<br />
+hard coded by Kris Drent specifically for reading AIML categories.  <br />
+thatpattern.  AliceReader scans the AIML input and tries to<br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT IS CLASS B</pattern>
+<template>
+<br />
+now just extends Bawt.<br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT IS CLASS BAWT</pattern>
+<template>
+<br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT IS CLASS BLET</pattern>
+<template>
+<br />
+The applet is a stripped down version of the program, with a simpler GUI<br />
+web server, because it runs as a client-side applet.<br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT IS CLASS BRAIN</pattern>
+<template>
+<br />
+strings in the Brain class are keys formed by combining the<br />
+of ALICE, there were no "that" and no "topic" tags, so the<br />
+With the addition of the "that" and "topic" tags we had to<br />
+<br />
+These structures form the basis of the classification and targeting<br />
+an instance of StringRanker storing the inputs classified into<br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT IS CLASS CLASSIFIER</pattern>
+<template>
+<br />
+the basic functionality of the chatterbot algorithm.  <br />
+See the question "How can I interace my Java program to ALICE?" for<br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT IS CLASS DIALOGUE</pattern>
+<template>
+<br />
+the representation of the conversation between the client<br />
+client_said[] and robot_said[] that store the alternating<br />
+encodes the length, hostname, and start and end tag<br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT IS CLASS GLOBALS</pattern>
+<template>
+<br />
+parameters in program B.  The Globals class corresponds to<br />
+methods toFile() and fromFile() to make these values<br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT IS CLASS INTSET</pattern>
+<template>
+<br />
+Collections this would likely be a Set, but the simple<br />
+IntSet class.<br />
+"Set" means that the object has only one occurance of each item:<br />
+ </template>
+</category>
+
+<category>
+<pattern>WHAT IS CLASS KID</pattern>
+<template>
+<br />
+for kids" to run.  Program Kid does not evoke program B, but the Kid<br />
+is that kids should be able to have conversations with the chat<br />
+(see Appendix B: Note to Parents).<br />
+Class Kid utilizes RobotCommunicator as its interface to the<br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT IS CLASS LINECLASSIFIER</pattern>
+<template>
+<br />
+with one required method: process_line().  The LineProcessor<br />
+processes each line as a data record, and moves on to the next.<br />
+LineClassifier implements LineProcessor because it reads lines<br />
+classification. What makes classification efficient is the way<br />
+Lines.   Becuase the matching algorithm proiritizes the patterns<br />
+in O(1) time.<br />
+The code for LineClassifier is in Classifier.java.<br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT IS CLASS LOADER</pattern>
+<template>
+<br />
+robot script. The Loader class extends Thread, and runs "in the background"<br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT IS CLASS PARSER</pattern>
+<template>
+<br />
+response templates.  The method pfkh() [the Program Formerly<br />
+method contains the code for recognizing and processing<br />
+<br />
+definition; it parses and evaluates only the templates at runtime.<br />
+at load time, and parsing the categories into topics, patterns and templates. <br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT IS CLASS ROBOTCOMMUNICATOR</pattern>
+<template>
+<br />
+you might find RobotCommunicator is a useful class.  The<br />
+output display with a TextField input area input field.<br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT IS CLASS SORTEDINTSET</pattern>
+<template>
+<br />
+elements in a sorted array.  Throughout program B you will<br />
+objects provide an efficient means to locate items in<br />
+smallest numbers last.  <br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT IS CLASS STRINGHISTOGRAMMER</pattern>
+<template>
+<br />
+each string to a count, usually indicating the number of times<br />
+like a "bar graph" that counts occurances of each item.  <br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT IS CLASS STRINGRANKER</pattern>
+<template>
+<br />
+strings by the histogram count.  The highest count string<br />
+<br />
+who has ranked people, companies or sports teams by any<br />
+One application for a StringRanker is determining the<br />
+http://alicebot.org/mine.html).    <br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT IS CLASS STRINGSET</pattern>
+<template>
+<br />
+strings, meaning that each string item appears at most once<br />
+<br />
+of object StringSet:  {"this","that","another"} is a set of<br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT IS CLASS STRINGSORTER</pattern>
+<template>
+<br />
+ordering of the Strings.  The StringSorter maintains its<br />
+after each item is added.  Specifically, the StringSorter uses<br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT IS CLASS SUBSTITUTER</pattern>
+<template>
+<br />
+methods useful at several points in program B.<br />
+Program B has the unique feature that it relies on HTTP GET methods,<br />
+HTTP inserts '+' characters in place of spaces, and applies a series of<br />
+undoes these substitutions and restores the input string to the form similar<br />
+<br />
+conventional use of periods to denote abbreviations like "Dr.", "Mr.",<br />
+eliminate most common abbreviations. Like the other substitution methods<br />
+of class String[][2], which stores the substitution map.<br />
+The patterns in AIML are written in normalized form. The method normalize()<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+is explained by the need to make the chatterbot compatible with speech<br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT IS CLASS UNIFIER</pattern>
+<template>
+<br />
+whether two sentences match and, if so, what any 'variables' in the pattern<br />
+symbol. The Unifier class contains a 'star' data memeber to contain the<br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT IS CLASS WEBSERVER</pattern>
+<template>
+<br />
+listens for HTTP connections and accepts them; then replies in properly<br />
+the difference between the chat robot server and a full-blown web server.<br />
+methods.  Our WebServer class does not implement many of the other features <br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT IS LT LOAD FILENAME X GT</pattern>
+<template>
+<br />
+file.  The semantics of a load are the same as a merge: categories<br />
+duplicate patterns.  <br />
+The default robot file B.aiml contains the top-level load commands.<br />
+to test your system with a smaller robot.  You can change the<br />
+&lt;load filename="Brain.aiml"/&gt;<br />
+&lt;noload filename="Brain.aiml"/&gt;<br />
+command.<br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT IS LT STAR GT</pattern>
+<template>
+<br />
+Remember, &lt;star/&gt; is an XML abbreviation for &lt;star&gt;&lt;/star&gt;.<br />
+&lt;star/&gt;   the value of "*" matched by the pattern.<br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT IS LT THAT GT</pattern>
+<template>
+<br />
+a user input.  Conceptually the choice of "that" comes from the<br />
+<br />
+Client: That makes no sense.<br />
+Robot:  The answer is 3.14159<br />
+<br />
+to match the robot's "that" expression.  A common example using "that"<br />
+<br />
+&lt;pattern&gt;YES&lt;/pattern&gt;<br />
+&lt;template&gt; What's your favorite movie? &lt;/template&gt;<br />
+<br />
+the client is replying to the question "What's your favorite movie?".<br />
+One interesting application of "that" are the categories that<br />
+<br />
+&lt;pattern&gt;KNOCK KNOCK&lt;/pattern&gt;<br />
+&lt;/category&gt;<br />
+&lt;category&gt;<br />
+&lt;that&gt;WHO IS THERE&lt;/that&gt;<br />
+&lt;/category&gt;<br />
+&lt;category&gt;<br />
+&lt;that&gt;* WHO&lt;/that&gt;<br />
+&lt;/category&gt;<br />
+Client: KNOCK KNOCK<br />
+Client: BANANA<br />
+Client: KNOCK KNOCK<br />
+Client: BANANA<br />
+Client: KNOCK KNOCK<br />
+Client: ORANGE<br />
+Client: ORANGE YOU GLAD I DID NOT SAY BANANA<br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT IS LT THINK GT</pattern>
+<template>
+<br />
+to evaluate the AIML expression X, but "nullify" or hide<br />
+<br />
+<br />
+&lt;pattern&gt;I AM FEMALE&lt;/pattern&gt;<br />
+&lt;/template&gt;<br />
+<br />
+&lt;think&gt; tag hides the text output of &lt;set_female/&gt; from the reply,<br />
+<br />
+  </template>
+</category>
+
+<category>
+<pattern>WHAT IS NEW IN AIML</pattern>
+<template>
+<br />
+into XML.  Right now, AIML uses XML syntax for the<br />
+&lt;template&gt; tag you may still see the original +~ syntax in a few places.  <br />
+supports both versions.<br />
+The biggest change between the old AIML and the new<br />
+character to stand for string appendage.  The change<br />
+&lt;random&gt;, discussed at length below.<br />
+The old AIML used a tilde (~) markup character to<br />
+naturally uses an SGML type tag syntax instead.<br />
+XML tags, unlike HTML, are case-sensitive.  Moreover, XML syntax<br />
+no text, like &lt;A&gt;&lt;/A&gt; in HTML, are written like &lt;A/&gt; in XML.<br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT IS ON THE HELP MENU</pattern>
+<template>
+<br />
+<br />
+    one by deleting all the others.  Obtain the answer with "Send." <br />
+  Don't Read Me - Display the text of this document.<br />
+  GNU Public License - Display the software license.<br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT IS PROGRAM BAWT</pattern>
+<template>
+<br />
+pre- Java 2 (formerly known as Java 1.2) prompted the<br />
+for chat robot development that works with older versions of<br />
+Java 2 and Swing, but program Bawt needs only Java 1.1 and AWT.<br />
+Abstract Windows Toolkit (AWT).<br />
+At present class B merely extends class Bawt.  Swing not<br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT IS THE BOTMASTER MENU</pattern>
+<template>
+<br />
+<br />
+<br />
+   the Default ('*') category,<br />
+   quick conversion to new AIML.<br />
+  Recursive Targets - display targets from "recursive" categories,<br />
+    the AIML &lt;sr/&gt; or &lt;srai/&gt; functions.<br />
+  Autochat - The robot chats with herself; sometimes helpful<br />
+<br />
+    "Add AIML" adds this new category to the chatbot.  You can<br />
+    "File/Save Robot".<br />
+    In general you can add any number of new AIML categories<br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT IS THE CLASS STRUCTURE OF PROGRAM B</pattern>
+<template>
+<br />
+Classifier.java.  In that file, you find a class hierarchy<br />
+A branch in that hierarchy contains classes for histogramming<br />
+<br />
+from StringSorter, extending StringSet.  The second branch<br />
+The final class Brain extends StringSet and uses StringRanker.<br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT IS THE DIFFERENCE BETWEEN B AND C</pattern>
+<template>
+<br />
+for creating chat robots like ALICE.  The original AIML interpreter<br />
+which is the subject of this document.  Most recently new threads<br />
+of C/C++ programs and applications including Cgi-ALICE, IRC-ALICE and<br />
+http://hippie.alicebot.com for more details.  <br />
+Program B remains the most stable, general purpose chat robot<br />
+subject to intense peer review over a period of years, evolving<br />
+software.<br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT IS THE DTD FOR AIML</pattern>
+<template>
+<br />
+must have something called a DTD (Document Template Descriptor).<br />
+Unless you are using special XML tools to work on your AIML or<br />
+much about the DTD.<br />
+Our DTD reflects the current content of the *.aiml files that program B can <br />
+improves. <br />
+Rather than reproduce the entire DTD here, in order to shorten the<br />
+the A.L.I.C.E. XML page by John Friedman.  The URL for the AIML<br />
+The full URL for the DTD is <br />
+<br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT IS THE GOAL FOR AIML</pattern>
+<template>
+<br />
+for programming chat robots like ALICE using program B.  The emphasis<br />
+it easy for non-programmers, especially those who already know HTML, <br />
+<br />
+robots, each with a unique area of expertise, program B can literally <br />
+duplicate categories.  We offer the both the source code and the ALICE <br />
+robots as well, to contribute to the Superbot.  <br />
+Botmasters are also of course free to copy protect private chat robots.<br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT IS THE LOW LEVEL INTERFACE TO PROGRAM B</pattern>
+<template>
+<br />
+class RobotCommunicator.  Depending on your application,<br />
+Some developers however  may want lower-level access to the<br />
+<br />
+methods needed to interface directly to ALICE.  "Classifier" might <br />
+it handles those functions most unique to the chat robot.<br />
+The method Classifier.multiline_response() is a key entry point <br />
+"multiline_response" means that the input may contain <br />
+multiline_response is the input. The second argument "hname" is <br />
+is the class implementing the Responder interface.<br />
+If the input string contains "Sentence1.  Sentence2?  Sentence3." <br />
+<br />
+Reply1<br />
+Reply2<br />
+Reply3<br />
+The method multiline_response hides all of the details <br />
+and formatting the output.  In particular multiline_response() <br />
+Agent output, depending on whether the global MS Agent parameter is set.<br />
+The argument "hname" is a key that indexes the client's conversation.  For<br />
+other constant.  <br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT IS THE LT PERSON GT TAG</pattern>
+<template>
+<br />
+&lt;person&gt; be followed by a matching end tag like &lt;/person&gt;.  <br />
+the liberal use of the &lt;IMG&gt; tag without a corresponding &lt;/IMG&gt;.<br />
+The &lt;star/&gt; tag is an example of a shorthand AIML tag.  <br />
+<br />
+<br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT IS THE LT PERSON2 GT TAG</pattern>
+<template>
+<br />
+<br />
+<br />
+information about &lt;person2/&gt;.<br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT IS THE LT PERSONF GT TAG</pattern>
+<template>
+<br />
+is shown by the example <br />
+&lt;category&gt;<br />
+&lt;template&gt;<br />
+&lt;A HREF="http://www.dictionary.com/cgi-bin/dict.pl?term=&lt;personf/&gt;"&gt; <br />
+&lt;/A&gt; mean? &lt;BR&gt; <br />
+&lt;A HREF="http://www.ask.com/AskJeeves.asp?ask=WHAT%20IS%20A%20&lt;personf/&gt;"&gt;<br />
+&lt;/A&gt;<br />
+&lt;/category&gt;<br />
+The search strings formatted for the Webster Dictionary and for<br />
+same as &lt;person/&gt;, but the formatting inserts an escaped "%20" in<br />
+permit the HTTP GET methods to transmit multiple-word queries.   <br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT IS THE LT SRAI GT TAG</pattern>
+<template>
+<br />
+"Stimulus-Response artificial intelligence" and means<br />
+to the pattern matcher and the result interpreted.<br />
+<br />
+&lt;sr/&gt;             recursive call to chat robot<br />
+&lt;sr/&gt; abbreviates &lt;srai&gt; &lt;star/&gt; &lt;/srai&gt;<br />
+Note: what happens if X contains AIML markup?  Does the interpreter<br />
+method pfkh(), the Program Formerly Known as "Hello".<br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT IS THE LT TOPIC GT TAG</pattern>
+<template>
+<br />
+topic currently being discussed. This creates topical <br />
+to another.<br />
+contexts (topics) allowing ALICE to have different responses to <br />
+"overriding" the " * " pattern for different topics. (I'll give <br />
+3. As always, you can still use the &lt;gettopic/&gt; tag to refer to <br />
+4. As always, you can add topics on top of all your existing AIML <br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT IS THE RESPONDER INTERFACE</pattern>
+<template>
+<br />
+application scenarios, the Responder interface<br />
+natural language queries.  The Responder defines<br />
+<br />
+log() : tells how to log the conversation.<br />
+post_process() : runs after response loop finishes.<br />
+The method Classifier.multiline_response() calls<br />
+question ("What is the low-level interface?")<br />
+At least five classes implement the Responder<br />
+<br />
+HTMLResponder: a class for Web Server HTML replies.<br />
+CustomResponder: a template for more Responder classes.<br />
+<br />
+for the various Responder types: for example,<br />
+response; GUIResponder does not.   AppletResponder<br />
+all other classes write to a local file.  RobotResponder,<br />
+from robot replies; while HTMLResponder passes<br />
+Animagent class to create the MS Agent VB Script.<br />
+need not wrap because the browser handles text formatting.<br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT IS THE THEORY BEHIND ALICE</pattern>
+<template>
+<br />
+no knowledge representation, no search, no fuzzy logic, no genetic<br />
+circulating in applied AI called "Case-Based Reasoning" or CBR that<br />
+pattern recognition, is "nearest-neighbor classification."  <br />
+The CBR "cases" are the categories in AIML.  The algorithm finds<br />
+response template directly to the stimulus pattern.  ALICE is<br />
+chat robot; the main differences are the much larger case base and the<br />
+<br />
+"stimulus-response" robotics.  Mobile robots work best, fastest and<br />
+inputs directly control the motor reactions.  Higher-level symbolic<br />
+too much for realistic applications, even with the fastest control<br />
+</template>
+</category>
+
+<category>
+<pattern>WHAT IS XML</pattern>
+<template>
+<br />
+Markup Language.  Like many "standards" in computer science, XML<br />
+version of HTML.  Anyone is free to define new XML tags, which<br />
+AIML is an example of using the XML standard to define a specialized<br />
+<br />
+to edit and manipulate XML format files.  Another reason is that an<br />
+familiar with HTML.  Third, AIML programs contain a mixture of<br />
+convenience for programming web chat robots.<br />
+A good resource for information on XML is www.oasis-open.org.<br />
+</template>
+</category>
+
+<category>
+<pattern>WHERE DOES THE LT TOPIC GT TAG APPEAR</pattern>
+<template>
+<br />
+many.)  The categories (with each respective "pattern", "that", <br />
+associated with the defined topic. The name of the topic would be <br />
+be the full AIML format with topic:<br />
+&lt;alice&gt; <br />
+ &lt;topic name="THE TOPIC"&gt; <br />
+  &lt;category&gt; <br />
+   &lt;that&gt; phrase &lt;/that&gt; <br />
+  &lt;/category&gt; <br />
+ &lt;/topic&gt; <br />
+&lt;/alice&gt;<br />
+</template>
+</category>
+
+<category>
+<pattern>WHO IS THE BOTMASTER</pattern>
+<template>
+<br />
+program B and creates or modifies a chat robot with the program's<br />
+reading the dialogues, analyzing the responses, and creating new<br />
+hobbyists, webmasters, developers, advertisers, artists, publishers,<br />
+chat robot.<br />
+</template>
+</category>
+
+<category>
+<pattern>WHY IS THE FORMAT OF THE OPTIONS GLOBALS TXT SO STRANGE</pattern>
+<template>
+<br />
+<br />
+Botmaster=Jon Baer<br />
+ClientLineContains=t:<br />
+CodeBase=D\:CHATTERBOTS\ALICE<br />
+Beep=true<br />
+AppletHost=206.184.206.210<br />
+BotName=ALICE<br />
+TempFile=Temp.ai<br />
+# ... and so on<br />
+The global values seem to be stored in a random order.<br />
+Properties.load() and Properties.store() to save the globals<br />
+<br />
+not preserve the order of the global variables.  The program<br />
+ <br />
+</template>
+</category>
+</aiml>

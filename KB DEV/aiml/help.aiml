@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<aiml>
+
+<category><pattern>HELP VOICE</pattern>
+<template>You can buy a male voice from Svox. Installing this app will give CallMom (as well as all other apps) a male voice. See </template>
+</category>
+</aiml>

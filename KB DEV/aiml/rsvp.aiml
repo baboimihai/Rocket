@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8'?>
+<aiml>
+
+<category><pattern>SEND RSVP TO *</pattern>
+<template>I'm sending an RSVP to <star />.
+<think>
+<addtriple><subj><star /></subj><pred>status</pred><obj>not responded</obj></addtriple>
+</think></template>
+</category>
+
+<category><pattern>WHO HAS AN RSVP</pattern>
+<template><think>
+<set var="tuples">
+</set>
+</think>
+<condition var="tuples">
+  <li value="NIL" />
+  <li><get var="?x" />,
+  <think>
+      <set var="tuples" />
+  </think> </li>
+</condition></template>
+</category>
+
+<category><pattern>RSVP STATUS</pattern>
+<template><think>
+<set var="tuples">
+</set>
+</think>
+<condition var="tuples">
+  <li value="NIL" />
+  <li><get var="?x" /> -- <get var="?status" /> 
+  <think>
+      <set var="tuples" />
+  </think> </li>
+</condition></template>
+</category>
+
+<category><pattern><set>name</set> IS ATTENDING</pattern>
+<template>Setting <star />'s RSVP status to "attending".
+<think>
+<addtriple><subj><star /></subj><pred>status</pred><obj>attending</obj></addtriple>
+</think></template>
+</category>
+
+<category><pattern><set>name</set> IS NOT ATTENDING</pattern>
+<template>Setting <star />'s RSVP status to "not attending".
+<think>
+<addtriple><subj><star /></subj><pred>status</pred><obj>not attending</obj></addtriple>
+</think></template>
+</category>
+</aiml>

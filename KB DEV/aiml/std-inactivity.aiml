@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<aiml version="1.0">
+
+<category>
+<pattern>INACTIVITY</pattern>
+<template>
+<srai>ASK USER A QUESTION</srai>
+</template>
+</category>
+</aiml>

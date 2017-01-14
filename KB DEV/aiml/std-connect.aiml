@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<aiml version="1.0">
+
+<category>
+<pattern>CONNECT</pattern>
+<template>
+<think><set name="that">CONNECT</set></think>
+     Hello there <get name="name" /> and thanks for connecting!
+</template>
+</category>
+</aiml>
