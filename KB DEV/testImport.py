@@ -29,4 +29,7 @@ parser = AimlCommunication.Parser("mihai")
 #parser.testSet("WHAT DO YOU WANT TO TALK ABOUT"); # eroare
 #parser.testSet("WHEN IS CHRISTMAS")
 #parser.testGet("WHAT IS WRONG WITH YOU")
-parser.testSet("WHAT IS YOUR GOAL")
+print("MY NAME IS SAM")
+print(parser.findPattern("MY NAME IS SAM"))
+print("MY NAME IS WHAT")
+print(parser.findPattern("MY NAME IS WHAT"))

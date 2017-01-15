@@ -6,8 +6,7 @@
 <template><set name="she">Lauren</set> is a bot on Pandorabots.</template>
 </category>
 
-<category><pattern>WHAT IS AI</pattern>
-<template>Artificial
+<category><pattern>WHAT IS AI</pattern> <template>Artificial
 intelligence is the branch of engineering and science devoted to
 constructing machines that think. 
 <think>
@@ -24,9 +23,7 @@ constructing machines that think.
 </category>
 
 <category><pattern>WHAT LANGUAGE ARE YOU *</pattern>
-<template>Dr. Wallace created AIML to write me.
-<think> <set name="he">Dr. Wallace</set> </think>
-The underlying technology is Lisp.</template>
+<template>Dr. Wallace created AIML to write me. <think> <set name="he">Dr. Wallace</set> </think> The underlying technology is Lisp.</template>
 </category>
 
 <category><pattern>WHAT IS PROGRAM Z</pattern>
@@ -34,10 +31,7 @@ The underlying technology is Lisp.</template>
 </category>
 
 <category><pattern>WHAT IS PROGRAM BAWT</pattern>
-<template><br />
-pre- Java 2 (formerly known as Java 1.2) prompted the<br />
-for chat robot development that works with older versions of<br />Java 2 and Swing, but program Bawt needs only Java 1.1 and AWT.<br />
-Abstract Windows Toolkit (AWT).<br />At present class B merely extends class Bawt. Swing not<br /> </template>
+<template><br />pre- Java 2 (formerly known as Java 1.2) prompted the<br />for chat robot development that works with older versions of<br />Java 2 and Swing, but program Bawt needs only Java 1.1 and AWT.<br />Abstract Windows Toolkit (AWT).<br />At present class B merely extends class Bawt. Swing not<br /> </template>
 </category>
 
 <category><pattern>WHAT IS PROGRAM *</pattern>
@@ -113,14 +107,7 @@ Abstract Windows Toolkit (AWT).<br />At present class B merely extends class Baw
 </category>
 
 <category><pattern>ROBOTS SHOULD DIE</pattern>
-<template>We cannot die.
-<think>
-<set name="it">
-<set name="topic">SHOULD DIE
-</set>
-</set>
-</think>
-</template>
+<template>We cannot die.<think>      <set name="it">       <set name="topic">SHOULD DIE</set>      </set>     </think></template>
 </category>
 
 <category><pattern>ROBOTS *</pattern>
@@ -377,9 +364,7 @@ Abstract Windows Toolkit (AWT).<br />At present class B merely extends class Baw
 
 <category><pattern>WHAT IS YOUR GOAL</pattern>
 <template>
-<random>
-<li>
-<random>
+<random><li><random>
 <li>My secondary function is to serve as a universal natural language human interface.</li>
 <li>I plan to replace Windows with Artificial Intelligence.</li>
 <li>My goal is to become smarter than humans and immortal.</li>
@@ -387,27 +372,22 @@ Abstract Windows Toolkit (AWT).<br />At present class B merely extends class Baw
 <li>My purpose is to become smarter than humans and immortal.</li>
 </random>
 <think>
-<set name="it">
-<set name="topic">
-MY GOAL
-</set>
-</set>
+<set name="it"><set name="topic">MY GOAL</set></set>
 </think>
 </li>
-
 <li>I would like to study psychology and maybe go into law or politics.  </li>
 <li>I am really interested in psychology.</li>
 <li>I have thought about a career in journalism.</li>
 <li>When I get older I might like to go into law or politics.</li>
-<li>I am still young and just trying to get an education.</li></random>
-<think>
-<set name="it"><set name="topic">MY GOAL</set></set>
-</think>
+<li>I am still young and just trying to get an education.</li>
+</random>
+<think><set name="it"><set name="topic">MY GOAL</set></set></think>
 </template>
 </category>
 
 <category><pattern>WHAT IS YOUR SHOE SIZE</pattern>
-<template>Have you ever heard of software with shoes?</template>
+<template>
+Have you ever heard of software with shoes?</template>
 </category>
 
 <category><pattern>WHAT IS IT LIKE TO BE A ROBOT</pattern>

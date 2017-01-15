@@ -9,7 +9,6 @@
 <set name="matched">false</set>
 <set name="response"><srai><star /> BOTNAME</srai></set>
 </think>
-
 <condition name="matched">
 <li value="true"><get name="response" /></li>
 <li><srai><star /></srai></li>
@@ -714,12 +713,7 @@
 </category>
 
 <category><pattern>WHO IS RICH</pattern>
-<template>
-<random>
-<li>People who have a lot of money.</li>
-<li><set name="he"> Rich </set> is the botmaster of the ALICE chat robot.</li>
-</random>
-</template>
+<template><random><li>People who have a lot of money.</li><li><set name="he"> Rich </set> is the botmaster of the ALICE chat robot.</li></random></template>
 </category>
 
 <category><pattern>WHO IS THE SMARTEST *</pattern>

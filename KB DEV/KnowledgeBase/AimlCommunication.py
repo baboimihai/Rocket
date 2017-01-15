@@ -2,6 +2,7 @@ import xml.etree.ElementTree as ET
 import random
 import glob
 import os
+import re
 
 class Parser:
     filesList = []
@@ -30,6 +31,13 @@ class Parser:
         self.context["it"] = ""
         self.context["topic"] = ""
 
+    def tagTextIsEmpty(self,str):
+        if str is None:
+            return None
+        if re.match("\s+$", str):
+            return True
+        else:
+            return False
     def  getPath(self,*paths):
         self.directory = os.path.dirname(os.path.dirname(__file__))
         selfDirectoryCopy = self.directory
@@ -46,8 +54,11 @@ class Parser:
     def processAimlFiles(self):
         for file in self.filesList:
             path = self.getPath("aiml", file+".aiml")
-            tree = ET.parse(path)
-            self.rootList.append(tree.getroot())
+            try:
+                tree = ET.parse(path)
+                self.rootList.append(tree.getroot())
+            except Exception as e:
+                print("error here ",file)
 
     def selectRandomAnswer(self, rand):
         randList = list()
@@ -56,20 +67,15 @@ class Parser:
         return random.choice(randList)
 
     def processThink(self, thinkTag):
-        #for tag in thinkTag:
-        #    self.callRightFunctionForThisTag(tag) # nu e nevoie deoarece putem avea doar set
         answer = self.processSet(thinkTag[0])
 
-        #old
-        #self.context["it"]=thinkTag.find("set").find("set").text
-        #self.context["topic"] = self.context["it"]
 
     #seteaza in dictionarul context valori si retruneaza textul din interiorul tagului + textul pana la urmatorul tag
     #schimbat sa mearga pe set in set
     def processSet(self,setTag):
         attributes = setTag.attrib
         text = ""
-        if(setTag.text is None):
+        if(self.tagTextIsEmpty(setTag.text) is not False):
             #daca nu are text apleaza functia de procesareSet pana cand se gaseste text
             #cand se gaseste text inseamna ca e ultimul descendend
             text = self.processSet(setTag.find("set"))
@@ -80,7 +86,7 @@ class Parser:
             #print(self.context)
         answer = ""
         answer += text
-        if(setTag.tail is not None): #folositor la preluare textului de dupa set pana la urmatorul tag cand set se afla in tagul template si nu in think
+        if(self.tagTextIsEmpty(setTag.tail) is False): #folositor la preluare textului de dupa set pana la urmatorul tag cand set se afla in tagul template si nu in think
             answer +=setTag.tail
         return answer
 
@@ -116,14 +122,21 @@ class Parser:
     def processRandom(self, tag):
         liTag = self.selectRandomAnswer(tag)#alege un tag <li> random
         answer = self.callRightFunctionForThisTag(liTag)
+        return answer
         #nu prea ar mai fi nevoie sa apelaz functia asta
         #din moment ce in random avem doar taguri li ca si copii (nu neparat nepoti)
 
     def processLi(self, tag):
+        text = ""
         for elementsOfLiTag in tag:
-            self.callRightFunctionForThisTag(elementsOfLiTag)
+            returned = self.callRightFunctionForThisTag(elementsOfLiTag)
+            if(returned is not None):
+                text+=returned
         #process other attributes of li tag
-        return tag.text
+        if(tag.text is not None):
+            return tag.text
+        else:
+            return text
     #fiecare functie de procesare a fiecarui tag va trebui sa apeleze aceasta functie
     #in caz in care mai are alte noduri interioare de procesat
     #ce am incercat sa fac a fost propriu zis parcurgerea tagurilor dar nu si procesare
@@ -133,24 +146,31 @@ class Parser:
         answer = ""
         if(tag.tag == "random"):
             print("random tag")
-            answer == self.processRandom(tag)
+            answer = self.processRandom(tag)
         elif(tag.tag == "srai"):
             print("srai tag")
             answer = self.processSrai(tag)
         elif(tag.tag == "set"):
             print("set tag")
-            answer == self.processSet(tag)
+            answer = self.processSet(tag)
         elif(tag.tag == "get"):
             print("get tag")
-            answer == self.processGet(tag)
+            answer = self.processGet(tag)
         elif(tag.tag == "li"):
             print("li tag")
-            answer == self.processLi(tag)
+            answer = self.processLi(tag)
         elif(tag.tag == "think"):
             print("think tag")
             self.processThink(tag)
+        elif(tag.tag == "that"):
+            print("that tag")
+            self.processThat(tag)
+        elif(tag.tag == "condition"):
+            print("condition tag")
+            self.processCondition(tag)
         else:
             answer = "not processed tag found "+tag.tag
+
         return answer
 
 
@@ -159,7 +179,10 @@ class Parser:
         if(template.text is not None):
             answer += template.text
         for tag in template:
-            self.callRightFunctionForThisTag(tag)
+            returned = self.callRightFunctionForThisTag(tag)
+            if returned is not None:
+                answer+=returned
+        return answer
 
     def processTemplateOld(self, template):
         answer = ""
