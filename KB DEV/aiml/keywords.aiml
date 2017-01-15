@@ -1,8 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<aiml>
-
-<category><pattern># DOWNLOAD ^ YOU ^</pattern>
-<template>You can download CallMom BASIC from
-</template>
-</category>
-</aiml>

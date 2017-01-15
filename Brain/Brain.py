@@ -1,5 +1,6 @@
-from KB.KnowledgeBase.AimlCommunication import Parser
 import PreProcessing.main
+from KB.KnowledgeBase import Parser
+
 parser = Parser("nume")
 def MainBrain(input):
     user_authenthicated=0
