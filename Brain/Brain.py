@@ -1,18 +1,21 @@
 import PreProcessing.main
-from KB.KnowledgeBase import Parser
+from Brain.WikiSearch import searchWiki
+from KB import KnowledgeBase
 
-parser = Parser("nume")
+
+interface = KnowledgeBase.Interface()
 def MainBrain(input):
-    user_authenthicated=0
-
-    result = parser.findPattern(input[:-1])
+    result = interface.answer(input)
+    if result.find('I do not know')!=-1:
+        result=None
     if result is not None:
         return result
     else:
         try:
             vParsed=PreProcessing.main.parser(input)
             subject=getSubject(vParsed)
-            response=whatIsQuestions(subject)
+            print (subject)
+            response=searchWiki(subject)
             if response is not None:
                 return response
             if result is None:
@@ -25,22 +28,8 @@ def MainBrain(input):
 def whatIsQuestions(input):
     whatIs="define "+input
 
-    return parser.findPattern(whatIs)
+    return interface.answer(whatIs)
 
-def getQuestionType(input): #what who when where why how
-    text=input.lower()
-    if text.find('what') != -1:
-        return 1
-    if text.find('who') != -1:
-        return 2
-    if text.find('when') != -1:
-        return 3
-    if text.find('where') != -1:
-        return 4
-    if text.find('why') != -1:
-        return 5
-    if text.find('how') != -1:
-        return 6
 
 def getSubject(obiect):
     subject = ''
@@ -64,6 +53,6 @@ print(MainBrain('What is abbacus?'))
     # while True:
     #     pattern = input("Me> ")
     #     #TODO: goodbye synonims
-    #     result = parser.findPattern(pattern)
+    #     result = parser.answer(pattern)
     #     print(result)
     # return "raspuns"
