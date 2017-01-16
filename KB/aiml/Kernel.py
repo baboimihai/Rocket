@@ -42,7 +42,7 @@ class Kernel:
 
         # Set up the bot predicates
         self._botPredicates = {}
-        self.setBotPredicate("name", "Alzheimer")
+        self.setBotPredicate("name", "Rocket")
 
         # set up the word substitutors (subbers):
         self._subbers = {}
