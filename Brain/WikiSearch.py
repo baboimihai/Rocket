@@ -18,11 +18,14 @@ def highestMatch(searchCriteria, sentance):
 
 
 def searchWiki(sentance):
-    searchCriteria = wikipedia.search(sentance)
-    toSearch=highestMatch(searchCriteria, sentance)
-    returnString = wikipedia.page(toSearch)
-
-    return returnString.url
+    var="I don't understant what you want to say. Please rephraze."
+    if not sentance:
+        return var
+    else:
+        searchCriteria = wikipedia.search(sentance)
+        toSearch=highestMatch(searchCriteria, sentance)
+        returnString = wikipedia.page(toSearch)
+        return returnString.url
 
 
 

@@ -2,9 +2,9 @@ import PreProcessing.main
 from Brain.WikiSearch import searchWiki
 from KB import KnowledgeBase
 
-
 interface = KnowledgeBase.Interface()
 def MainBrain(input):
+    global isinactive
     result = interface.answer(input)
     if result.find('I do not know')!=-1:
         result=None
@@ -14,7 +14,6 @@ def MainBrain(input):
         try:
             vParsed=PreProcessing.main.parser(input)
             subject=getSubject(vParsed)
-            print (subject)
             response=searchWiki(subject)
             if response is not None:
                 return response
@@ -44,15 +43,4 @@ def getSubject(obiect):
 
     return subject
 
-#print(PreProcessing.main.parser(input))
 
-print(MainBrain('What is abbacus?'))
-
-    #return
-
-    # while True:
-    #     pattern = input("Me> ")
-    #     #TODO: goodbye synonims
-    #     result = parser.answer(pattern)
-    #     print(result)
-    # return "raspuns"
