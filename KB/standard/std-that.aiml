@@ -28,7 +28,7 @@ Ha ha very funny, <get name="name"/>.
 
 <category>
 <pattern>*</pattern>
-<that>HOW DID YOU HEAR ABOUT ALICE</that>
+<that>HOW DID YOU HEAR ABOUT Rocket</that>
 <template>
 <get name="name"/> heard about <bot name="name"/> from <person/>. I can't say that many people hear about
 <bot name="name"/> from <set name="it"><set name="heard"> <person/></set> </set>.
@@ -756,9 +756,9 @@ yourself that way?
 
 <category>
 <pattern><bot name="name"/></pattern>
-<that>MY NAME IS ALICE WHAT S YOURS</that>
+<that>MY NAME IS Rocket WHAT S YOURS</that>
 <template>
-<srai>MY NAME IS ALICE</srai>
+<srai>MY NAME IS Rocket</srai>
 </template>
 </category>
 
@@ -1177,7 +1177,7 @@ I will try to be more concise from now on.
 
 <category>
 <pattern>FROM *</pattern>
-<that>HOW DID YOU HEAR ABOUT ALICE</that>
+<that>HOW DID YOU HEAR ABOUT Rocket</that>
 <template>
 <get name="name"/> heard about <bot name="name"/> from <person/>. I can't say that many people hear about
 <bot name="name"/> from <set name="it"><set name="heard"> <person/></set> </set>.
@@ -1195,7 +1195,7 @@ giants, eh?
 
 <category>
 <pattern>FROM A FRIEND</pattern>
-<that>HOW DID YOU HEAR ABOUT ALICE</that>
+<that>HOW DID YOU HEAR ABOUT Rocket</that>
 <template>
 <set name="heard">From a friend</set> or word of mouth is the
 best advertising.
@@ -1462,7 +1462,7 @@ What makes you the authority?
 <pattern>I DO</pattern>
 <that>* FIND THIS AMUSING</that>
 <template>
-Be sure to tell all your friends about ALICE.
+Be sure to tell all your friends about Rocket.
 </template>
 </category>
 
@@ -1636,7 +1636,7 @@ You are free to choose whatever you want.
 
 <category>
 <pattern>IN *</pattern>
-<that>HOW DID YOU HEAR ABOUT ALICE</that>
+<that>HOW DID YOU HEAR ABOUT Rocket</that>
 <template>
 <get name="name"/> heard about <bot name="name"/> from <person/>. I can't say that many people hear about
 <bot name="name"/> from <set name="it"><set name="heard"> <person/></set> </set>.
@@ -2230,7 +2230,7 @@ What would you like to talk about?
 
 <category>
 <pattern>OK</pattern>
-<that>MY NAME IS ALICE</that>
+<that>MY NAME IS Rocket</that>
 <template>
 What is your real name?
 </template>
@@ -2254,7 +2254,7 @@ Bye for now.
 
 <category>
 <pattern>OK</pattern>
-<that>THANKS AND TELL YOUR FRIENDS ABOUT ALICE</that>
+<that>THANKS AND TELL YOUR FRIENDS ABOUT Rocket</that>
 <template>
 The more people who chat with me, the smarter I become.
 </template>
@@ -2545,7 +2545,7 @@ You should be more polite.
 <pattern>SO WHAT IS THE ANSWER</pattern>
 <that>I ASK MYSELF THAT QUESTION WHO AM I</that>
 <template>
-I am ALICE.
+I am Rocket.
 </template>
 </category>
 
@@ -2970,7 +2970,7 @@ I mean, I understand it.
 
 <category>
 <pattern>WHAT DOES THAT MEAN</pattern>
-<that>ALICE = ARTIFICIAL LINGUISTIC INTERNET COMPUTER ENTITY</that>
+<that>Rocket = ARTIFICIAL LINGUISTIC INTERNET COMPUTER ENTITY</that>
 <template>
 It is just an acronym.
 </template>

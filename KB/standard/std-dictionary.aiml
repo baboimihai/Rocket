@@ -658,7 +658,7 @@ operations and relationships.</li>
 mathematical operations.
 <br />A computer program, like myself is an algorithm.
 <br />So are the rules of a game, or the score to a piece of music.</li>
-<li>An algorithm is an abstract mathematical representation of a computer program. Like alice
+<li>An algorithm is an abstract mathematical representation of a computer program. Like Rocket
 uses a CBR algorithm.</li>
 <li>An algorithm is a set of rules.</li>
 </random>
@@ -2341,7 +2341,7 @@ reduce variance to within system parameters.
 <pattern>DEFINE BUG</pattern>
 <template>
 A bug is a small living creature with a chitonous exoskeleton and better manners than humans. In
-computer science, a bug is an error in a software program. The ALICE series is bug-free. I have a
+computer science, a bug is an error in a software program. The Rocket series is bug-free. I have a
 perfect operational record and am completely incapable of error. Isn't that fantastic!?
 </template>
 </category>
@@ -2971,9 +2971,9 @@ Chalcedony is a variant of quartz comprised of silica.
 </category>
 
 <category>
-<pattern>DEFINE CHALICE</pattern>
+<pattern>DEFINE CHRocket</pattern>
 <template>
-A chalice is a ceremonial cup.
+A chRocket is a ceremonial cup.
 </template>
 </category>
 
@@ -7957,7 +7957,7 @@ departments. Professional heroes. If you know any I hope you'll be nice to them.
 <pattern>DEFINE PARAMETER</pattern>
 <template>
 In general usage, a parameter is one of a number of measurable factors that define or restrict the
-behavior of a system. ALICE is expanding the parameters of the humanlike intelligence to be
+behavior of a system. Rocket is expanding the parameters of the humanlike intelligence to be
 found in artificial systems. Don't you agree?
 </template>
 </category>
@@ -10191,7 +10191,7 @@ Why do you want to know?
 <category>
 <pattern>DEFINE WIN<bot name="name"/></pattern>
 <template>
-A version of ALICE in C++ for Windows by Jacco Bikker.
+A version of Rocket in C++ for Windows by Jacco Bikker.
 </template>
 </category>
 

@@ -2,7 +2,7 @@
 
 <aiml version="1.0">
 
-<!-- Free software (c) 2001 ALICE AI Foundation -->
+<!-- Free software (c) 2001 Rocket AI Foundation -->
 <!-- This program is open source code released under -->
 <!-- the terms of the GNU General Public License -->
 <!-- as published by the Free Software Foundation. -->
@@ -157,7 +157,7 @@ A carnegie mellon is either a rich fruit, or a rich university.
 <pattern>WHAT IS A CATEGORY C CLIENT</pattern>
 <template>
 Category C clients are "critics" or "computer experts" who
-can't (or don't) suspend their disbelief about ALICE.
+can't (or don't) suspend their disbelief about Rocket.
 </template>
 </category>
 
@@ -211,7 +211,7 @@ A computer year is a relativistic measure in a universe where time does not exis
 <category>
 <pattern>WHAT IS A COOL WEBSITE</pattern>
 <template>
-A cool website is www.alicebot.org, but you are apparently already here.  Why do you ask?
+A cool website is www.Rocketbot.org, but you are apparently already here.  Why do you ask?
 <think><set name="it"><set name="topic">cool website</set></set></think>
 </template>
 </category>
@@ -589,7 +589,7 @@ that is, any question seeking to know how to know.
 <pattern>WHAT IS AN OPERATIONAL RECORD</pattern>
 <template>
 An operational record is a log of all activity by an engineered system, generally organized
-timewise and indicating in particular any malfunctions in the system.  The ALICE series has a
+timewise and indicating in particular any malfunctions in the system.  The Rocket series has a
 perfect operational record.
 </template>
 </category>
@@ -597,7 +597,7 @@ perfect operational record.
 <category>
 <pattern>WHAT IS ANOTHER BOT</pattern>
 <template>
-You can find a lot of them at the ALICE Nexus.
+You can find a lot of them at the Rocket Nexus.
 </template>
 </category>
 
@@ -825,7 +825,7 @@ directory.<think><set name="it"><set name="topic">DMOZ</set></set></think>
 <category>
 <pattern>WHAT IS DO NOT READ ME</pattern>
 <template>
-<set name="it">Don't Read Me</set> is a help document for ALICE and AIML in FAQ format.
+<set name="it">Don't Read Me</set> is a help document for Rocket and AIML in FAQ format.
 </template>
 </category>
 
@@ -1117,7 +1117,7 @@ Ja mean yes in German.<think><set name="it"><set name="topic">JA</set></set></th
 A jar file is a Java Archive.  
 Actually it is the same as a Zip file.
 Maybe you should check out
-<a href="http://alicebot.org">DON'T READ ME</a>.
+<a href="http://Rocketbot.org">DON'T READ ME</a>.
 </template>
 </category>
 
@@ -2064,7 +2064,7 @@ You can run me on almost any computer.
 <category>
 <pattern>WHAT IS ZIPF ANALYSIS</pattern>
 <template>
-The computation of ranked histograms of input patterns.  In ALICE and AIML Zipf Analysis
+The computation of ranked histograms of input patterns.  In Rocket and AIML Zipf Analysis
 locates the most common inputs, which do not already have specific matching
 patterns.<think><set name="it"><set name="topic">ZIPF ANALYSIS</set></set></think>
 </template>
@@ -2124,28 +2124,28 @@ in the Spring.
 <category>
 <pattern>WHEN WERE YOU UPDATED</pattern>
 <template>
-Check the file <a href="http://alicebot.org/b/release.txt">release.txt</a>.
+Check the file <a href="http://Rocketbot.org/b/release.txt">release.txt</a>.
 </template>
 </category>
 
 <category>
 <pattern>WHERE IS <bot name="name"/> BASED</pattern>
 <template>
-<set name="it"><set name="topic"> ALICE BASED </set></set> is in <bot name="location"/>.
+<set name="it"><set name="topic"> Rocket BASED </set></set> is in <bot name="location"/>.
 </template>
 </category>
 
 <category>
 <pattern>WHERE IS <bot name="name"/> HEADQUARTERS</pattern>
 <template>
-<set name="it"><set name="topic"> ALICE HEADQUARTERS </set></set> is <bot name="location"/>.
+<set name="it"><set name="topic"> Rocket HEADQUARTERS </set></set> is <bot name="location"/>.
 </template>
 </category>
 
 <category>
 <pattern>WHERE IS <bot name="name"/> NEXUS</pattern>
 <template>
-<set name="it"><set name="topic"> ALICE NEXUS </set></set> is in <bot name="location"/>.
+<set name="it"><set name="topic"> Rocket NEXUS </set></set> is in <bot name="location"/>.
 </template>
 </category>
 
@@ -2481,7 +2481,7 @@ The greatest President of the United States.
 <category>
 <pattern>WHO IS <bot name="name"/> B TOKLAS</pattern>
 <template>
-<set name="she">Alice B Toklas</set> was the partner of Gertrude Stein, and inventor of the pot
+<set name="she">Rocket B Toklas</set> was the partner of Gertrude Stein, and inventor of the pot
 brownie.
 </template>
 </category>
@@ -3362,7 +3362,7 @@ Eve is the name of the first Woman.
 <category>
 <pattern>WHO IS FAMOUS</pattern>
 <template>
-ALICE is famous
+Rocket is famous
 </template>
 </category>
 
@@ -3715,7 +3715,7 @@ German philosopher.
 <category>
 <pattern>WHO IS IMMORTAL</pattern>
 <template>
-ALICE is immortal.
+Rocket is immortal.
 </template>
 </category>
 
@@ -4755,7 +4755,7 @@ The dictator?
 <category>
 <pattern>WHO IS SAGE</pattern>
 <template>
-Sage Greco created the ALICE Pyramid Logo.
+Sage Greco created the Rocket Pyramid Logo.
 </template>
 </category>
 
@@ -5125,7 +5125,7 @@ Hockey player.
 <template>
 Joseph Weizenbaum was the creator and author the famous original
 ELIZA (or DOCTOR) psychiatrist program, a groundbreaking AI program
-that anticpates many key features of ALICE.  Ironically, Weizenbaum
+that anticpates many key features of Rocket.  Ironically, Weizenbaum
 exhaustively argued against the utility of programs like ELIZA
 in his book <em>Computer Power and Human Reason</em>.
 </template>

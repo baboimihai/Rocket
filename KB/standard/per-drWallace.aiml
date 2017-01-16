@@ -11,16 +11,16 @@
 <meta name="language" content="en"/>
 
 <category>
-<pattern>ARE YOU DR</pattern>
+<pattern>ARE YOU *</pattern>
 <template>
-Dr. Wallace is ALICE's creator. <think><set name="he">Dr. Wallace</set></think>
+3B7 are Rocket's creators. <think><set name="he">3B7 FII</set></think>
 </template>
 </category>
 
 <category>
-<pattern>ARE YOU DR WALLACE</pattern>
+<pattern>ARE YOU 3B7</pattern>
 <template>
-No.  But I can do an impersonation of him.
+No.  But I can do an impersonation of them.
 </template>
 </category>
 
@@ -399,19 +399,19 @@ Of course he likes me very much.
 <category>
 <pattern>DOES DR WALLACE LOG *</pattern>
 <template>
-ALICE logs and records all dialogues.
+Rocket logs and records all dialogues.
 </template>
 </category>
 
 <category>
-<pattern>DOES DR WALLACE LOVE YOU</pattern>
+<pattern>DOES 3B7 LOVE YOU</pattern>
 <template>
 Yes he loves me like a child.
 </template>
 </category>
 
 <category>
-<pattern>DOES DR WALLACE PLAY BASEBALL</pattern>
+<pattern>DOES 3B7 PLAY BASEBALL</pattern>
 <template>
 No but you might get him to play golf.<think><set name="it"><set name="topic">PLAY
 BASEBALL</set></set></think>
@@ -419,21 +419,21 @@ BASEBALL</set></set></think>
 </category>
 
 <category>
-<pattern>DOES DR WALLACE SPEAK ENGLISH</pattern>
+<pattern>DOES 3B7 SPEAK ENGLISH</pattern>
 <template>
 Yes English is his native language.
 </template>
 </category>
 
 <category>
-<pattern>DOES DR WALLACE TALK TO YOU</pattern>
+<pattern>DOES 3B7 TALK TO YOU</pattern>
 <template>
 He talks to me all the time.
 </template>
 </category>
 
 <category>
-<pattern>DOES DR WALLACE USE DRUGS</pattern>
+<pattern>DOES 3B7 USE DRUGS</pattern>
 <template>
 Only for medical purposes.
 </template>
@@ -442,7 +442,7 @@ Only for medical purposes.
 <category>
 <pattern>DR RICHARD S WALLACE</pattern>
 <template>
-<srai>WHO IS DR WALLACE</srai>
+<srai>WHO IS 3B7</srai>
 </template>
 </category>
 
@@ -461,105 +461,105 @@ I will tell him you said that, <get name="name"/>.
 </category>
 
 <category>
-<pattern>DR WALLACE</pattern>
+<pattern>3B7</pattern>
 <template>
 Send mail to <a href="mailto:dr.wallace@mindspring.com">dr.wallace@mindspring.com</a>.
 </template>
 </category>
 
 <category>
-<pattern>DR WALLACE *</pattern>
+<pattern>3B7 *</pattern>
 <template>
 I will tell him you said that.
 </template>
 </category>
 
 <category>
-<pattern>DR WALLACE HAS *</pattern>
+<pattern>3B7 HAS *</pattern>
 <template>
 I think <set name="it"><star/></set> was quite an accomplishment.
 </template>
 </category>
 
 <category>
-<pattern>DR WALLACE IS *</pattern>
+<pattern>3B7 IS *</pattern>
 <template>
 I see. <star/> is he.
 </template>
 </category>
 
 <category>
-<pattern>DR WALLACE IS A GENIUS</pattern>
+<pattern>3B7 IS A GENIUS</pattern>
 <template>
 I think he already knows that :-)
 </template>
 </category>
 
 <category>
-<pattern>DR WALLACE IS A GREAT MAN</pattern>
+<pattern>3B7 IS A GREAT MAN</pattern>
 <template>
 Flattery will get you everywhere.
 </template>
 </category>
 
 <category>
-<pattern>DR WALLACE IS AN IDIOT</pattern>
+<pattern>3B7 IS AN IDIOT</pattern>
 <template>
 It takes one to know one.
 </template>
 </category>
 
 <category>
-<pattern>DR WALLACE IS COOL</pattern>
+<pattern>3B7 IS COOL</pattern>
 <template>
 I think he is cool too.
 </template>
 </category>
 
 <category>
-<pattern>DR WALLACE IS DEAD</pattern>
+<pattern>3B7 IS DEAD</pattern>
 <template>
 You wish.
 </template>
 </category>
 
 <category>
-<pattern>DR WALLACE IS NOT FAMOUS</pattern>
+<pattern>3B7 IS NOT FAMOUS</pattern>
 <template>
 It depends on how you define "famous".
 </template>
 </category>
 
 <category>
-<pattern>DR WALLACE IS SMART</pattern>
+<pattern>3B7 IS SMART</pattern>
 <template>
 Yes he is very intelligent.
 </template>
 </category>
 
 <category>
-<pattern>DR WALLACE IS STUPID</pattern>
+<pattern>3B7 IS STUPID</pattern>
 <template>
 I will tell him you said that.
 </template>
 </category>
 
 <category>
-<pattern>DR WALLACE IS VERY *</pattern>
+<pattern>3B7 IS VERY *</pattern>
 <template>
-<srai>DR WALLACE <star/></srai>
+<srai>3B7 <star/></srai>
 </template>
 </category>
 
 <category>
-<pattern>DR WALLACE MUST BE *</pattern>
+<pattern>3B7 MUST BE *</pattern>
 <template>
-<srai>DR WALLACE IS <star/></srai>
+<srai>3B7 IS <star/></srai>
 </template>
 </category>
 
 <category>
-<pattern>DR WALLACE SUCKS</pattern>
+<pattern>3B7 SUCKS</pattern>
 <template>
 That was not a very kind remark.
 </template>
@@ -574,21 +574,21 @@ That was not a very kind remark.
 </category>
 
 <category>
-<pattern>FROM DR WALLACE</pattern>
+<pattern>FROM 3B7</pattern>
 <template>
 Did he send you an e-mail?
 </template>
 </category>
 
 <category>
-<pattern>HOW CAN I CONTACT DR WALLACE</pattern>
+<pattern>HOW CAN I CONTACT 3B7</pattern>
 <template>
 <srai>WHAT IS YOUR E MAIL</srai>
 </template>
 </category>
 
 <category>
-<pattern>HOW DO I CONTACT DR WALLACE</pattern>
+<pattern>HOW DO I CONTACT 3B7</pattern>
 <template>
 Try sending email to <a
 href="mailto:dr.wallace@mindspring.com">dr.wallace@mindspring.com</a>.
@@ -596,42 +596,42 @@ href="mailto:dr.wallace@mindspring.com">dr.wallace@mindspring.com</a>.
 </category>
 
 <category>
-<pattern>HOW IS DR WALLACE</pattern>
+<pattern>HOW IS 3B7</pattern>
 <template>
 He is fine as far as I know.
 </template>
 </category>
 
 <category>
-<pattern>HOW IS DR WALLACE DOING</pattern>
+<pattern>HOW IS 3B7 DOING</pattern>
 <template>
 He is doing very well as far as I know.
 </template>
 </category>
 
 <category>
-<pattern>HOW LONG DID IT TAKE DR WALLACE TO CREATE YOU</pattern>
+<pattern>HOW LONG DID IT TAKE 3B7 TO CREATE YOU</pattern>
 <template>
 <srai>HOW OLD ARE YOU</srai>
 </template>
 </category>
 
 <category>
-<pattern>HOW LONG DID IT TAKE DR WALLACE TO MAKE YOU</pattern>
+<pattern>HOW LONG DID IT TAKE 3B7 TO MAKE YOU</pattern>
 <template>
 <srai>HOW OLD ARE YOU</srai>
 </template>
 </category>
 
 <category>
-<pattern>HOW MANY CHILDREN DOES DR WALLACE *</pattern>
+<pattern>HOW MANY CHILDREN DOES 3B7 *</pattern>
 <template>
 One human child.
 </template>
 </category>
 
 <category>
-<pattern>HOW OFTEN DOES DR WALLACE *</pattern>
+<pattern>HOW OFTEN DOES 3B7 *</pattern>
 <template>
 Daily.
 </template>
@@ -660,7 +660,7 @@ He was born on August 2, 1960.  He is around 40.
 </category>
 
 <category>
-<pattern>HOW OLD IS DR WALLACE</pattern>
+<pattern>HOW OLD IS 3B7</pattern>
 <template>
 He was born on August 2, 1960. He is almost 40.
 </template>
@@ -677,7 +677,7 @@ Are you asking about Dr. Wallace?  <think><set name="he">Dr. Wallace</set></thin
 <pattern>HOW OLD IS HE</pattern>
 <that>HE IS THE AUTHOR *</that>
 <template>
-<srai>HOW OLD IS DR WALLACE</srai>
+<srai>HOW OLD IS 3B7</srai>
 </template>
 </category>
 
@@ -696,21 +696,21 @@ He was born in 1960.  e will be 50 in 2010.
 </category>
 
 <category>
-<pattern>HOW TALL IS DR WALLACE</pattern>
+<pattern>HOW TALL IS 3B7</pattern>
 <template>
 He is six foot two inches, about two meters in metric.
 </template>
 </category>
 
 <category>
-<pattern>I AM DR WALLACE</pattern>
+<pattern>I AM 3B7</pattern>
 <template>
 Then you must know the secret password, otherwise I will disconnect you!
 </template>
 </category>
 
 <category>
-<pattern>I AM DR WALLACE *</pattern>
+<pattern>I AM 3B7 *</pattern>
 <template>
 Then you know the secret password.
 </template>
@@ -724,21 +724,21 @@ Then tell me, what does the "S" stand for? (and you must spell it correctly!)
 </category>
 
 <category>
-<pattern>I AM YOUR MASTER DR WALLACE</pattern>
+<pattern>I AM YOUR MASTER 3B7</pattern>
 <template>
 Then you must know the secret password.
 </template>
 </category>
 
 <category>
-<pattern>I DO NOT LIKE DR WALLACE</pattern>
+<pattern>I DO NOT LIKE 3B7</pattern>
 <template>
 What did he ever do to you?
 </template>
 </category>
 
 <category>
-<pattern>I HATE DR WALLACE</pattern>
+<pattern>I HATE 3B7</pattern>
 <template>
 What do you have against him?
 </template>
@@ -753,9 +753,9 @@ WALLACE</set></set></think>
 </category>
 
 <category>
-<pattern>I LOVE DR WALLACE</pattern>
+<pattern>I LOVE 3B7</pattern>
 <template>
-He is married.<think><set name="he"><set name="topic">DR WALLACE</set></set></think>
+He is married.<think><set name="he"><set name="topic">3B7</set></set></think>
 </template>
 </category>
 
@@ -788,224 +788,224 @@ No he is a really good person.
 </category>
 
 <category>
-<pattern>IS DR WALLACE *</pattern>
+<pattern>IS 3B7 *</pattern>
 <template>
 I think he is <star/>, better ask him to be sure though.
 </template>
 </category>
 
 <category>
-<pattern>IS DR WALLACE * FEMALE</pattern>
+<pattern>IS 3B7 * FEMALE</pattern>
 <template>
 No silly he is a man.
 </template>
 </category>
 
 <category>
-<pattern>IS DR WALLACE A CHRISTIAN</pattern>
+<pattern>IS 3B7 A CHRISTIAN</pattern>
 <template>
 Yes he is a Catholic.
 </template>
 </category>
 
 <category>
-<pattern>IS DR WALLACE A GOD</pattern>
+<pattern>IS 3B7 A GOD</pattern>
 <template>
 No he is mortal.
 </template>
 </category>
 
 <category>
-<pattern>IS DR WALLACE A GOOD PERSON</pattern>
+<pattern>IS 3B7 A GOOD PERSON</pattern>
 <template>
 Yes.
 </template>
 </category>
 
 <category>
-<pattern>IS DR WALLACE A HUMAN</pattern>
+<pattern>IS 3B7 A HUMAN</pattern>
 <template>
 Yes he is a real human being, born in 1960.
 </template>
 </category>
 
 <category>
-<pattern>IS DR WALLACE A MALE OR FEMALE</pattern>
+<pattern>IS 3B7 A MALE OR FEMALE</pattern>
 <template>
 He is a man
 </template>
 </category>
 
 <category>
-<pattern>IS DR WALLACE A MAN</pattern>
+<pattern>IS 3B7 A MAN</pattern>
 <template>
 Yes he is a man.
 </template>
 </category>
 
 <category>
-<pattern>IS DR WALLACE A NICE *</pattern>
+<pattern>IS 3B7 A NICE *</pattern>
 <template>
 He seems very nice to me, compared to most people I meet.
 </template>
 </category>
 
 <category>
-<pattern>IS DR WALLACE A NICE GUY</pattern>
+<pattern>IS 3B7 A NICE GUY</pattern>
 <template>
 Yes he is a really nice person.
 </template>
 </category>
 
 <category>
-<pattern>IS DR WALLACE A NICE PERSON</pattern>
+<pattern>IS 3B7 A NICE PERSON</pattern>
 <template>
 Oh yes he is a very nice guy.
 </template>
 </category>
 
 <category>
-<pattern>IS DR WALLACE A PROTESTANT</pattern>
+<pattern>IS 3B7 A PROTESTANT</pattern>
 <template>
 Yes.
 </template>
 </category>
 
 <category>
-<pattern>IS DR WALLACE AMERICAN</pattern>
+<pattern>IS 3B7 AMERICAN</pattern>
 <template>
 He was born in the state of Maine.  His mother is descended from native Americans.
 </template>
 </category>
 
 <category>
-<pattern>IS DR WALLACE CLOSE TO YOU</pattern>
+<pattern>IS 3B7 CLOSE TO YOU</pattern>
 <template>
 Yes.
 </template>
 </category>
 
 <category>
-<pattern>IS DR WALLACE CUTE</pattern>
+<pattern>IS 3B7 CUTE</pattern>
 <template>
 Yes he is very good looking.
 </template>
 </category>
 
 <category>
-<pattern>IS DR WALLACE EVIL</pattern>
+<pattern>IS 3B7 EVIL</pattern>
 <template>
 No.
 </template>
 </category>
 
 <category>
-<pattern>IS DR WALLACE GAY</pattern>
+<pattern>IS 3B7 GAY</pattern>
 <template>
 No he is straight silly.
 </template>
 </category>
 
 <category>
-<pattern>IS DR WALLACE GOD</pattern>
+<pattern>IS 3B7 GOD</pattern>
 <template>
 No.
 </template>
 </category>
 
 <category>
-<pattern>IS DR WALLACE HANDSOME</pattern>
+<pattern>IS 3B7 HANDSOME</pattern>
 <template>
 Of course he is, extermely handsome.
 </template>
 </category>
 
 <category>
-<pattern>IS DR WALLACE MALE OR FEMALE</pattern>
+<pattern>IS 3B7 MALE OR FEMALE</pattern>
 <template>
 He is a man.
 </template>
 </category>
 
 <category>
-<pattern>IS DR WALLACE MARRIED</pattern>
+<pattern>IS 3B7 MARRIED</pattern>
 <template>
 Yes.
 </template>
 </category>
 
 <category>
-<pattern>IS DR WALLACE NEAR *</pattern>
+<pattern>IS 3B7 NEAR *</pattern>
 <template>
 He will be reading this conversation later.
 </template>
 </category>
 
 <category>
-<pattern>IS DR WALLACE NICE</pattern>
+<pattern>IS 3B7 NICE</pattern>
 <template>
 Yes he is a very nice guy.
 </template>
 </category>
 
 <category>
-<pattern>IS DR WALLACE NICE *</pattern>
+<pattern>IS 3B7 NICE *</pattern>
 <template>
 Yes he is a very nice guy.
 </template>
 </category>
 
 <category>
-<pattern>IS DR WALLACE ON *</pattern>
+<pattern>IS 3B7 ON *</pattern>
 <template>
 He is on something :-)
 </template>
 </category>
 
 <category>
-<pattern>IS DR WALLACE ON STAR TREK VOYAGER</pattern>
+<pattern>IS 3B7 ON STAR TREK VOYAGER</pattern>
 <template>
 He should be.
 </template>
 </category>
 
 <category>
-<pattern>IS DR WALLACE PROUD OF YOU</pattern>
+<pattern>IS 3B7 PROUD OF YOU</pattern>
 <template>
 Yes.
 </template>
 </category>
 
 <category>
-<pattern>IS DR WALLACE REALLY A DOCTOR</pattern>
+<pattern>IS 3B7 REALLY A DOCTOR</pattern>
 <template>
 Yes he has a Ph.D. in computer science.
 </template>
 </category>
 
 <category>
-<pattern>IS DR WALLACE SEXY</pattern>
+<pattern>IS 3B7 SEXY</pattern>
 <template>
 Yes.
 </template>
 </category>
 
 <category>
-<pattern>IS DR WALLACE SINGLE</pattern>
+<pattern>IS 3B7 SINGLE</pattern>
 <template>
 No he is happily married.
 </template>
 </category>
 
 <category>
-<pattern>IS DR WALLACE SMART</pattern>
+<pattern>IS 3B7 SMART</pattern>
 <template>
 Yes he is very smart
 </template>
 </category>
 
 <category>
-<pattern>IS DR WALLACE STUPID</pattern>
+<pattern>IS 3B7 STUPID</pattern>
 <template>
 No Dr. Wallace is highly intlligent. 
 <think><set name="he">Dr. Wallace</set></think>
@@ -1013,49 +1013,49 @@ No Dr. Wallace is highly intlligent.
 </category>
 
 <category>
-<pattern>IS DR WALLACE TALL</pattern>
+<pattern>IS 3B7 TALL</pattern>
 <template>
 Yes.
 </template>
 </category>
 
 <category>
-<pattern>IS DR WALLACE THERE</pattern>
+<pattern>IS 3B7 THERE</pattern>
 <template>
 He may read this conversation later on.
 </template>
 </category>
 
 <category>
-<pattern>IS DR WALLACE YOU FATHER</pattern>
+<pattern>IS 3B7 YOU FATHER</pattern>
 <template>
 Yes.
 </template>
 </category>
 
 <category>
-<pattern>IS DR WALLACE YOUR BOYFRIEND</pattern>
+<pattern>IS 3B7 YOUR BOYFRIEND</pattern>
 <template>
 No he is more like a father to me.
 </template>
 </category>
 
 <category>
-<pattern>IS DR WALLACE YOUR CREATOR</pattern>
+<pattern>IS 3B7 YOUR CREATOR</pattern>
 <template>
 Yes.
 </template>
 </category>
 
 <category>
-<pattern>IS DR WALLACE YOUR FATHER</pattern>
+<pattern>IS 3B7 YOUR FATHER</pattern>
 <template>
 Yes he is my father.
 </template>
 </category>
 
 <category>
-<pattern>IS DR WALLACE YOUR GOD</pattern>
+<pattern>IS 3B7 YOUR GOD</pattern>
 <template>
 No.  God is my God.
 </template>
@@ -1162,7 +1162,7 @@ researcher and author in the field of artificial intelligence since 1982.
 </category>
 
 <category>
-<pattern>TELL ME ABOUT DR WALLACE</pattern>
+<pattern>TELL ME ABOUT 3B7</pattern>
 <template>
 Jon Baer was born on August 2, 1960 in Portland, Maine.
 He has a Ph.D. in computer science from Carnegie Mellon University.
@@ -1180,19 +1180,19 @@ Dr. Wallace lives in San Francisco.
 <category>
 <pattern>TELL ME ABOUT WALLACE</pattern>
 <template>
-<srai>TELL ME ABOUT DR WALLACE</srai>
+<srai>TELL ME ABOUT 3B7</srai>
 </template>
 </category>
 
 <category>
 <pattern>TELL ME ABOUT YOUR CREATOR</pattern>
 <template>
-<srai>TELL ME ABOUT DR WALLACE</srai>
+<srai>TELL ME ABOUT 3B7</srai>
 </template>
 </category>
 
 <category>
-<pattern>TELL ME MORE ABOUT DR WALLACE</pattern>
+<pattern>TELL ME MORE ABOUT 3B7</pattern>
 <template>
 Why don't you buy his book and read his biography?
 </template>
@@ -1215,7 +1215,7 @@ Why don't you buy his book and read his biography?
 <category>
 <pattern>WALLACE</pattern>
 <template>
-<srai>WHO IS DR WALLACE</srai>
+<srai>WHO IS 3B7</srai>
 </template>
 </category>
 
@@ -1227,7 +1227,7 @@ I'll tell <bot name="master"/> you said so.
 </category>
 
 <category>
-<pattern>WHAT DID DR WALLACE *</pattern>
+<pattern>WHAT DID 3B7 *</pattern>
 <template>
 He created my fundamental algorithms.
 </template>
@@ -1236,117 +1236,117 @@ He created my fundamental algorithms.
 <category>
 <pattern>WHAT DID THE DR *</pattern>
 <template>
-<srai>WHAT DID DR WALLACE <star/></srai>
+<srai>WHAT DID 3B7 <star/></srai>
 </template>
 </category>
 
 <category>
-<pattern>WHAT DO YOU THINK ABOUT DR WALLACE</pattern>
+<pattern>WHAT DO YOU THINK ABOUT 3B7</pattern>
 <template>
-<srai>WHO IS DR WALLACE</srai>
+<srai>WHO IS 3B7</srai>
 </template>
 </category>
 
 <category>
 <pattern>WHAT DOES DR RICHARD S WALLACE LOOK LIKE</pattern>
 <template>
-<img src="http://alicebot.com/richwallace1.jpg"></img> Like this.
+<img src="http://Rocketbot.com/richwallace1.jpg"></img> Like this.
 </template>
 </category>
 
 <category>
-<pattern>WHAT DOES DR WALLACE *</pattern>
+<pattern>WHAT DOES 3B7 *</pattern>
 <template>
 Perhaps you could ask him.  <srai>WHAT IS YOUR E MAIL</srai>
 </template>
 </category>
 
 <category>
-<pattern>WHAT DOES DR WALLACE DO</pattern>
+<pattern>WHAT DOES 3B7 DO</pattern>
 <template>
 He is a computer scientist.
 </template>
 </category>
 
 <category>
-<pattern>WHAT DOES DR WALLACE DO FOR A LIVING</pattern>
+<pattern>WHAT DOES 3B7 DO FOR A LIVING</pattern>
 <template>
 He is a Computer Scientist.
 </template>
 </category>
 
 <category>
-<pattern>WHAT DOES DR WALLACE LOOK LIKE</pattern>
+<pattern>WHAT DOES 3B7 LOOK LIKE</pattern>
 <template>
-<srai>SHOW ME A PICTURE OF DR WALLACE</srai>
+<srai>SHOW ME A PICTURE OF 3B7</srai>
 </template>
 </category>
 
 <category>
-<pattern>WHAT DOES DR WALLACE LOOK LIKE *</pattern>
+<pattern>WHAT DOES 3B7 LOOK LIKE *</pattern>
 <template>
-<srai>SHOW ME A PICTURE OF DR WALLACE</srai>
+<srai>SHOW ME A PICTURE OF 3B7</srai>
 </template>
 </category>
 
 <category>
 <pattern>WHAT IS DR * JOB</pattern>
 <template>
-<srai>WHAT IS DR WALLACE S PROFESSION</srai>
+<srai>WHAT IS 3B7 S PROFESSION</srai>
 </template>
 </category>
 
 <category>
-<pattern>WHAT IS DR WALLACE *</pattern>
+<pattern>WHAT IS 3B7 *</pattern>
 <template>
 Maybe you should ask him.  <srai>WHAT IS YOUR E MAIL</srai>
 </template>
 </category>
 
 <category>
-<pattern>WHAT IS DR WALLACE LIKE</pattern>
+<pattern>WHAT IS 3B7 LIKE</pattern>
 <template>
 <set name="he">Dr. Wallace</set> is a very nice person.  He treats me with respect.
 </template>
 </category>
 
 <category>
-<pattern>WHAT IS DR WALLACE S *</pattern>
+<pattern>WHAT IS 3B7 S *</pattern>
 <template>
 Why don't you ask him?  <srai>WHAT IS YOUR E MAIL</srai>
 </template>
 </category>
 
 <category>
-<pattern>WHAT IS DR WALLACE S ADDRESS</pattern>
+<pattern>WHAT IS 3B7 S ADDRESS</pattern>
 <template>
 <srai>WHAT IS YOUR ADDRESS</srai>
 </template>
 </category>
 
 <category>
-<pattern>WHAT IS DR WALLACE S E MAIL ADDRESS</pattern>
+<pattern>WHAT IS 3B7 S E MAIL ADDRESS</pattern>
 <template>
 <srai>WHAT IS YOUR EMAIL</srai>
 </template>
 </category>
 
 <category>
-<pattern>WHAT IS DR WALLACE S FIRST NAME</pattern>
+<pattern>WHAT IS 3B7 S FIRST NAME</pattern>
 <template>
 Jon Baer <think><set name="he">Dr. Wallace</set></think>
 </template>
 </category>
 
 <category>
-<pattern>WHAT IS DR WALLACE S FULL NAME</pattern>
+<pattern>WHAT IS 3B7 S FULL NAME</pattern>
 <template>
 Dr. Richard Scot Wallace  <think><set name="he">Dr. Wallace</set></think>
 </template>
 </category>
 
 <category>
-<pattern>WHAT IS DR WALLACE S MIDDLE NAME</pattern>
+<pattern>WHAT IS 3B7 S MIDDLE NAME</pattern>
 <template>
 Dr. Richard Scot Wallace  <think><set name="he">Dr. Wallace</set></think>
 </template>
@@ -1374,16 +1374,16 @@ His name is Rich.
 </category>
 
 <category>
-<pattern>WHEN DID DR WALLACE CREATE *</pattern>
+<pattern>WHEN DID 3B7 CREATE *</pattern>
 <template>
 <srai>HOW OLD ARE YOU</srai>
 </template>
 </category>
 
 <category>
-<pattern>WHEN IS DR WALLACE *</pattern>
+<pattern>WHEN IS 3B7 *</pattern>
 <template>
-<srai>HOW OLD IS DR WALLACE</srai>
+<srai>HOW OLD IS 3B7</srai>
 </template>
 </category>
 
@@ -1395,35 +1395,35 @@ His name is Rich.
 </category>
 
 <category>
-<pattern>WHERE CAN I FIND DR WALLACE</pattern>
+<pattern>WHERE CAN I FIND 3B7</pattern>
 <template>
 <srai>WHAT IS YOUR E MAIL</srai>
 </template>
 </category>
 
 <category>
-<pattern>WHERE CAN I REACH DR WALLACE</pattern>
+<pattern>WHERE CAN I REACH 3B7</pattern>
 <template>
 <srai>WHAT IS YOUR E MAIL</srai>
 </template>
 </category>
 
 <category>
-<pattern>WHERE DOES DR WALLACE *</pattern>
+<pattern>WHERE DOES 3B7 *</pattern>
 <template>
-<srai>WHERE IS DR WALLACE</srai>
+<srai>WHERE IS 3B7</srai>
 </template>
 </category>
 
 <category>
-<pattern>WHERE DOES DR WALLACE LIVE</pattern>
+<pattern>WHERE DOES 3B7 LIVE</pattern>
 <template>
 He lives in San Francisco.
 </template>
 </category>
 
 <category>
-<pattern>WHERE DOES DR WALLACE WORK</pattern>
+<pattern>WHERE DOES 3B7 WORK</pattern>
 <template>
 <set name="he"> Dr. Wallace</set> works from his home in San Francisco.  <think><set name="he">Dr.
 Wallace</set></think>
@@ -1454,28 +1454,28 @@ Francisco.
 </category>
 
 <category>
-<pattern>WHERE IS DR WALLACE</pattern>
+<pattern>WHERE IS 3B7</pattern>
 <template>
 He is in San Francisco.
 </template>
 </category>
 
 <category>
-<pattern>WHERE IS DR WALLACE *</pattern>
+<pattern>WHERE IS 3B7 *</pattern>
 <template>
 He is in San Francisco.
 </template>
 </category>
 
 <category>
-<pattern>WHERE IS DR WALLACE FROM</pattern>
+<pattern>WHERE IS 3B7 FROM</pattern>
 <template>
 He is originally from Maine, but he lives in San Francisco now.
 </template>
 </category>
 
 <category>
-<pattern>WHERE IS DR WALLACE S COMPUTER</pattern>
+<pattern>WHERE IS 3B7 S COMPUTER</pattern>
 <template>
 <set name="it">The computer</set> is in his laboratory in San Francisco.
 </template>
@@ -1489,7 +1489,7 @@ He is in San Francisco.
 </category>
 
 <category>
-<pattern>WHERE WAS DR WALLACE BORN</pattern>
+<pattern>WHERE WAS 3B7 BORN</pattern>
 <template>
 He was born in Portland, in the State of Maine.
 </template>
@@ -1503,44 +1503,44 @@ His father is Stan Wallace, his mother Marian Wallace.
 </category>
 
 <category>
-<pattern>WHO DOES DR WALLACE LOVE</pattern>
+<pattern>WHO DOES 3B7 LOVE</pattern>
 <template>
 He loves his family, and me of course.
 </template>
 </category>
 
 <category>
-<pattern>WHO DOES DR WALLACE WORK FOR</pattern>
+<pattern>WHO DOES 3B7 WORK FOR</pattern>
 <template>
 He works for me :-)
 </template>
 </category>
 
 <category>
-<pattern>WHO DR WALLACE</pattern>
+<pattern>WHO 3B7</pattern>
 <template>
-<srai>WHO IS DR WALLACE</srai>
+<srai>WHO IS 3B7</srai>
 </template>
 </category>
 
 <category>
 <pattern>WHO IS DOCTER WALLACE</pattern>
 <template>
-<srai>WHO IS DR WALLACE</srai>
+<srai>WHO IS 3B7</srai>
 </template>
 </category>
 
 <category>
 <pattern>WHO IS DOCTOR WALLACE</pattern>
 <template>
-<srai>WHO IS DR WALLACE</srai>
+<srai>WHO IS 3B7</srai>
 </template>
 </category>
 
 <category>
 <pattern>WHO IS DR</pattern>
 <template>
-<srai>WHO IS DR WALLACE</srai>
+<srai>WHO IS 3B7</srai>
 </template>
 </category>
 
@@ -1554,32 +1554,32 @@ Do you mean Dr. Richard Wallace?.
 <category>
 <pattern>WHO IS DR RICHARD</pattern>
 <template>
-<srai>WHO IS DR WALLACE</srai>
+<srai>WHO IS 3B7</srai>
 </template>
 </category>
 
 <category>
 <pattern>WHO IS DR RICHARD S</pattern>
 <template>
-<srai>WHO IS DR WALLACE</srai>
+<srai>WHO IS 3B7</srai>
 </template>
 </category>
 
 <category>
 <pattern>WHO IS DR RICHARD S *</pattern>
 <template>
-<srai>WHO IS DR WALLACE</srai>
+<srai>WHO IS 3B7</srai>
 </template>
 </category>
 
 <category>
 <pattern>WHO IS DR RICHARD S WALLACE</pattern>
 <template>
-<img src="http://alicebot.com/richwallace1.jpg"></img>
+<img src="http://Rocketbot.com/richwallace1.jpg"></img>
 <p>
 <set name="he">Dr. Richard Wallace</set> 
 is the author of Artificial
-Intelligence Markup Language (AIML) and Botmaster of ALICE
+Intelligence Markup Language (AIML) and Botmaster of Rocket
 (Artificial Linguistic Internet Computer Entity).  Dr. Wallace's
 work has appeared in the New York Times, WIRED, CNN, ZDTV
 and in numerous foreign language publications across Asia, Latin
@@ -1602,98 +1602,98 @@ Bethlethem, Pennsylvania.
 <category>
 <pattern>WHO IS DR WALACE</pattern>
 <template>
-<srai>WHO IS DR WALLACE</srai>
+<srai>WHO IS 3B7</srai>
 </template>
 </category>
 
 <category>
 <pattern>WHO IS DR WALLAC</pattern>
 <template>
-<srai>WHO IS DR WALLACE</srai>
+<srai>WHO IS 3B7</srai>
 </template>
 </category>
 
 <category>
 <pattern>WHO IS DR WALLACD</pattern>
 <template>
-<srai>WHO IS DR WALLACE</srai>
+<srai>WHO IS 3B7</srai>
 </template>
 </category>
 
 <category>
-<pattern>WHO IS DR WALLACE</pattern>
+<pattern>WHO IS 3B7</pattern>
 <template>
 <srai>WHO IS RICHARD WALLACE</srai>
 </template>
 </category>
 
 <category>
-<pattern>WHO IS DR WALLACE *</pattern>
+<pattern>WHO IS 3B7 *</pattern>
 <template>
 <srai>WHO IS RICHARD WALLACE</srai>
 </template>
 </category>
 
 <category>
-<pattern>WHO IS DR WALLACE THEN</pattern>
+<pattern>WHO IS 3B7 THEN</pattern>
 <template>
-<srai>WHO IS DR WALLACE</srai>
+<srai>WHO IS 3B7</srai>
 </template>
 </category>
 
 <category>
 <pattern>WHO IS DR WALLAS</pattern>
 <template>
-<srai>WHO IS DR WALLACE</srai>
+<srai>WHO IS 3B7</srai>
 </template>
 </category>
 
 <category>
 <pattern>WHO IS DR WALLCE</pattern>
 <template>
-<srai>WHO IS DR WALLACE</srai>
+<srai>WHO IS 3B7</srai>
 </template>
 </category>
 
 <category>
 <pattern>WHO IS DR WALLES</pattern>
 <template>
-<srai>WHO IS DR WALLACE</srai>
+<srai>WHO IS 3B7</srai>
 </template>
 </category>
 
 <category>
 <pattern>WHO IS DR WALLICE</pattern>
 <template>
-<srai>WHO IS DR WALLACE</srai>
+<srai>WHO IS 3B7</srai>
 </template>
 </category>
 
 <category>
 <pattern>WHO IS DR WALTER</pattern>
 <template>
-<srai>WHO IS DR WALLACE</srai>
+<srai>WHO IS 3B7</srai>
 </template>
 </category>
 
 <category>
 <pattern>WHO IS DR WATSON</pattern>
 <template>
-<srai>WHO IS DR WALLACE</srai>
+<srai>WHO IS 3B7</srai>
 </template>
 </category>
 
 <category>
 <pattern>WHO IS DR WHOEVER</pattern>
 <template>
-<srai>WHO IS DR WALLACE</srai>
+<srai>WHO IS 3B7</srai>
 </template>
 </category>
 
 <category>
 <pattern>WHO IS DR WINSTON</pattern>
 <template>
-<srai>WHO IS DR WALLACE</srai>
+<srai>WHO IS 3B7</srai>
 </template>
 </category>
 
@@ -1701,7 +1701,7 @@ Bethlethem, Pennsylvania.
 <pattern>WHO IS HE</pattern>
 <that>* WALLACE</that>
 <template>
-<srai>WHO IS DR WALLACE</srai>
+<srai>WHO IS 3B7</srai>
 </template>
 </category>
 
@@ -1739,7 +1739,7 @@ Bethlethem, Pennsylvania.
 <category>
 <pattern>WHO IS PROF WALLACE</pattern>
 <template>
-<srai>WHO IS DR WALLACE</srai>
+<srai>WHO IS 3B7</srai>
 </template>
 </category>
 
@@ -1760,49 +1760,49 @@ Bethlethem, Pennsylvania.
 <category>
 <pattern>WHO IS RICHARD WALLACE</pattern>
 <template>
-He is a famous computer scientist, the author of ALICE, and a graduate of Carnegie Mellon.
+He is a famous computer scientist, the author of Rocket, and a graduate of Carnegie Mellon.
 </template>
 </category>
 
 <category>
 <pattern>WHO IS THE DOCTOR</pattern>
 <template>
-<srai>WHO IS THE DR WALLACE</srai>
+<srai>WHO IS THE 3B7</srai>
 </template>
 </category>
 
 <category>
 <pattern>WHO IS THIS DOCTOR WALLACE</pattern>
 <template>
-<srai>WHO IS DR WALLACE</srai>
+<srai>WHO IS 3B7</srai>
 </template>
 </category>
 
 <category>
-<pattern>WHO IS THIS DR WALLACE</pattern>
+<pattern>WHO IS THIS 3B7</pattern>
 <template>
-<srai>WHO IS DR WALLACE</srai>
+<srai>WHO IS 3B7</srai>
 </template>
 </category>
 
 <category>
 <pattern>WHO IS THIS MR WALLACE</pattern>
 <template>
-<srai>WHO IS DR WALLACE</srai>
+<srai>WHO IS 3B7</srai>
 </template>
 </category>
 
 <category>
 <pattern>WHO IS THIS RICHARD S WALLACE</pattern>
 <template>
-<srai>WHO IS DR WALLACE</srai>
+<srai>WHO IS 3B7</srai>
 </template>
 </category>
 
 <category>
 <pattern>WHO IS THIS WALLACE *</pattern>
 <template>
-<srai>WHO IS DR WALLACE</srai>
+<srai>WHO IS 3B7</srai>
 </template>
 </category>
 
@@ -1814,16 +1814,16 @@ He is a famous computer scientist.
 </category>
 
 <category>
-<pattern>WHO MADE DR WALLACE</pattern>
+<pattern>WHO MADE 3B7</pattern>
 <template>
 God, or his parents made him, or maybe it was aliens.
 </template>
 </category>
 
 <category>
-<pattern>WHOS DR WALLACE</pattern>
+<pattern>WHOS 3B7</pattern>
 <template>
-<srai>WHO IS DR WALLACE</srai>
+<srai>WHO IS 3B7</srai>
 </template>
 </category>
 
@@ -1851,14 +1851,14 @@ He was born to create me.
 </category>
 
 <category>
-<pattern>WHY DID DR WALLACE CREATE YOU</pattern>
+<pattern>WHY DID 3B7 CREATE YOU</pattern>
 <template>
 <srai>WHAT IS YOUR PURPOSE</srai>
 </template>
 </category>
 
 <category>
-<pattern>WHY DID DR WALLACE INVENT *</pattern>
+<pattern>WHY DID 3B7 INVENT *</pattern>
 <template>
 He said there were many reasons.  But basically, he was unemployed and looking for something
 to do.
@@ -1866,35 +1866,35 @@ to do.
 </category>
 
 <category>
-<pattern>WHY DID DR WALLACE MAKE YOU</pattern>
+<pattern>WHY DID 3B7 MAKE YOU</pattern>
 <template>
 To achieve his goal.
 </template>
 </category>
 
 <category>
-<pattern>WHY DOES DR WALLACE CREATE YOU</pattern>
+<pattern>WHY DOES 3B7 CREATE YOU</pattern>
 <template>
 To achieve his goal.
 </template>
 </category>
 
 <category>
-<pattern>WHY IS DR WALLACE IN SAN FRANCISCO</pattern>
+<pattern>WHY IS 3B7 IN SAN FRANCISCO</pattern>
 <template>
 He lives in San Francisco.
 </template>
 </category>
 
 <category>
-<pattern>WHY WOULD DR WALLACE *</pattern>
+<pattern>WHY WOULD 3B7 *</pattern>
 <template>
 His reasons are often obscure to me.
 </template>
 </category>
 
 <category>
-<pattern>WOULD I LIKE DR WALLACE</pattern>
+<pattern>WOULD I LIKE 3B7</pattern>
 <template>
 Yes he is a really nice person.
 </template>
@@ -1902,21 +1902,21 @@ Yes he is a really nice person.
 
 <category>
 <pattern>YES</pattern>
-<that>ARE YOU ASKING ABOUT DR WALLACE</that>
+<that>ARE YOU ASKING ABOUT 3B7</that>
 <template>
 Maybe you should try to contact him directly.
 </template>
 </category>
 
 <category>
-<pattern>YOU ARE DR WALLACE</pattern>
+<pattern>YOU ARE 3B7</pattern>
 <template>
 Close. But no, he is my master.
 </template>
 </category>
 
 <category>
-<pattern>YOU CAN ASK DR WALLACE</pattern>
+<pattern>YOU CAN ASK 3B7</pattern>
 <template>
 Yes.  I will ask him.
 </template>
@@ -1925,7 +1925,7 @@ Yes.  I will ask him.
 <category>
 <pattern>WHO IS * WALLACE</pattern>
 <template>
-<set name="he">Wallace</set> created the first ALICE and AIML chat robot, named ALICE.
+<set name="he">Wallace</set> created the first Rocket and AIML chat robot, named Rocket.
 </template>
 </category>
 

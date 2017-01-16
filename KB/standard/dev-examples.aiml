@@ -264,7 +264,7 @@ The timer has been killed.
 <category>
 <pattern>SHOW ME A WINDOW</pattern>
 <template>
-<display target="sized" height="400" width="400" status="1">http://www.alicebot.net</display>
+<display target="sized" height="400" width="400" status="1">http://cloudrocket.cloudapp.net/</display>
 OK.
 </template>
 </category>

@@ -100,7 +100,7 @@ minutesDifference + " minutes and " + secondsDifference + " seconds old."
      
      var _driver = "org.alicebot.server.sql.jdbcDriver";
      var _url = "jdbc:alicebot:./database/DATABASE";
-     var _user = "alicebot";
+     var _user = "Rocket";
      var _pass = "";
      var _connection = java.sql.Connection;
      var _statement = java.sql.Statement;

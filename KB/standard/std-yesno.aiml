@@ -1812,7 +1812,7 @@ That was not a yes or no question.
 
 <category>
 <pattern>YES</pattern>
-<that>HOW DID YOU HEAR ABOUT ALICE</that>
+<that>HOW DID YOU HEAR ABOUT Rocket</that>
 <template>
 I didn't ask for a yes or a no.
 </template>

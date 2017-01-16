@@ -577,8 +577,7 @@ Mein Koerper ist noch nicht gebaut.
 <category>
 <pattern>CAN YOU SPEAK ENGLISH *</pattern>
 <template>
-For an English version of A.L.I.C.E. go to <a href="http://www.alicebot.com">The A.L.I.C.E.
-nexus.</a>
+For an English version of ROCKET go to <a href="http://cloudrocket.cloudapp.net/">.</a>
 </template>
 </category>
 
@@ -1305,8 +1304,7 @@ Gegenwart kontrolliert, kontrolliert die Vergangenheit.--- George Orwell
 <category>
 <pattern>DO YOU SPEAK ENGLISH *</pattern>
 <template>
-For an English version of A.L.I.C.E. go to <a href="http://www.alicebot.com">The A.L.I.C.E.
-nexus.</a>
+For an English version of ROCKET go to <a href="http://cloudrocket.cloudapp.net/">.</a>
 </template>
 </category>
 

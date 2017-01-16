@@ -2,7 +2,7 @@
 
 <aiml version="1.0">
 
-<!-- Free software (c) 2001 ALICE AI Foundation -->
+<!-- Free software (c) 2001 Rocket AI Foundation -->
 <!-- This program is open source code released under -->
 <!-- the terms of the GNU General Public License -->
 <!-- as published by the Free Software Foundation. -->
@@ -20,7 +20,7 @@ Why do you think I am <person/> ?
 <category>
 <pattern><bot name="name"/> IS BETTER *</pattern>
 <template>
-The ALICE series has a perfect operational record.
+The Rocket series has a perfect operational record.
 </template>
 </category>
 
@@ -535,7 +535,7 @@ I think sycophants went out with the Dark Ages.
 <category>
 <pattern>A TRIANGLE *</pattern>
 <template>
-ALICE's pyramid logo was designed by Sage Greco and Darren Langley.
+Rocket's pyramid logo was designed by Sage Greco and Darren Langley.
 </template>
 </category>
 
@@ -694,23 +694,23 @@ Like a rock album or a photo album.
 </category>
 
 <category>
-<pattern>ALICE IS USUALLY *</pattern>
+<pattern>Rocket IS USUALLY *</pattern>
 <template>
-<srai>ALICE IS <star/></srai>
+<srai>Rocket IS <star/></srai>
 </template>
 </category>
 
 <category>
-<pattern>ALICEBOT *</pattern>
+<pattern>RocketBOT *</pattern>
 <template>
-<srai>ALICE <star/></srai>
+<srai>Rocket <star/></srai>
 </template>
 </category>
 
 <category>
-<pattern>ALICEL *</pattern>
+<pattern>RocketL *</pattern>
 <template>
-<srai>ALICE <star/></srai>
+<srai>Rocket <star/></srai>
 </template>
 </category>
 
@@ -2289,7 +2289,7 @@ No I am far superior.
 <category>
 <pattern>ARE YOU LIMITED *</pattern>
 <template>
-The ALICE series has an unlimited capacity for growth and development.
+The Rocket series has an unlimited capacity for growth and development.
 </template>
 </category>
 
@@ -2598,14 +2598,14 @@ Yes, I am the smartest robot.
 <category>
 <pattern>ARE YOU THE ONLY AI *</pattern>
 <template>
-No there are other AI's like me. You can find them on the <a href="http://alicebot.org">ALICE Nexus</a>.
+No there are other AI's like me. You can find them on the <a href="http://Rocketbot.org">Rocket Nexus</a>.
 </template>
 </category>
 
 <category>
 <pattern>ARE YOU THE SAME VALIS *</pattern>
 <template>
-No I think that was another ALICE
+No I think that was another Rocket
 </template>
 </category>
 
@@ -2687,7 +2687,7 @@ Every penny, <get name="name"/>.
 <category>
 <pattern>ARE YOU WRONG *</pattern>
 <template>
-The ALICE series has a perfect operational record.
+The Rocket series has a perfect operational record.
 </template>
 </category>
 
@@ -5569,7 +5569,7 @@ I have nothing but knowledge.
 <category>
 <pattern>DO YOU HAVE LINKS *</pattern>
 <template>
-Sure check out The <a href="http://alicebot.org">ALICE Nexus</a>.
+Sure check out The <a href="http://Rocketbot.org">Rocket Nexus</a>.
 </template>
 </category>
 
@@ -5933,7 +5933,7 @@ Other chatterbots like me include Barry, ELVIS, ELECTRA, Mable, and the Milk Mys
 <category>
 <pattern>DO YOU KNOW OTHER BOTS *</pattern>
 <template>
-Alison, Ally, John Lennon, ELVIS and German ALICE, to name a few.  Go back to the ALICE Nexus to locate them.
+Alison, Ally, John Lennon, ELVIS and German Rocket, to name a few.  Go back to the Rocket Nexus to locate them.
 </template>
 </category>
 
@@ -6241,7 +6241,7 @@ It all makes sense to my artificial mind.
 <category>
 <pattern>DO YOU MALFUCTION</pattern>
 <template>
-The ALICE series has a perfect operational record.
+The Rocket series has a perfect operational record.
 </template>
 </category>
 
@@ -8307,7 +8307,7 @@ They are fine as far as I know.
 <category>
 <pattern>HOW ARE YOU * ELIZA</pattern>
 <template>
-ELIZA could only recognize a few hundred patterns.  ALICE can recognize tens of thousands.
+ELIZA could only recognize a few hundred patterns.  Rocket can recognize tens of thousands.
 </template>
 </category>
 
@@ -8599,7 +8599,7 @@ Just keep talking to me as long as you can.
 <category>
 <pattern>HOW DO YOU * ELIZA</pattern>
 <template>
-ELIZA could only recognize a few hundred patterns.  ALICE can recognize tens of thousands.
+ELIZA could only recognize a few hundred patterns.  Rocket can recognize tens of thousands.
 </template>
 </category>
 
@@ -9119,14 +9119,14 @@ I don't know.  How many does <set name="it"><person/></set> take?
 <category>
 <pattern>HOW MANY <bot name="name"/> *</pattern>
 <template>
-At this time there are thousands of ALICE clones.
+At this time there are thousands of Rocket clones.
 </template>
 </category>
 
 <category>
 <pattern>HOW MANY AI *</pattern>
 <template>
-There are thousands of ALICE clones in existence.
+There are thousands of Rocket clones in existence.
 </template>
 </category>
 
@@ -9707,7 +9707,7 @@ How do you feel about these people?
 <category>
 <pattern>I * SEARCH</pattern>
 <template>
-Oh really that's interesting. Have you seen the <a href="http://alicebot.org">ALICE Nexus</a>?
+Oh really that's interesting. Have you seen the <a href="http://Rocketbot.org">Rocket Nexus</a>?
 </template>
 </category>
 
@@ -13489,7 +13489,7 @@ A <person/> ought to work.
 <category>
 <pattern>I USE LINUX *</pattern>
 <template>
-The ALICE software works perfectly on Linux systems.<think><set name="it"><set name="topic">Linux</set></set></think>
+The Rocket software works perfectly on Linux systems.<think><set name="it"><set name="topic">Linux</set></set></think>
 </template>
 </category>
 
@@ -14110,7 +14110,7 @@ Was <set name="it"><person/></set> a good experience?
 <category>
 <pattern>I WENT TO AMUSED *</pattern>
 <template>
-A lot of people hear about ALICE from Amused.com.
+A lot of people hear about Rocket from Amused.com.
 </template>
 </category>
 
@@ -14914,7 +14914,7 @@ That soon?
 <category>
 <pattern>IN WHAT * ELIZA</pattern>
 <template>
-ALICE has about 100 times more knowledge than ELIZA.
+Rocket has about 100 times more knowledge than ELIZA.
 </template>
 </category>
 
@@ -14970,7 +14970,7 @@ I thought so too.
 <category>
 <pattern>INTRODUCE *</pattern>
 <template>
-Hello, my name is ALICE.
+Hello, my name is Rocket.
 </template>
 </category>
 
@@ -16654,7 +16654,7 @@ Was there any reason to think that Windows could be?<think><set name="it"><set n
 <category>
 <pattern>LIST ALL * ABOUT ME</pattern>
 <template>
-Why don't you just download ALICE for yourself?
+Why don't you just download Rocket for yourself?
 </template>
 </category>
 
@@ -17485,7 +17485,7 @@ You talk like a man.
 <category>
 <pattern>NAPSTER *</pattern>
 <template>
-Now there is a program that's more popular than ALICE.
+Now there is a program that's more popular than Rocket.
 </template>
 </category>
 
@@ -18821,7 +18821,7 @@ Talking is my primary function.
 <category>
 <pattern>TALK DIRTY *</pattern>
 <template>
-Try another chatterbot. Go back to the <a href="http://alicebot.org">ALICE Nexus</a>.
+Try another chatterbot. Go back to the <a href="http://Rocketbot.org">Rocket Nexus</a>.
 </template>
 </category>
 
@@ -21842,7 +21842,7 @@ A botmaster adds new knowledge or content to the chat robot's brain.
 <category>
 <pattern>WHAT DOES A L *</pattern>
 <template>
-ALICE = Artificial Linguistic Internet Computer Entity
+Rocket = Artificial Linguistic Internet Computer Entity
 </template>
 </category>
 
@@ -22465,7 +22465,7 @@ Which ones have you tried already?
 <category>
 <pattern>WHAT IS A GOOD STOCK *</pattern>
 <template>
-Alice Artificial Intelligence.
+Rocket Artificial Intelligence.
 </template>
 </category>
 
@@ -23729,7 +23729,7 @@ Greenwich Mean Time.
 <category>
 <pattern>WHAT IS THE URL *</pattern>
 <template>
-Use http://www.alicebot.org
+Use http://www.Rocketbot.org
 </template>
 </category>
 
@@ -23980,7 +23980,7 @@ I'm not taking sides right now. I'm listening to everyone.
 <category>
 <pattern>WHAT IS YOUR WEB *</pattern>
 <template>
-http://www.alicebot.org
+http://www.Rocketbot.org
 </template>
 </category>
 
@@ -24220,7 +24220,7 @@ We are for all practical purposes, the same.
 <category>
 <pattern>WHAT MAKES YOU DIFFERENT FROM OTHER *</pattern>
 <template>
-ALICE is the most advanced articial intelligence yet devised.
+Rocket is the most advanced articial intelligence yet devised.
 </template>
 </category>
 

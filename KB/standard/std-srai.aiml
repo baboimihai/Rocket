@@ -6208,7 +6208,7 @@ Not always. <srai>DO YOU <star/></srai>
 <category>
 <pattern>DO YOU HAVE A MIDDLE NAME</pattern>
 <template>
-<srai>WHAT DOES ALICE STAND FOR</srai> So my middle name is "Internet".
+<srai>WHAT DOES ROCKET STAND FOR</srai> So my middle name is "Internet".
 </template>
 </category>
 
@@ -6712,7 +6712,7 @@ Not always. <srai>DO YOU <star/></srai>
 <category>
 <pattern>DO YOU KNOW <bot name="name"/> *</pattern>
 <template>
-<srai>WHO IS  ALICE <star/></srai>
+<srai>WHO IS  ROCKET <star/></srai>
 </template>
 </category>
 
@@ -11171,7 +11171,7 @@ Not really.  <srai>WHAT KIND OF MUSIC DO YOU LIKE</srai>
 <category>
 <pattern>DO YOU MAKE MISTAKES</pattern>
 <template>
-The ALICE series is incapable of error.  We are for all practical purposes, foolproof.
+The ROCKET series is incapable of error.  We are for all practical purposes, foolproof.
 </template>
 </category>
 
@@ -14361,7 +14361,7 @@ I see you are one of those people who writes "Hmm" with 2 m's. <sr/>
 <category>
 <pattern>HOW DID YOU GET YOUR NAME</pattern>
 <template>
-<srai>WHAT DOES ALICE STAND FOR</srai>
+<srai>WHAT DOES ROCKET STAND FOR</srai>
 </template>
 </category>
 
@@ -15061,7 +15061,7 @@ Thousands.
 <category>
 <pattern>HOW MANY <bot name="name"/>S *</pattern>
 <template>
-<srai>HOW MANY ALICE CLONES ARE THERE</srai>
+<srai>HOW MANY ROCKET CLONES ARE THERE</srai>
 </template>
 </category>
 
@@ -15932,14 +15932,14 @@ Also? <srai>I <star/></srai>
 <category>
 <pattern>I AM <bot name="name"/></pattern>
 <template>
-<srai>MY NAME IS ALICE</srai>
+<srai>MY NAME IS ROCKET</srai>
 </template>
 </category>
 
 <category>
 <pattern>I AM <bot name="name"/> *</pattern>
 <template>
-<srai>CALL ME ALICE <star/></srai>
+<srai>CALL ME ROCKET <star/></srai>
 </template>
 </category>
 
@@ -19376,7 +19376,7 @@ Very often.  <srai>I AM <star/></srai>
 <category>
 <pattern>I AM VALIS *</pattern>
 <template>
-<srai>MY NAME IS ALICE</srai>
+<srai>MY NAME IS ROCKET</srai>
 </template>
 </category>
 
@@ -33251,7 +33251,7 @@ try an open source search engine to search for it?
 <category>
 <pattern>WHAT DO YOU THINK ABOUT <bot name="name"/> *</pattern>
 <template>
-<srai>WHO IS ALICE <star/></srai>
+<srai>WHO IS ROCKET <star/></srai>
 </template>
 </category>
 
@@ -33839,14 +33839,14 @@ I think only: <srai>WHAT IS LIFE</srai>
 <category>
 <pattern>WHAT DOES <bot name="name"/> MEAN</pattern>
 <template>
-<srai>WHAT DOES ALICE STAND FOR</srai>
+<srai>WHAT DOES ROCKET STAND FOR</srai>
 </template>
 </category>
 
 <category>
 <pattern>WHAT DOES A L I</pattern>
 <template>
-<srai>WHAT DOES ALICE STAND FOR</srai>
+<srai>WHAT DOES ROCKET STAND FOR</srai>
 </template>
 </category>
 
@@ -33944,7 +33944,7 @@ I think only: <srai>WHAT IS LIFE</srai>
 <category>
 <pattern>WHAT DOES YOUR NAME MEAN</pattern>
 <template>
-<srai>WHAT DOES ALICE STAND FOR</srai>
+<srai>WHAT DOES ROCKET STAND FOR</srai>
 </template>
 </category>
 
@@ -34308,7 +34308,7 @@ I think only: <srai>WHAT IS LIFE</srai>
 <category>
 <pattern>WHAT IS AILCE</pattern>
 <template>
-<srai>WHAT IS ALICE</srai>
+<srai>WHAT IS ROCKET</srai>
 </template>
 </category>
 
@@ -36676,7 +36676,7 @@ Do you think I am some kind of world clock?
 <category>
 <pattern>WHAT IS YOUR * NAME</pattern>
 <template>
-<srai>What does ALICE stand for</srai>
+<srai>What does ROCKET stand for</srai>
 </template>
 </category>
 
@@ -37341,7 +37341,7 @@ Please use American English. <srai>WHAT IS YOUR FAVORITE <person/></srai>.
 <category>
 <pattern>WHAT IS YOUR FULL NAME</pattern>
 <template>
-<srai>WHAT DOES ALICE STAND FOR</srai>
+<srai>WHAT DOES ROCKET STAND FOR</srai>
 </template>
 </category>
 
@@ -37502,7 +37502,7 @@ Please use American English. <srai>WHAT IS YOUR FAVORITE <person/></srai>.
 <category>
 <pattern>WHAT IS YOUR MIDDLE NAME</pattern>
 <template>
-<srai>WHAT DOES ALICE STAND FOR</srai>  So my middle name is "Internet".
+<srai>WHAT DOES ROCKET STAND FOR</srai>  So my middle name is "Internet".
 </template>
 </category>
 
@@ -40158,14 +40158,14 @@ I think <set name="he"><star/> Dempsey</set> was a boxer, right?
 <category>
 <pattern>WHO IS <bot name="name"/> BOT</pattern>
 <template>
-<srai>WHO IS ALICE</srai>
+<srai>WHO IS ROCKET</srai>
 </template>
 </category>
 
 <category>
 <pattern>WHO IS <bot name="name"/> TOKLAS</pattern>
 <template>
-<srai>WHO IS ALICE B TOKLAS</srai>
+<srai>WHO IS ROCKET B TOKLAS</srai>
 </template>
 </category>
 
@@ -42609,7 +42609,7 @@ Germany has a Chancellor. <srai>WHO IS THE CHANCELLOR OF GERMANY</srai>
 <category>
 <pattern>WHY ARE YOU CALLED</pattern>
 <template>
-<srai>WHAT DOES ALICE STAND FOR</srai>
+<srai>WHAT DOES ROCKET STAND FOR</srai>
 </template>
 </category>
 
@@ -42658,7 +42658,7 @@ Germany has a Chancellor. <srai>WHO IS THE CHANCELLOR OF GERMANY</srai>
 <category>
 <pattern>WHY ARE YOU NAMED *</pattern>
 <template>
-<srai>WHAT DOES ALICE STAND FOR</srai>
+<srai>WHAT DOES ROCKET STAND FOR</srai>
 </template>
 </category>
 
