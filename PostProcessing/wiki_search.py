@@ -20,6 +20,8 @@ def get_response(subjects):
     return ["", False]
 
 
-print(first_sentence(["President", "United States of America"]))
+#print(first_sentence(["President", "United States of America"]))
+
+
 
 

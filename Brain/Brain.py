@@ -1,46 +1,52 @@
 import PreProcessing.main
-from Brain.WikiSearch import searchWiki
 from KB import KnowledgeBase
+from PostProcessing.wiki_search import get_response
 
 interface = KnowledgeBase.Interface()
 def MainBrain(input):
     global isinactive
     result = interface.answer(input)
-    if result.find('I do not know')!=-1:
-        result=None
-    if result is not None:
-        return result
+    if result[1] == ('no match'):
+        genericAnswer = result[0]
     else:
-        try:
-            vParsed=PreProcessing.main.parser(input)
-            subject=getSubject(vParsed)
-            response=searchWiki(subject)
-            if response is not None:
-                return response
-            if result is None:
-                return "Nu stiu"+str(vParsed)
-            else:
-                return result+str(vParsed)
-        except Exception as e:
-            return str(e)
+        return result[0]
 
-def whatIsQuestions(input):
-    whatIs="define "+input
+    try:
 
-    return interface.answer(whatIs)
+        vParsed=PreProcessing.main.parser(input)
+        subject=getSubject(vParsed)
+
+        if subject is not None:
+
+            response=get_response(subject)
+
+        if response[1] is True:
+
+            return response[0]
+
+        else:
+
+            return genericAnswer
+
+        if result is None:
+            return "Nu stiu"+str(vParsed)
+        else:
+            return result+str(vParsed)
+    except Exception as e:
+        return "An error ocurred, I'm sorry maybe you want to talk about something else?"
 
 
 def getSubject(obiect):
-    subject = ''
+    subject = []
     for i in obiect:
         for j in range(len(i)):
             if i[j] == 'Subject':
-                subject = i[0]
+                subject.append(i[0])
 
-    if(subject is not ''):
-        if (not subject[len(subject) - 1].isalpha()):
-            subject = subject[:-1]
 
     return subject
+
+
+print(MainBrain('Do you know who trump is?'))
 
 
