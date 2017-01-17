@@ -8,5 +8,5 @@ for (root,directory,files) in os.walk(path):
         print (fullFileName)
         f = open(fullFileName)
         text = f.read()
-        if("WHAT IS MY NAME" in text):
+        if("ASK USER A QUESTION" in text):
             print ("found")
