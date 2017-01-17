@@ -13,6 +13,7 @@ class Interface:
         learn.text = os.path.join(self.dir,"standard","std-*.aiml")
         tree.write(os.path.join(self.dir,"start.xml"))
         self.kern.bootstrap(learnFiles=os.path.join(self.dir,"start.xml"), commands="load")
+        self.kern.respond("set predicates om")
     def answer(self,input):
         answer =  self.kern.respond(input)
         pathToNoAnswer = os.path.join(self.dir,"noAnswer")
@@ -25,4 +26,5 @@ class Interface:
                 toReturn.append("no match")
                 return toReturn
         toReturn.append("match")
+        self.kern.respond("set predicates om")
         return toReturn

@@ -8,5 +8,5 @@ for (root,directory,files) in os.walk(path):
         print (fullFileName)
         f = open(fullFileName)
         text = f.read()
-        if("What is your favorite color" in text):
+        if("WHAT IS MY NAME" in text):
             print ("found")
