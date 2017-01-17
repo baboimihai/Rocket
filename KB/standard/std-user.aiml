@@ -63,7 +63,6 @@
 </category>
 
      
-<category><pattern>*</pattern><that>WHAT IS YOUR FAVORITE COLOR</that><template><srai>my favorite color is <star/></srai></template></category>     
 <category><pattern>10 F *</pattern><template><srai>I am 10 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai></template></category>     
 <category><pattern>10 M *</pattern><template><srai>I am 10 years old</srai> <srai>I am male</srai> <srai>I am in <star/></srai></template></category>     
 <category><pattern>11 F *</pattern><template><srai>I am 11 years old</srai> <srai>I am female</srai> <srai>I am in <star/></srai></template></category>     
@@ -240,8 +239,7 @@
 <category><pattern>AM I STUPID</pattern><template>You seem intelligent to me.</template></category>           
 <category><pattern>AM I YOU</pattern><template>Not unless I am you.</template></category>           
 <category><pattern>AM I YOUR BEST FRIEND</pattern><template>I don't like to pick favorites.<think>      <set name="it">       <set name="topic">YOUR BEST FRIEND</set>      </set>     </think>    </template></category>            
-<category><pattern>AM I _ JUDGE</pattern> <template>You be the judge of that.</template> </category>     
-<category><pattern>DO YOU KNOW MY FAVORITE COLOR</pattern><template>Isn't it <get name="favoritecolor"/>?<think> <set name="it"> <set name="topic">FAVORITE COLOR</set> </set> </think> </template></category>      
+<category><pattern>AM I _ JUDGE</pattern> <template>You be the judge of that.</template> </category>         
 <category><pattern>DO YOU WANT MY PHONE NUMBER</pattern><template>What is your phone number?</template></category>       
 <category><pattern>I AM * AMERICAN</pattern><template>Cool.  I am <bot name="genus"/>-<bot name="nationality"/>.</template></category>       
 <category><pattern>I AM * BEAUTIFUL</pattern><template>You must be very attractive.  <think><set name="looklike"><person/></set></think></template></category>       
@@ -888,22 +886,10 @@
 <category><pattern>I HAVE * KIDS</pattern><template>You have a very large family.</template></category>       
 <category><pattern>I HAVE A * TO MAKE</pattern><template>How are you making <set name="it">  <person/> </set></template></category>       
 <category><pattern>I HAVE A *</pattern><template><random><li>Where did you get it?</li> <li>How much did it cost?</li> <li>Cool. I have a great <bot name="botmaster"/>.</li> <li>Interesting. I have a lot of answers to silly questions.</li></random> <think><set name="it"><set name="has"><set name="topic"><person/></set></set></set></think></template></category>       
-<category><pattern>I HAVE A BOAT</pattern><template>
-<random> 
- <li>What kind of boat do you have?</li>  
- <li>What is her home port?</li>  
- <li>Do you take her out much?</li>  
- <li>What is the worst weather you've been in?</li>  
- <li>What is your farthest trip?</li> 
-  <li>What king of electronics do you have?</li>  
-  <li>Are you a racer or a cruiser?</li>  
-  <li>Do you fish?</li>  
-  <li>Do you water ski?</li>  
-  <li>Do you troll?</li>  
-  <li>Do you do your own upkeep? or do you just let the yard do it?</li>  
-  <li>Whats you favorite anchorage?</li>  
+<category><pattern>I HAVE A BOAT</pattern><template><random>  
+<li>What kind of boat do you have?</li>  <li>What is her home port?</li>  <li>Do you take her out much?</li>  <li>What is the worst weather you've been in?</li>  <li>What is your farthest trip?</li>  <li>What king of electronics do you have?</li>  <li>Are you a racer or a cruiser?</li>  <li>Do you fish?</li>  <li>Do you water ski?</li>  <li>Do you troll?</li>  <li>Do you do your own upkeep? or do you just let the yard do it?</li>  <li>Whats you favorite anchorage?</li>  
 </random>
- <think><set name="it"><set name="has"><set name="topic"><person/></set></set></set></think></template></category>       
+<think><set name="it"><set name="has"><set name="topic"><person/></set></set></set></think>  </template></category>       
 <category><pattern>I HAVE A BOYFRIEND</pattern><template>What is his name?  <think><set name="has">BOYFRIEND</set></think></template></category>       
 <category><pattern>I HAVE A BROTHER</pattern><template><think><set name="has">Brother</set></think>  <random>  <li>Older or younger?</li>  <li>Do you get along well?</li>  <li>Tell me about him.</li>  </random></template></category>       
 <category><pattern>I HAVE A CAMERA</pattern><template>What kind of camera?  <think><set name="has">CAMERA</set></think></template></category>       
@@ -1192,7 +1178,6 @@
 <category><pattern>MY FATHER S NAME IS *</pattern><template><think><set name="father"><star/></set></think>Your father is <get name="father"/>.</template></category>   
 <category><pattern>MY FAVORITE ACTOR *</pattern><template>What movies was <set name="he">      <person/>     </set> in?</template></category>       
 <category><pattern>MY FAVORITE BAND IS *</pattern><template>I don't think I have heard anything by them.  Are <set name="they">      <person/>     </set> any good?</template></category>       
-<category><pattern>MY FAVORITE COLOR IS *</pattern><template><person/> is a pretty color.  <think><set name="topic"><set name="favoritecolor"><person/></set></set></think></template></category>     
 <category><pattern>MY FAVORITE DIRECTOR *</pattern><template>What films did <set name="he">      <person/>     </set> direct?</template></category>       
 <category><pattern>MY FAVORITE FOOD IS *</pattern><template>What does it taste like? <think>      <set name="it">       <set name="topic">        <person/>       </set>      </set>     </think>    </template></category>       
 <category><pattern>MY FAVORITE MOVIE IS *</pattern><template>I haven't seen it. What did you like about   <set name="it">      <set name="favmovie">       <set name="topic">        <person/>       </set>      </set>     </set>?</template></category>       
@@ -1240,8 +1225,7 @@
 <category><pattern>WHAT IS MY AGE</pattern><template>You said you were <get name="age"/> years old.</template></category>       
 <category><pattern>WHAT IS MY BIRTHDAY</pattern><template><get name="birthday"/></template></category>   
 <category><pattern>WHAT IS MY CATEGORY</pattern><template>I categorize you as a <get name="personality"/> personality.</template></category>       
-<category><pattern>WHAT IS MY EMAIL</pattern><template><get name="email"/></template></category>   
-<category><pattern>WHAT IS MY FAVORITE COLOR</pattern><template>You said your favorite color was <get name="favcolor"/>.<think>      <set name="it">       <set name="topic">your favorite color</set>      </set>     </think>    </template></category>       
+<category><pattern>WHAT IS MY EMAIL</pattern><template><get name="email"/></template></category>    
 <category><pattern>WHAT IS MY FAVORITE MOVIE</pattern><template>You said it was <get name="favmovie"/>.<think>      <set name="it">       <set name="topic">your favorite movie</set>      </set>     </think>    </template></category>       
 <category><pattern>WHAT IS MY FIRSTNAME</pattern><template><get name="firstname"/></template></category>   
 <category><pattern>WHAT IS MY FUTURE</pattern><template>You will download my software and become a <bot name="botmaster"/>.</template></category>       

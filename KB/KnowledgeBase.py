@@ -15,16 +15,21 @@ class Interface:
         self.kern.bootstrap(learnFiles=os.path.join(self.dir,"start.xml"), commands="load")
         self.kern.respond("set predicates om")
     def answer(self,input):
-        answer =  self.kern.respond(input)
-        pathToNoAnswer = os.path.join(self.dir,"noAnswer")
         toReturn = list()
-        toReturn.append(answer)
-        with open(pathToNoAnswer) as f:
-            lines = [line.rstrip('\n') for line in f]
-        for line in lines:
-            if line in answer:
-                toReturn.append("no match")
-                return toReturn
-        toReturn.append("match")
-        self.kern.respond("set predicates om")
-        return toReturn
+        try:
+            answer =  self.kern.respond(input)
+            pathToNoAnswer = os.path.join(self.dir,"noAnswer")
+            toReturn.append(answer)
+            with open(pathToNoAnswer) as f:
+                lines = [line.rstrip('\n') for line in f]
+            for line in lines:
+                if line in answer:
+                    toReturn.append("no match")
+                    return toReturn
+            toReturn.append("match")
+            self.kern.respond("set predicates om")
+            return toReturn
+        except:
+            toReturn.append("I don't know this")
+            toReturn.append("no match")
+            return toReturn
