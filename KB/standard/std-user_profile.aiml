@@ -526,7 +526,6 @@
                     <li>You tell me.</li>
                     </random>
 </set>
-<set name="name">judge</set>
 <set name="nickname"><random>
                     <li>I don't know this yet.</li>
                     <li>It is unknown to me yet.</li>
