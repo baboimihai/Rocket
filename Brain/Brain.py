@@ -36,6 +36,10 @@ def MainBrain(input):
         return "An error ocurred, I'm sorry maybe you want to talk about something else?"
 
 
+def random_bot_line():
+    result=interface.answer("RANDOM FACTS FOR WHEN THE USER IS INACTIVE")
+    return (result[0]+"?")
+
 def getSubject(obiect):
     subject = []
     for i in obiect:
@@ -47,6 +51,6 @@ def getSubject(obiect):
     return subject
 
 
-print(MainBrain('Do you know who trump is?'))
+#print(MainBrain('Do you know who trump is?'))
 
 
