@@ -2,7 +2,7 @@
 <category>
 <pattern>LOAD</pattern>
 <template>
-<learn>C:\Users\Dan\Desktop\Rocket\Rocket\KB\standard\std-*.aiml</learn>
+<learn>C:\Users\alexa\PycharmProjects\Rocket\KB\standard\std-*.aiml</learn>
 </template>
 </category>
 
