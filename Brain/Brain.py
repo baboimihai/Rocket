@@ -1,68 +1,56 @@
-from KB.KnowledgeBase.AimlCommunication import Parser
 import PreProcessing.main
-parser = Parser("nume")
+from KB import KnowledgeBase
+from PostProcessing.wiki_search import get_response
+
+interface = KnowledgeBase.Interface()
 def MainBrain(input):
-    user_authenthicated=0
-
-    result = parser.findPattern(input[:-1])
-    if result is not None:
-        return result
+    global isinactive
+    result = interface.answer(input)
+    if result[1] == ('no match'):
+        genericAnswer = result[0]
     else:
-        try:
-            vParsed=PreProcessing.main.parser(input)
-            subject=getSubject(vParsed)
-            response=whatIsQuestions(subject)
-            if response is not None:
-                return response
-            if result is None:
-                return "Nu stiu"+str(vParsed)
-            else:
-                return result+str(vParsed)
-        except Exception as e:
-            return str(e)
+        return result[0]
 
-def whatIsQuestions(input):
-    whatIs="define "+input
+    try:
 
-    return parser.findPattern(whatIs)
+        vParsed=PreProcessing.main.parser(input)
+        subject=getSubject(vParsed)
 
-def getQuestionType(input): #what who when where why how
-    text=input.lower()
-    if text.find('what') != -1:
-        return 1
-    if text.find('who') != -1:
-        return 2
-    if text.find('when') != -1:
-        return 3
-    if text.find('where') != -1:
-        return 4
-    if text.find('why') != -1:
-        return 5
-    if text.find('how') != -1:
-        return 6
+        if subject is not None:
+
+            response=get_response(subject)
+
+        if response[1] is True:
+
+            return response[0]
+
+        else:
+
+            return genericAnswer
+
+        if result is None:
+            return "Nu stiu"+str(vParsed)
+        else:
+            return result+str(vParsed)
+    except Exception as e:
+        return "An error ocurred, I'm sorry maybe you want to talk about something else?"
+
+
+def random_bot_line():
+    result=interface.answer("RANDOM FACTS FOR WHEN THE USER IS INACTIVE")
+    return (result[0]+"?")
 
 def getSubject(obiect):
-    subject = ''
+    subject = []
     for i in obiect:
         for j in range(len(i)):
             if i[j] == 'Subject':
-                subject = i[0]
+                subject.append(i[0])
 
-    if(subject is not ''):
-        if (not subject[len(subject) - 1].isalpha()):
-            subject = subject[:-1]
 
     return subject
 
-#print(PreProcessing.main.parser(input))
 
-print(MainBrain('What is abbacus?'))
+#print(MainBrain('Do you know who trump is?'))
 
-    #return
 
-    # while True:
-    #     pattern = input("Me> ")
-    #     #TODO: goodbye synonims
-    #     result = parser.findPattern(pattern)
-    #     print(result)
-    # return "raspuns"
