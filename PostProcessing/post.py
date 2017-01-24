@@ -24,7 +24,7 @@ class PostProcess:
         subiect = ''
         # predicat = ''
         complement = ''
-        adjectiv = ("good", "cool", "great", "occasionally")
+        adjectiv = ("good", "cool", "great", "occasionally","bad","ugly","unregular")
         DT = ("the", "a", "this", "these", "one")
         IN = ('in', 'that')
         if 'q' in logic['type']:
