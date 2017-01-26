@@ -1,10 +1,23 @@
 import PreProcessing.main
 from KB import KnowledgeBase
 from PostProcessing.wiki_search import get_response
-
+import random
+from google import search
 interface = KnowledgeBase.Interface()
 def MainBrain(input):
     global isinactive
+    none_result=["Why do you send these empty thoughts to me? ", "I can't get that.","I can't read minds.","Can't process when there's nothing to process."]
+    i=random.randint(0,3)
+
+    if input is "" or not input[0].isalpha():
+        return none_result[i]
+
+    input_copy=input.lower();
+
+    if input_copy.find("search on google")!= -1:
+        return find_on_google(input_copy[input_copy.find("search on google"):])
+
+
     result = interface.answer(input)
     if result[1] == ('no match'):
         genericAnswer = result[0]
@@ -12,7 +25,6 @@ def MainBrain(input):
         return result[0]
 
     try:
-
         vParsed=PreProcessing.main.parser(input)
         subject=getSubject(vParsed)
 
@@ -39,6 +51,10 @@ def MainBrain(input):
 def random_bot_line():
     result=interface.answer("RANDOM FACTS FOR WHEN THE USER IS INACTIVE")
     return (result[0]+"?")
+
+def find_on_google(string):
+    for url in search(string, stop=1):
+        return(url)
 
 def getSubject(obiect):
     subject = []
